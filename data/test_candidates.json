@@ -1,0 +1,427 @@
+[
+  {
+    "id": "CAND01",
+    "scenario": "Java Backend Development",
+    "resume": {
+      "name": "Aarav Sharma",
+      "summary": "Passionate Computer Science student specializing in Java enterprise backend development and RESTful web microservices.",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "SQL",
+        "Hibernate",
+        "REST APIs",
+        "PostgreSQL",
+        "Maven",
+        "Git"
+      ],
+      "education": [
+        "B.Tech in Computer Science and Engineering, CGPA 8.8"
+      ],
+      "experience": [
+        "Backend Developer Intern at Campus Tech Club"
+      ],
+      "projects": [
+        "E-Commerce Microservices Engine: Built Spring Boot REST APIs with PostgreSQL database and JWT token security",
+        "Banking Account Management Service: Implemented Hibernate ORM mapping and JUnit test cases for balance transfers"
+      ],
+      "certifications": [
+        "Oracle Certified Professional: Java SE 11 Developer",
+        "Spring Professional Certification"
+      ],
+      "achievements": [
+        "1st Prize in University Backend Coding Contest",
+        "LeetCode 300+ Problems Solved"
+      ]
+    },
+    "expected_relevant_ids": [
+      "INT001",
+      "INT002",
+      "INT003",
+      "INT004",
+      "INT051"
+    ]
+  },
+  {
+    "id": "CAND02",
+    "scenario": "Python Development",
+    "resume": {
+      "name": "Priya Nair",
+      "summary": "Software engineering undergraduate with hands-on experience designing asynchronous web APIs and backend automation in Python.",
+      "skills": [
+        "Python",
+        "FastAPI",
+        "Flask",
+        "SQLAlchemy",
+        "PostgreSQL",
+        "Docker",
+        "Pytest",
+        "REST APIs"
+      ],
+      "education": [
+        "B.Tech in Information Technology, 3rd Year"
+      ],
+      "experience": [],
+      "projects": [
+        "Real-time Notification API: Built high-throughput asynchronous REST endpoints using FastAPI and WebSockets",
+        "Automated Web Data Ingestion Engine: Built web scraping and validation workflows using BeautifulSoup and Requests"
+      ],
+      "certifications": [
+        "Python for Everybody Specialization - Coursera",
+        "FastAPI Modern Web APIs"
+      ],
+      "achievements": [
+        "Finalist in Hackathon 2025 Python Track"
+      ]
+    },
+    "expected_relevant_ids": [
+      "INT005",
+      "INT006",
+      "INT007",
+      "INT008",
+      "INT052"
+    ]
+  },
+  {
+    "id": "CAND03",
+    "scenario": "Data Science",
+    "resume": {
+      "name": "Rohan Verma",
+      "summary": "Data science and analytics student skilled in statistical hypothesis testing, feature extraction, and exploratory analysis.",
+      "skills": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "SQL",
+        "Data Science",
+        "Statistics",
+        "Power BI",
+        "Data Analysis"
+      ],
+      "education": [
+        "B.Tech in Artificial Intelligence & Data Science",
+        "Minor in Applied Mathematics"
+      ],
+      "experience": [
+        "Data Analyst Trainee at University Research Cell"
+      ],
+      "projects": [
+        "Customer Churn Prediction Model: Analyzed 100k customer transaction records, performed exploratory data analysis, and engineered features",
+        "E-Commerce Sales Insights Dashboard: Designed interactive Power BI dashboards and optimized SQL analytical queries"
+      ],
+      "certifications": [
+        "IBM Data Science Professional Certificate",
+        "Google Data Analytics Certificate"
+      ],
+      "achievements": [
+        "Published student research paper on Predictive Analytics in IEEE Student Branch"
+      ]
+    },
+    "expected_relevant_ids": [
+      "INT010",
+      "INT009",
+      "INT030",
+      "INT031",
+      "INT032"
+    ]
+  },
+  {
+    "id": "CAND04",
+    "scenario": "AI/ML (Machine Learning)",
+    "resume": {
+      "name": "Ananya Iyer",
+      "summary": "Pre-final year engineering student passionate about deep learning, computer vision, and building end-to-end ML models.",
+      "skills": [
+        "Python",
+        "PyTorch",
+        "Scikit-Learn",
+        "Machine Learning",
+        "Deep Learning",
+        "OpenCV",
+        "NumPy",
+        "Matplotlib"
+      ],
+      "education": [
+        "B.Tech in Computer Science (Honors in Artificial Intelligence)"
+      ],
+      "experience": [],
+      "projects": [
+        "Autonomous Vehicle Sign Detection: Implemented YOLOv8 object detection with PyTorch and OpenCV achieving 92% mAP",
+        "Medical Imaging Anomaly Classifier: Fine-tuned ResNet-50 convolution neural network on chest X-ray datasets"
+      ],
+      "certifications": [
+        "DeepLearning.AI Deep Learning Specialization",
+        "PyTorch for Deep Learning Bootcamp"
+      ],
+      "achievements": [
+        "Kaggle Competitions Expert, Top 5% in Image Classification Challenge"
+      ]
+    },
+    "expected_relevant_ids": [
+      "INT009",
+      "INT011",
+      "INT040",
+      "INT041",
+      "INT055"
+    ]
+  },
+  {
+    "id": "CAND05",
+    "scenario": "Generative AI",
+    "resume": {
+      "name": "Karthik Menon",
+      "summary": "AI researcher and developer focused on Retrieval-Augmented Generation (RAG), vector embeddings, and autonomous LLM agents.",
+      "skills": [
+        "Python",
+        "Generative AI",
+        "LangChain",
+        "Vector Databases",
+        "FAISS",
+        "Embeddings",
+        "Hugging Face",
+        "LLMs",
+        "FastAPI"
+      ],
+      "education": [
+        "B.Tech Computer Science and Engineering"
+      ],
+      "experience": [
+        "AI Research Intern at Emerging Tech Lab"
+      ],
+      "projects": [
+        "Enterprise Document Q&A RAG System: Engineered chunking pipelines, FAISS index similarity retrieval, and prompt guardrails",
+        "Autonomous Multi-Agent Researcher: Built interactive workflow using LangGraph, tool calling, and Hugging Face embeddings"
+      ],
+      "certifications": [
+        "Generative AI with Large Language Models - DeepLearning.AI",
+        "LangChain AI Certification"
+      ],
+      "achievements": [
+        "Winner at National GenAI Hackathon 2025 for best semantic search pipeline"
+      ]
+    },
+    "expected_relevant_ids": [
+      "INT013",
+      "INT014",
+      "INT015",
+      "INT050",
+      "INT055"
+    ]
+  },
+  {
+    "id": "CAND06",
+    "scenario": "Full Stack Development",
+    "resume": {
+      "name": "Neha Patel",
+      "summary": "MERN and full stack developer experienced in responsive user interfaces, RESTful services, and relational database systems.",
+      "skills": [
+        "React",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "JavaScript",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "REST APIs"
+      ],
+      "education": [
+        "B.Tech in Information Technology"
+      ],
+      "experience": [
+        "Web Development Intern at Local Startup"
+      ],
+      "projects": [
+        "Full Stack Collaborative Project Board: Developed using React, Node.js, Express, MongoDB, and Socket.io for live updates",
+        "Campus Event Booking Portal: Implemented responsive UI with Tailwind CSS and secure payment gateway integration"
+      ],
+      "certifications": [
+        "Meta Front-End Developer Professional Certificate",
+        "Full Stack Web Development - Udemy"
+      ],
+      "achievements": [
+        "Designed and maintained college department website with 10k monthly views"
+      ]
+    },
+    "expected_relevant_ids": [
+      "INT016",
+      "INT017",
+      "INT018",
+      "INT019",
+      "INT054"
+    ]
+  },
+  {
+    "id": "CAND07",
+    "scenario": "Cloud Computing",
+    "resume": {
+      "name": "Vikram Rathore",
+      "summary": "Cloud enthusiast specializing in AWS infrastructure provisioning, containerization, and automated CI/CD pipelines.",
+      "skills": [
+        "AWS",
+        "Cloud Computing",
+        "Docker",
+        "DevOps",
+        "Linux",
+        "Kubernetes",
+        "Git",
+        "Python",
+        "CI/CD"
+      ],
+      "education": [
+        "B.Tech in Computer Science and Cloud Technology"
+      ],
+      "experience": [],
+      "projects": [
+        "Multi-Tier Cloud Application on AWS: Deployed scalable application on EC2, S3, and RDS with ALB and Auto Scaling groups",
+        "Automated CI/CD Pipeline: Built GitHub Actions workflow to containerize Python services and push to Docker Hub"
+      ],
+      "certifications": [
+        "AWS Certified Solutions Architect – Associate",
+        "Docker Certified Associate Training"
+      ],
+      "achievements": [
+        "AWS Community Builder Student Ambassador"
+      ]
+    },
+    "expected_relevant_ids": [
+      "INT023",
+      "INT024",
+      "INT025",
+      "INT026",
+      "INT053"
+    ]
+  },
+  {
+    "id": "CAND08",
+    "scenario": "Cybersecurity",
+    "resume": {
+      "name": "Sneha Kulkarni",
+      "summary": "Cybersecurity student interested in application vulnerability assessments, network penetration testing, and defensive security.",
+      "skills": [
+        "Cybersecurity",
+        "Network Security",
+        "OWASP",
+        "Vulnerability Assessment",
+        "Linux",
+        "Burp Suite",
+        "Wireshark",
+        "Python"
+      ],
+      "education": [
+        "B.Tech in Cybersecurity and Digital Forensics"
+      ],
+      "experience": [
+        "Security Analyst Intern at University IT Operations"
+      ],
+      "projects": [
+        "Web Application Security Audit: Performed penetration testing against test web applications identifying SQL Injection and XSS flaws",
+        "Intrusion Detection Telemetry Pipeline: Configured packet capture analysis using Wireshark and automated alerts via Python"
+      ],
+      "certifications": [
+        "CompTIA Security+ Certified",
+        "Certified Ethical Hacker (CEH) Coursework"
+      ],
+      "achievements": [
+        "Ranked Top 10 in State Level Inter-College CTF (Capture The Flag) Competition"
+      ]
+    },
+    "expected_relevant_ids": [
+      "INT027",
+      "INT028",
+      "INT029",
+      "INT053"
+    ]
+  },
+  {
+    "id": "CAND09",
+    "scenario": "Education-focused candidate",
+    "resume": {
+      "name": "Aditya Sengupta",
+      "summary": "Academic achiever with distinction in Computer Science fundamentals, algorithm design, formal mathematics, and systems design.",
+      "skills": [
+        "Data Structures",
+        "Algorithms",
+        "C++",
+        "Java",
+        "Problem Solving",
+        "Object-Oriented Programming",
+        "Operating Systems",
+        "SQL"
+      ],
+      "education": [
+        "B.Tech in Computer Science, Indian Institute of Information Technology, CGPA 9.6/10 (Gold Medalist Candidate)",
+        "Higher Secondary Certificate (PCM): 96.4%"
+      ],
+      "experience": [
+        "Teaching Assistant for Data Structures & Algorithms Course"
+      ],
+      "projects": [
+        "B-Tree and Hash Index Simulator: Built low-level in-memory storage engine demonstrating disk paging algorithms in C++",
+        "Graph Theory Pathfinding Visualizer: Developed interactive educational visualizer for Dijkstra and A* algorithms"
+      ],
+      "certifications": [
+        "NPTEL Elite Gold in Programming in C++",
+        "Coursera Algorithms Specialization - Stanford"
+      ],
+      "achievements": [
+        "Department Rank 1 for 6 consecutive semesters",
+        "National Talent Search Examination (NTSE) Scholar",
+        "ACM-ICPC Regionalist Candidate"
+      ]
+    },
+    "expected_relevant_ids": [
+      "INT033",
+      "INT034",
+      "INT003",
+      "INT001",
+      "INT041"
+    ]
+  },
+  {
+    "id": "CAND10",
+    "scenario": "Project-based candidate with multiple technical skills",
+    "resume": {
+      "name": "Meera Krishnan",
+      "summary": "Versatile developer with a robust portfolio of cross-disciplinary production projects spanning full-stack web, Python APIs, and cloud microservices.",
+      "skills": [
+        "Python",
+        "React",
+        "FastAPI",
+        "Docker",
+        "SQL",
+        "JavaScript",
+        "AWS",
+        "REST APIs",
+        "Git"
+      ],
+      "education": [
+        "B.Tech in Computer Science and Engineering, Final Year"
+      ],
+      "experience": [
+        "Freelance Full Stack Developer (Delivered 3 end-to-end client applications)",
+        "Technical Lead - University Open Source Club"
+      ],
+      "projects": [
+        "Healthcare Appointment & Telehealth Platform: Built with FastAPI, React, PostgreSQL, Dockerized and deployed on AWS EC2",
+        "AI-Powered Resume ATS Scanner: Created parser service with Python, REST API backend, and clean modern React frontend",
+        "Smart Campus IoT Telemetry Hub: Collected sensor data with Python scripts, persisted to MySQL, displayed via interactive dashboard"
+      ],
+      "certifications": [
+        "AWS Certified Cloud Practitioner",
+        "Meta Front-End Developer Specialization"
+      ],
+      "achievements": [
+        "Built open-source developer tool with 150+ stars on GitHub",
+        "Smart India Hackathon Finalist"
+      ]
+    },
+    "expected_relevant_ids": [
+      "INT054",
+      "INT018",
+      "INT016",
+      "INT005",
+      "INT023"
+    ]
+  }
+]

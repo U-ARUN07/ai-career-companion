@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: rag-internship-matching
+    env: python
+    buildCommand: "pip install -r requirements.txt && python scripts/build_vector_database.py"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: INFO

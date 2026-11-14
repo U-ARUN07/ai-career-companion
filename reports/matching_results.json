@@ -1,0 +1,2584 @@
+{
+  "summary": {
+    "total_profiles_evaluated": 10,
+    "mean_precision_at_5": 0.68,
+    "mean_recall_at_5": 0.69,
+    "mean_reciprocal_rank": 1.0,
+    "evaluation_duration_seconds": 1.57
+  },
+  "candidates": [
+    {
+      "candidate_id": "CAND01",
+      "candidate_name": "Aarav Sharma",
+      "scenario": "Java Backend Development",
+      "expected_relevant_ids": [
+        "INT051",
+        "INT001",
+        "INT003",
+        "INT002",
+        "INT004"
+      ],
+      "retrieved_ids": [
+        "INT001",
+        "INT002",
+        "INT005",
+        "INT017",
+        "INT004"
+      ],
+      "relevant_retrieved_ids": [
+        "INT001",
+        "INT002",
+        "INT004"
+      ],
+      "metrics": {
+        "precision_at_5": 0.6,
+        "recall_at_5": 0.6,
+        "reciprocal_rank": 1.0
+      },
+      "matches": [
+        {
+          "internship_id": "INT001",
+          "title": "Java Backend Developer Intern",
+          "company": "TechNova Solutions (Synthetic)",
+          "similarity_score": 0.6469,
+          "description": "Design, build, and optimize enterprise backend microservices and RESTful APIs using Java and Spring Boot. Collaborate with database engineers on PostgreSQL queries and caching.",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "SQL",
+            "REST APIs"
+          ],
+          "preferred_skills": [
+            "Docker",
+            "PostgreSQL",
+            "Kafka",
+            "Git"
+          ],
+          "education_requirements": [
+            "B.Tech Computer Science",
+            "B.Tech Information Technology",
+            "MCA"
+          ],
+          "experience_requirements": "Students or fresh graduates with coursework in Object-Oriented Programming and relational databases.",
+          "location": "Hyderabad",
+          "work_mode": "Hybrid",
+          "duration": "3 months",
+          "stipend": "₹15,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Java Backend Developer Intern at TechNova Solutions (Synthetic). Demonstrated proficiency in Java, Spring Boot, SQL directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Java",
+              "Spring Boot",
+              "SQL",
+              "REST APIs"
+            ],
+            "relevant_projects": [
+              "E-Commerce Microservices Engine: Built Spring Boot REST APIs with PostgreSQL database and JWT token security"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Excellent alignment on core prerequisites. Highlight relevant project architecture and API design decisions in your interview discussions.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT002",
+          "title": "Spring Boot API Engineer Intern",
+          "company": "ApexCloud Labs (Synthetic)",
+          "similarity_score": 0.5436,
+          "description": "Develop scalable API endpoints for banking and fintech service prototypes. Implement authentication, Hibernate ORM data models, and unit testing using JUnit.",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "Hibernate",
+            "MySQL"
+          ],
+          "preferred_skills": [
+            "JWT",
+            "Redis",
+            "Swagger",
+            "Maven"
+          ],
+          "education_requirements": [
+            "B.E.",
+            "B.Tech",
+            "MCA",
+            "B.Sc Computer Science"
+          ],
+          "experience_requirements": "Academic project experience in Spring Boot backend services.",
+          "location": "Bengaluru",
+          "work_mode": "On-site",
+          "duration": "6 months",
+          "stipend": "₹20,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Spring Boot API Engineer Intern at ApexCloud Labs (Synthetic). Demonstrated proficiency in Java, Spring Boot, Hibernate directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Java",
+              "Spring Boot",
+              "Hibernate",
+              "MySQL"
+            ],
+            "relevant_projects": [
+              "E-Commerce Microservices Engine: Built Spring Boot REST APIs with PostgreSQL database and JWT token security",
+              "Banking Account Management Service: Implemented Hibernate ORM mapping and JUnit test cases for balance transfers"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Excellent alignment on core prerequisites. Highlight relevant project architecture and API design decisions in your interview discussions.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT005",
+          "title": "Python Backend Developer Intern",
+          "company": "NextGen Software Labs (Synthetic)",
+          "similarity_score": 0.5345,
+          "description": "Develop asynchronous web services and backend pipelines using Python, FastAPI, and SQLAlchemy. Write comprehensive pytest unit tests.",
+          "required_skills": [
+            "Python",
+            "FastAPI",
+            "SQLAlchemy",
+            "PostgreSQL"
+          ],
+          "preferred_skills": [
+            "Docker",
+            "Redis",
+            "Celery",
+            "Git"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "BCA",
+            "MCA",
+            "B.Sc Computer Science"
+          ],
+          "experience_requirements": "Hands-on projects building web APIs with Python frameworks.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "3 months",
+          "stipend": "₹16,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Python Backend Developer Intern at NextGen Software Labs (Synthetic). Demonstrated proficiency in SQLAlchemy, PostgreSQL directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "SQLAlchemy",
+              "PostgreSQL"
+            ],
+            "relevant_projects": [
+              "E-Commerce Microservices Engine: Built Spring Boot REST APIs with PostgreSQL database and JWT token security"
+            ],
+            "missing_required_skills": [
+              "Python",
+              "FastAPI"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Python, FastAPI. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT017",
+          "title": "Java & React Full Stack Intern",
+          "company": "Horizon Enterprise Systems (Synthetic)",
+          "similarity_score": 0.5338,
+          "description": "Develop end-to-end web portals using Java Spring Boot on the backend and React with TypeScript on the frontend. Manage PostgreSQL schemas.",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "React",
+            "SQL",
+            "JavaScript"
+          ],
+          "preferred_skills": [
+            "TypeScript",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/IT",
+            "MCA"
+          ],
+          "experience_requirements": "Solid grounding in both client-side components and server-side REST controllers.",
+          "location": "Chennai",
+          "work_mode": "On-site",
+          "duration": "6 months",
+          "stipend": "₹19,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Java & React Full Stack Intern at Horizon Enterprise Systems (Synthetic). Demonstrated proficiency in Java, Spring Boot, SQL directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Java",
+              "Spring Boot",
+              "SQL",
+              "JavaScript"
+            ],
+            "relevant_projects": [
+              "E-Commerce Microservices Engine: Built Spring Boot REST APIs with PostgreSQL database and JWT token security"
+            ],
+            "missing_required_skills": [
+              "React"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in React. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT004",
+          "title": "Enterprise Java Microservices Intern",
+          "company": "InfraCore Systems (Synthetic)",
+          "similarity_score": 0.5093,
+          "description": "Modernize legacy services to containerized Spring Cloud microservices. Integrate message queues and assist in deployment pipeline automation.",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "Microservices",
+            "REST APIs"
+          ],
+          "preferred_skills": [
+            "Kubernetes",
+            "Docker",
+            "RabbitMQ"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "M.Tech Computer Science"
+          ],
+          "experience_requirements": "Understanding of distributed systems and REST architecture.",
+          "location": "Noida",
+          "work_mode": "Remote",
+          "duration": "6 months",
+          "stipend": "₹18,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Enterprise Java Microservices Intern at InfraCore Systems (Synthetic). Demonstrated proficiency in Java, Spring Boot, REST APIs directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Java",
+              "Spring Boot",
+              "REST APIs"
+            ],
+            "relevant_projects": [
+              "E-Commerce Microservices Engine: Built Spring Boot REST APIs with PostgreSQL database and JWT token security"
+            ],
+            "missing_required_skills": [
+              "Microservices"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Microservices. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND02",
+      "candidate_name": "Priya Nair",
+      "scenario": "Python Development",
+      "expected_relevant_ids": [
+        "INT005",
+        "INT052",
+        "INT007",
+        "INT006",
+        "INT008"
+      ],
+      "retrieved_ids": [
+        "INT005",
+        "INT007",
+        "INT052",
+        "INT009",
+        "INT006"
+      ],
+      "relevant_retrieved_ids": [
+        "INT005",
+        "INT007",
+        "INT052",
+        "INT006"
+      ],
+      "metrics": {
+        "precision_at_5": 0.8,
+        "recall_at_5": 0.8,
+        "reciprocal_rank": 1.0
+      },
+      "matches": [
+        {
+          "internship_id": "INT005",
+          "title": "Python Backend Developer Intern",
+          "company": "NextGen Software Labs (Synthetic)",
+          "similarity_score": 0.645,
+          "description": "Develop asynchronous web services and backend pipelines using Python, FastAPI, and SQLAlchemy. Write comprehensive pytest unit tests.",
+          "required_skills": [
+            "Python",
+            "FastAPI",
+            "SQLAlchemy",
+            "PostgreSQL"
+          ],
+          "preferred_skills": [
+            "Docker",
+            "Redis",
+            "Celery",
+            "Git"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "BCA",
+            "MCA",
+            "B.Sc Computer Science"
+          ],
+          "experience_requirements": "Hands-on projects building web APIs with Python frameworks.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "3 months",
+          "stipend": "₹16,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Python Backend Developer Intern at NextGen Software Labs (Synthetic). Demonstrated proficiency in Python, FastAPI, SQLAlchemy directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "FastAPI",
+              "SQLAlchemy",
+              "PostgreSQL"
+            ],
+            "relevant_projects": [
+              "Real-time Notification API: Built high-throughput asynchronous REST endpoints using FastAPI and WebSockets"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Excellent alignment on core prerequisites. Highlight relevant project architecture and API design decisions in your interview discussions.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT007",
+          "title": "Python Automation & Scripting Intern",
+          "company": "PulseWave Dynamics (Synthetic)",
+          "similarity_score": 0.6234,
+          "description": "Automate routine data ingestion, web scraping, and workflow validation scripts using Python, BeautifulSoup, and Selenium. Parse JSON and XML feeds.",
+          "required_skills": [
+            "Python",
+            "BeautifulSoup",
+            "Automation",
+            "REST APIs"
+          ],
+          "preferred_skills": [
+            "Selenium",
+            "Pandas",
+            "Cron"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/ECE/EE",
+            "BCA"
+          ],
+          "experience_requirements": "Proficiency in scripting, file parsing, and API interactions.",
+          "location": "Hyderabad",
+          "work_mode": "Remote",
+          "duration": "2 months",
+          "stipend": "₹10,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Python Automation & Scripting Intern at PulseWave Dynamics (Synthetic). Demonstrated proficiency in Python, REST APIs directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "REST APIs"
+            ],
+            "relevant_projects": [
+              "Automated Web Data Ingestion Engine: Built web scraping and validation workflows using BeautifulSoup and Requests"
+            ],
+            "missing_required_skills": [
+              "BeautifulSoup",
+              "Automation"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in BeautifulSoup, Automation. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT052",
+          "title": "Python Data Automation Specialist Intern",
+          "company": "AlphaSync Labs (Synthetic)",
+          "similarity_score": 0.5699,
+          "description": "Construct automated data ingestion pipelines using Python, Pandas, and Airflow. Write custom extractors for CSV, JSON, and REST endpoints.",
+          "required_skills": [
+            "Python",
+            "Pandas",
+            "ETL",
+            "SQL",
+            "Automation"
+          ],
+          "preferred_skills": [
+            "Airflow",
+            "FastAPI",
+            "Git"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "MCA",
+            "BCA"
+          ],
+          "experience_requirements": "Practical experience parsing heterogeneous datasets with Python.",
+          "location": "Bengaluru",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹16,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Python Data Automation Specialist Intern at AlphaSync Labs (Synthetic). Demonstrated proficiency in Python, SQL directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "SQL"
+            ],
+            "relevant_projects": [
+              "Real-time Notification API: Built high-throughput asynchronous REST endpoints using FastAPI and WebSockets",
+              "Automated Web Data Ingestion Engine: Built web scraping and validation workflows using BeautifulSoup and Requests"
+            ],
+            "missing_required_skills": [
+              "Pandas",
+              "ETL",
+              "Automation"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Pandas, ETL. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT009",
+          "title": "Machine Learning Engineer Intern",
+          "company": "CognitiveMatrix AI (Synthetic)",
+          "similarity_score": 0.5189,
+          "description": "Train, evaluate, and fine-tune supervised and unsupervised machine learning algorithms using Scikit-Learn and PyTorch. Perform feature engineering and model benchmarking.",
+          "required_skills": [
+            "Python",
+            "Scikit-Learn",
+            "Machine Learning",
+            "Pandas",
+            "NumPy"
+          ],
+          "preferred_skills": [
+            "PyTorch",
+            "XGBoost",
+            "Matplotlib",
+            "MLflow"
+          ],
+          "education_requirements": [
+            "B.Tech CSE",
+            "B.Tech AI & Data Science",
+            "M.Sc Statistics"
+          ],
+          "experience_requirements": "Coursework in linear algebra, probability, and machine learning projects.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "6 months",
+          "stipend": "₹22,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Machine Learning Engineer Intern at CognitiveMatrix AI (Synthetic). Demonstrated proficiency in Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python"
+            ],
+            "relevant_projects": [
+              "General technical experience: Real-time Notification API: Built high-throughput asynchronous REST endpoints using FastAPI and WebSockets"
+            ],
+            "missing_required_skills": [
+              "Scikit-Learn",
+              "Machine Learning",
+              "Pandas",
+              "NumPy"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Scikit-Learn, Machine Learning. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT006",
+          "title": "Django Web Application Intern",
+          "company": "AuraDigital Studios (Synthetic)",
+          "similarity_score": 0.5176,
+          "description": "Build web portals and internal business dashboards using Django, Python, SQLite, and Bootstrap. Maintain ORM migrations and user authentication.",
+          "required_skills": [
+            "Python",
+            "Django",
+            "HTML/CSS",
+            "SQLite"
+          ],
+          "preferred_skills": [
+            "JavaScript",
+            "PostgreSQL",
+            "Git"
+          ],
+          "education_requirements": [
+            "Any Graduate in Engineering or Computer Applications"
+          ],
+          "experience_requirements": "Completed at least one full-stack or backend web application project in Django.",
+          "location": "Chennai",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹12,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Django Web Application Intern at AuraDigital Studios (Synthetic). Demonstrated proficiency in Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python"
+            ],
+            "relevant_projects": [
+              "General technical experience: Real-time Notification API: Built high-throughput asynchronous REST endpoints using FastAPI and WebSockets"
+            ],
+            "missing_required_skills": [
+              "Django",
+              "HTML/CSS",
+              "SQLite"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Django, HTML/CSS. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND03",
+      "candidate_name": "Rohan Verma",
+      "scenario": "Data Science",
+      "expected_relevant_ids": [
+        "INT010",
+        "INT031",
+        "INT009",
+        "INT032",
+        "INT030"
+      ],
+      "retrieved_ids": [
+        "INT010",
+        "INT030",
+        "INT039",
+        "INT038",
+        "INT031"
+      ],
+      "relevant_retrieved_ids": [
+        "INT010",
+        "INT030",
+        "INT031"
+      ],
+      "metrics": {
+        "precision_at_5": 0.6,
+        "recall_at_5": 0.6,
+        "reciprocal_rank": 1.0
+      },
+      "matches": [
+        {
+          "internship_id": "INT010",
+          "title": "Data Science Research Intern",
+          "company": "InnoInsight Analytics (Synthetic)",
+          "similarity_score": 0.6298,
+          "description": "Clean, explore, and model structured and semi-structured customer datasets. Formulate predictive models, customer churn analyses, and regression pipelines.",
+          "required_skills": [
+            "Python",
+            "Data Science",
+            "Pandas",
+            "Statistics",
+            "SQL"
+          ],
+          "preferred_skills": [
+            "Seaborn",
+            "Jupyter",
+            "Tableau"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "B.Stat",
+            "M.Sc Data Science"
+          ],
+          "experience_requirements": "Demonstrated exploratory data analysis and hypothesis testing experience.",
+          "location": "Mumbai",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹18,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Data Science Research Intern at InnoInsight Analytics (Synthetic). Demonstrated proficiency in Python, Data Science, Pandas directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "Data Science",
+              "Pandas",
+              "Statistics",
+              "SQL"
+            ],
+            "relevant_projects": [
+              "Customer Churn Prediction Model: Analyzed 100k customer transaction records, performed exploratory data analysis, and engineered features",
+              "E-Commerce Sales Insights Dashboard: Designed interactive Power BI dashboards and optimized SQL analytical queries"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Candidate satisfies core requirements. Exploring preferred technologies such as Seaborn, Jupyter can provide a competitive edge.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT030",
+          "title": "Data Analyst Intern",
+          "company": "MetricHub Analytics (Synthetic)",
+          "similarity_score": 0.596,
+          "description": "Extract, transform, and clean complex business datasets using SQL and Python. Build interactive performance dashboards in Power BI and Excel.",
+          "required_skills": [
+            "SQL",
+            "Power BI",
+            "Data Analytics",
+            "Excel",
+            "Python"
+          ],
+          "preferred_skills": [
+            "DAX",
+            "Pandas",
+            "Data Cleaning",
+            "Tableau"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "B.Com Analytics",
+            "BBA",
+            "B.Sc Statistics",
+            "MCA"
+          ],
+          "experience_requirements": "Proficiency writing complex SQL JOINs, aggregate queries, and pivot tables.",
+          "location": "Gurugram",
+          "work_mode": "Hybrid",
+          "duration": "3 months",
+          "stipend": "₹14,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Data Analyst Intern at MetricHub Analytics (Synthetic). Demonstrated proficiency in SQL, Power BI, Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "SQL",
+              "Power BI",
+              "Python"
+            ],
+            "relevant_projects": [
+              "Customer Churn Prediction Model: Analyzed 100k customer transaction records, performed exploratory data analysis, and engineered features",
+              "E-Commerce Sales Insights Dashboard: Designed interactive Power BI dashboards and optimized SQL analytical queries"
+            ],
+            "missing_required_skills": [
+              "Data Analytics",
+              "Excel"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Data Analytics, Excel. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT039",
+          "title": "Big Data Hadoop & Spark Intern",
+          "company": "MegaScale DataWorks (Synthetic)",
+          "similarity_score": 0.5452,
+          "description": "Work on distributed data ingestion pipelines, HDFS storage architectures, and big data transformations using Spark SQL and Scala/Python.",
+          "required_skills": [
+            "Big Data",
+            "PySpark",
+            "Hadoop",
+            "SQL",
+            "Python"
+          ],
+          "preferred_skills": [
+            "Hive",
+            "Scala",
+            "Linux"
+          ],
+          "education_requirements": [
+            "B.Tech Computer Science",
+            "M.Tech Data Engineering"
+          ],
+          "experience_requirements": "Academic exposure to map-reduce paradigms and large-scale data systems.",
+          "location": "Hyderabad",
+          "work_mode": "On-site",
+          "duration": "6 months",
+          "stipend": "₹20,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Big Data Hadoop & Spark Intern at MegaScale DataWorks (Synthetic). Demonstrated proficiency in SQL, Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "SQL",
+              "Python"
+            ],
+            "relevant_projects": [
+              "Customer Churn Prediction Model: Analyzed 100k customer transaction records, performed exploratory data analysis, and engineered features",
+              "E-Commerce Sales Insights Dashboard: Designed interactive Power BI dashboards and optimized SQL analytical queries"
+            ],
+            "missing_required_skills": [
+              "Big Data",
+              "PySpark",
+              "Hadoop"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Big Data, PySpark. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT038",
+          "title": "Data Engineering Intern",
+          "company": "StreamData Platform (Synthetic)",
+          "similarity_score": 0.4954,
+          "description": "Construct scalable ETL data pipelines, orchestrate workflows with Apache Airflow, and process batch datasets using PySpark and PostgreSQL.",
+          "required_skills": [
+            "Python",
+            "SQL",
+            "Data Engineering",
+            "PySpark",
+            "ETL"
+          ],
+          "preferred_skills": [
+            "Apache Airflow",
+            "Kafka",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/IT/Data Science",
+            "MCA"
+          ],
+          "experience_requirements": "Understanding of relational schemas, data warehousing, and distributed data processing.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "6 months",
+          "stipend": "₹21,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Data Engineering Intern at StreamData Platform (Synthetic). Demonstrated proficiency in Python, SQL directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "SQL"
+            ],
+            "relevant_projects": [
+              "Customer Churn Prediction Model: Analyzed 100k customer transaction records, performed exploratory data analysis, and engineered features",
+              "E-Commerce Sales Insights Dashboard: Designed interactive Power BI dashboards and optimized SQL analytical queries"
+            ],
+            "missing_required_skills": [
+              "Data Engineering",
+              "PySpark",
+              "ETL"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Data Engineering, PySpark. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT031",
+          "title": "Tableau & BI Developer Intern",
+          "company": "InsightForge Solutions (Synthetic)",
+          "similarity_score": 0.4681,
+          "description": "Design visual storytelling reports and executive dashboards in Tableau. Write data extraction pipelines from snowflake and SQL databases.",
+          "required_skills": [
+            "Tableau",
+            "SQL",
+            "Business Intelligence",
+            "Data Visualization"
+          ],
+          "preferred_skills": [
+            "Snowflake",
+            "Python",
+            "ETL"
+          ],
+          "education_requirements": [
+            "Any Graduate with analytical aptitude"
+          ],
+          "experience_requirements": "Demonstrated dashboard designs and data visualization charts.",
+          "location": "Bengaluru",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹15,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Tableau & BI Developer Intern at InsightForge Solutions (Synthetic). Demonstrated proficiency in SQL directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "SQL"
+            ],
+            "relevant_projects": [
+              "E-Commerce Sales Insights Dashboard: Designed interactive Power BI dashboards and optimized SQL analytical queries"
+            ],
+            "missing_required_skills": [
+              "Tableau",
+              "Business Intelligence",
+              "Data Visualization"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Tableau, Business Intelligence. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND04",
+      "candidate_name": "Ananya Iyer",
+      "scenario": "AI/ML (Machine Learning)",
+      "expected_relevant_ids": [
+        "INT040",
+        "INT055",
+        "INT041",
+        "INT011",
+        "INT009"
+      ],
+      "retrieved_ids": [
+        "INT009",
+        "INT040",
+        "INT011",
+        "INT041",
+        "INT055"
+      ],
+      "relevant_retrieved_ids": [
+        "INT009",
+        "INT040",
+        "INT011",
+        "INT041",
+        "INT055"
+      ],
+      "metrics": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0
+      },
+      "matches": [
+        {
+          "internship_id": "INT009",
+          "title": "Machine Learning Engineer Intern",
+          "company": "CognitiveMatrix AI (Synthetic)",
+          "similarity_score": 0.5478,
+          "description": "Train, evaluate, and fine-tune supervised and unsupervised machine learning algorithms using Scikit-Learn and PyTorch. Perform feature engineering and model benchmarking.",
+          "required_skills": [
+            "Python",
+            "Scikit-Learn",
+            "Machine Learning",
+            "Pandas",
+            "NumPy"
+          ],
+          "preferred_skills": [
+            "PyTorch",
+            "XGBoost",
+            "Matplotlib",
+            "MLflow"
+          ],
+          "education_requirements": [
+            "B.Tech CSE",
+            "B.Tech AI & Data Science",
+            "M.Sc Statistics"
+          ],
+          "experience_requirements": "Coursework in linear algebra, probability, and machine learning projects.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "6 months",
+          "stipend": "₹22,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Machine Learning Engineer Intern at CognitiveMatrix AI (Synthetic). Demonstrated proficiency in Python, Scikit-Learn, Machine Learning directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "Scikit-Learn",
+              "Machine Learning",
+              "NumPy"
+            ],
+            "relevant_projects": [
+              "Autonomous Vehicle Sign Detection: Implemented YOLOv8 object detection with PyTorch and OpenCV achieving 92% mAP"
+            ],
+            "missing_required_skills": [
+              "Pandas"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Pandas. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT040",
+          "title": "Deep Learning Research Intern",
+          "company": "NeuralFrontier Labs (Synthetic)",
+          "similarity_score": 0.5439,
+          "description": "Design and benchmark deep learning architectures for anomaly detection and sequential time-series forecasting using PyTorch and TensorFlow.",
+          "required_skills": [
+            "Deep Learning",
+            "PyTorch",
+            "Python",
+            "Neural Networks"
+          ],
+          "preferred_skills": [
+            "TensorFlow",
+            "Time Series",
+            "NumPy",
+            "Pandas"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/AI",
+            "M.Tech Computer Science"
+          ],
+          "experience_requirements": "Solid math foundations in backpropagation, optimization, and loss functions.",
+          "location": "Bengaluru",
+          "work_mode": "Remote",
+          "duration": "6 months",
+          "stipend": "₹24,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Deep Learning Research Intern at NeuralFrontier Labs (Synthetic). Demonstrated proficiency in Deep Learning, PyTorch, Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Deep Learning",
+              "PyTorch",
+              "Python"
+            ],
+            "relevant_projects": [
+              "Autonomous Vehicle Sign Detection: Implemented YOLOv8 object detection with PyTorch and OpenCV achieving 92% mAP"
+            ],
+            "missing_required_skills": [
+              "Neural Networks"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Neural Networks. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT011",
+          "title": "Computer Vision Intern",
+          "company": "VisionCraft Labs (Synthetic)",
+          "similarity_score": 0.4753,
+          "description": "Implement object detection, image segmentation, and facial landmark pipelines using OpenCV, PyTorch, and YOLO architectures.",
+          "required_skills": [
+            "Python",
+            "OpenCV",
+            "PyTorch",
+            "Deep Learning"
+          ],
+          "preferred_skills": [
+            "YOLO",
+            "TensorFlow",
+            "CUDA"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/ECE",
+            "M.Tech AI/ML"
+          ],
+          "experience_requirements": "Academic exposure to convolution neural networks and image preprocessing.",
+          "location": "Bengaluru",
+          "work_mode": "On-site",
+          "duration": "6 months",
+          "stipend": "₹25,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Computer Vision Intern at VisionCraft Labs (Synthetic). Demonstrated proficiency in Python, OpenCV, PyTorch directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "OpenCV",
+              "PyTorch",
+              "Deep Learning"
+            ],
+            "relevant_projects": [
+              "Autonomous Vehicle Sign Detection: Implemented YOLOv8 object detection with PyTorch and OpenCV achieving 92% mAP"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Candidate satisfies core requirements. Exploring preferred technologies such as YOLO, TensorFlow can provide a competitive edge.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT041",
+          "title": "Reinforcement Learning & Robotics Intern",
+          "company": "RoboCognition Tech (Synthetic)",
+          "similarity_score": 0.4612,
+          "description": "Simulate decision-making policies and path planning algorithms using Gym environments, Q-learning, and policy gradient methods in Python.",
+          "required_skills": [
+            "Python",
+            "Reinforcement Learning",
+            "Algorithms",
+            "Mathematics"
+          ],
+          "preferred_skills": [
+            "Gym/Gymnasium",
+            "ROS",
+            "PyTorch"
+          ],
+          "education_requirements": [
+            "B.Tech ECE/Mechatronics/CSE",
+            "M.Tech Robotics"
+          ],
+          "experience_requirements": "Interest in autonomous systems and control theory.",
+          "location": "Chennai",
+          "work_mode": "Hybrid",
+          "duration": "4 months",
+          "stipend": "₹22,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Reinforcement Learning & Robotics Intern at RoboCognition Tech (Synthetic). Demonstrated proficiency in Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python"
+            ],
+            "relevant_projects": [
+              "Autonomous Vehicle Sign Detection: Implemented YOLOv8 object detection with PyTorch and OpenCV achieving 92% mAP"
+            ],
+            "missing_required_skills": [
+              "Reinforcement Learning",
+              "Algorithms",
+              "Mathematics"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Reinforcement Learning, Algorithms. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT055",
+          "title": "AI Quality & Model Evaluation Intern",
+          "company": "TrustWorth AI (Synthetic)",
+          "similarity_score": 0.3566,
+          "description": "Evaluate machine learning and generative AI models for bias, hallucinations, and safety. Develop automated evaluation test cases and ground-truth metrics.",
+          "required_skills": [
+            "Python",
+            "Machine Learning",
+            "Generative AI",
+            "Evaluation Metrics"
+          ],
+          "preferred_skills": [
+            "Pandas",
+            "Prompt Engineering",
+            "Statistics"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/AI",
+            "M.Sc Data Science"
+          ],
+          "experience_requirements": "Experience testing and validating model outputs against ground truth datasets.",
+          "location": "Hyderabad",
+          "work_mode": "Remote",
+          "duration": "4 months",
+          "stipend": "₹20,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with AI Quality & Model Evaluation Intern at TrustWorth AI (Synthetic). Demonstrated proficiency in Python, Machine Learning directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "Machine Learning"
+            ],
+            "relevant_projects": [
+              "General technical experience: Autonomous Vehicle Sign Detection: Implemented YOLOv8 object detection with PyTorch and OpenCV achieving 92% mAP"
+            ],
+            "missing_required_skills": [
+              "Generative AI",
+              "Evaluation Metrics"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Generative AI, Evaluation Metrics. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND05",
+      "candidate_name": "Karthik Menon",
+      "scenario": "Generative AI",
+      "expected_relevant_ids": [
+        "INT014",
+        "INT050",
+        "INT055",
+        "INT015",
+        "INT013"
+      ],
+      "retrieved_ids": [
+        "INT050",
+        "INT013",
+        "INT015",
+        "INT055",
+        "INT009"
+      ],
+      "relevant_retrieved_ids": [
+        "INT050",
+        "INT013",
+        "INT015",
+        "INT055"
+      ],
+      "metrics": {
+        "precision_at_5": 0.8,
+        "recall_at_5": 0.8,
+        "reciprocal_rank": 1.0
+      },
+      "matches": [
+        {
+          "internship_id": "INT050",
+          "title": "RAG Applications & AI Integration Intern",
+          "company": "SemanticNexus AI (Synthetic)",
+          "similarity_score": 0.6736,
+          "description": "Implement vector retrieval pipelines, chunking strategies, and hybrid semantic-lexical search for enterprise knowledge bases using Python and FAISS.",
+          "required_skills": [
+            "Python",
+            "RAG",
+            "FAISS",
+            "Vector Search",
+            "Embeddings"
+          ],
+          "preferred_skills": [
+            "FastAPI",
+            "Sentence Transformers",
+            "LangChain"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/IT/AI"
+          ],
+          "experience_requirements": "Hands-on projects with vector similarity search and NLP pipelines.",
+          "location": "Hyderabad",
+          "work_mode": "Remote",
+          "duration": "6 months",
+          "stipend": "₹23,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with RAG Applications & AI Integration Intern at SemanticNexus AI (Synthetic). Demonstrated proficiency in Python, FAISS, Embeddings directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "FAISS",
+              "Embeddings"
+            ],
+            "relevant_projects": [
+              "Enterprise Document Q&A RAG System: Engineered chunking pipelines, FAISS index similarity retrieval, and prompt guardrails",
+              "Autonomous Multi-Agent Researcher: Built interactive workflow using LangGraph, tool calling, and Hugging Face embeddings"
+            ],
+            "missing_required_skills": [
+              "RAG",
+              "Vector Search"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in RAG, Vector Search. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT013",
+          "title": "Generative AI & RAG Solutions Intern",
+          "company": "Synthetix Intelligence (Synthetic)",
+          "similarity_score": 0.6596,
+          "description": "Build Retrieval-Augmented Generation (RAG) pipelines, semantic search engines, and prompt engineering chains using LangChain, FAISS, and vector embeddings.",
+          "required_skills": [
+            "Python",
+            "Generative AI",
+            "LangChain",
+            "Vector Databases",
+            "Embeddings"
+          ],
+          "preferred_skills": [
+            "FAISS",
+            "ChromaDB",
+            "LlamaIndex",
+            "Sentence Transformers"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/IT/AI",
+            "MCA"
+          ],
+          "experience_requirements": "Prior projects involving LLM integration, prompt orchestration, or vector embeddings.",
+          "location": "Bengaluru",
+          "work_mode": "Remote",
+          "duration": "4 months",
+          "stipend": "₹24,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Generative AI & RAG Solutions Intern at Synthetix Intelligence (Synthetic). Demonstrated proficiency in Python, Generative AI, LangChain directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "Generative AI",
+              "LangChain",
+              "Vector Databases",
+              "Embeddings"
+            ],
+            "relevant_projects": [
+              "Enterprise Document Q&A RAG System: Engineered chunking pipelines, FAISS index similarity retrieval, and prompt guardrails",
+              "Autonomous Multi-Agent Researcher: Built interactive workflow using LangGraph, tool calling, and Hugging Face embeddings"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Excellent alignment on core prerequisites. Highlight relevant project architecture and API design decisions in your interview discussions.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT015",
+          "title": "AI Agent Systems Intern",
+          "company": "AgenticFlow AI (Synthetic)",
+          "similarity_score": 0.6537,
+          "description": "Develop multi-agent autonomous decision workflows, function calling tool chains, and stateful memory persistence using LangGraph and Python.",
+          "required_skills": [
+            "Python",
+            "Generative AI",
+            "AI Agents",
+            "LangGraph",
+            "REST APIs"
+          ],
+          "preferred_skills": [
+            "AsyncIO",
+            "FastAPI",
+            "Vector Search"
+          ],
+          "education_requirements": [
+            "B.Tech CSE",
+            "MCA"
+          ],
+          "experience_requirements": "Experience creating tool-augmented LLM applications or autonomous reasoning agents.",
+          "location": "Hyderabad",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹20,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with AI Agent Systems Intern at AgenticFlow AI (Synthetic). Demonstrated proficiency in Python, Generative AI directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "Generative AI"
+            ],
+            "relevant_projects": [
+              "Autonomous Multi-Agent Researcher: Built interactive workflow using LangGraph, tool calling, and Hugging Face embeddings"
+            ],
+            "missing_required_skills": [
+              "AI Agents",
+              "LangGraph",
+              "REST APIs"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in AI Agents, LangGraph. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT055",
+          "title": "AI Quality & Model Evaluation Intern",
+          "company": "TrustWorth AI (Synthetic)",
+          "similarity_score": 0.521,
+          "description": "Evaluate machine learning and generative AI models for bias, hallucinations, and safety. Develop automated evaluation test cases and ground-truth metrics.",
+          "required_skills": [
+            "Python",
+            "Machine Learning",
+            "Generative AI",
+            "Evaluation Metrics"
+          ],
+          "preferred_skills": [
+            "Pandas",
+            "Prompt Engineering",
+            "Statistics"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/AI",
+            "M.Sc Data Science"
+          ],
+          "experience_requirements": "Experience testing and validating model outputs against ground truth datasets.",
+          "location": "Hyderabad",
+          "work_mode": "Remote",
+          "duration": "4 months",
+          "stipend": "₹20,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with AI Quality & Model Evaluation Intern at TrustWorth AI (Synthetic). Demonstrated proficiency in Python, Generative AI directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "Generative AI"
+            ],
+            "relevant_projects": [
+              "General technical experience: Enterprise Document Q&A RAG System: Engineered chunking pipelines, FAISS index similarity retrieval, and prompt guardrails"
+            ],
+            "missing_required_skills": [
+              "Machine Learning",
+              "Evaluation Metrics"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Machine Learning, Evaluation Metrics. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT009",
+          "title": "Machine Learning Engineer Intern",
+          "company": "CognitiveMatrix AI (Synthetic)",
+          "similarity_score": 0.49,
+          "description": "Train, evaluate, and fine-tune supervised and unsupervised machine learning algorithms using Scikit-Learn and PyTorch. Perform feature engineering and model benchmarking.",
+          "required_skills": [
+            "Python",
+            "Scikit-Learn",
+            "Machine Learning",
+            "Pandas",
+            "NumPy"
+          ],
+          "preferred_skills": [
+            "PyTorch",
+            "XGBoost",
+            "Matplotlib",
+            "MLflow"
+          ],
+          "education_requirements": [
+            "B.Tech CSE",
+            "B.Tech AI & Data Science",
+            "M.Sc Statistics"
+          ],
+          "experience_requirements": "Coursework in linear algebra, probability, and machine learning projects.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "6 months",
+          "stipend": "₹22,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Machine Learning Engineer Intern at CognitiveMatrix AI (Synthetic). Demonstrated proficiency in Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python"
+            ],
+            "relevant_projects": [
+              "Enterprise Document Q&A RAG System: Engineered chunking pipelines, FAISS index similarity retrieval, and prompt guardrails"
+            ],
+            "missing_required_skills": [
+              "Scikit-Learn",
+              "Machine Learning",
+              "Pandas",
+              "NumPy"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Scikit-Learn, Machine Learning. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND06",
+      "candidate_name": "Neha Patel",
+      "scenario": "Full Stack Development",
+      "expected_relevant_ids": [
+        "INT016",
+        "INT019",
+        "INT018",
+        "INT054",
+        "INT017"
+      ],
+      "retrieved_ids": [
+        "INT016",
+        "INT054",
+        "INT022",
+        "INT015",
+        "INT018"
+      ],
+      "relevant_retrieved_ids": [
+        "INT016",
+        "INT054",
+        "INT018"
+      ],
+      "metrics": {
+        "precision_at_5": 0.6,
+        "recall_at_5": 0.6,
+        "reciprocal_rank": 1.0
+      },
+      "matches": [
+        {
+          "internship_id": "INT016",
+          "title": "MERN Full Stack Developer Intern",
+          "company": "WebSpectrum Solutions (Synthetic)",
+          "similarity_score": 0.6018,
+          "description": "Construct responsive web applications using MongoDB, Express.js, React, and Node.js. Implement client-side routing, JWT authentication, and REST APIs.",
+          "required_skills": [
+            "React",
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "JavaScript"
+          ],
+          "preferred_skills": [
+            "TypeScript",
+            "Redux",
+            "Tailwind CSS",
+            "Git"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "BCA",
+            "B.Sc IT",
+            "MCA"
+          ],
+          "experience_requirements": "Portfolio of full stack web applications built from scratch.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "6 months",
+          "stipend": "₹18,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with MERN Full Stack Developer Intern at WebSpectrum Solutions (Synthetic). Demonstrated proficiency in React, Node.js, Express.js directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "React",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+              "JavaScript"
+            ],
+            "relevant_projects": [
+              "Full Stack Collaborative Project Board: Developed using React, Node.js, Express, MongoDB, and Socket.io for live updates",
+              "Campus Event Booking Portal: Implemented responsive UI with Tailwind CSS and secure payment gateway integration"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Excellent alignment on core prerequisites. Highlight relevant project architecture and API design decisions in your interview discussions.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT054",
+          "title": "Full Stack Python & React Developer Intern",
+          "company": "PrimeStack Tech (Synthetic)",
+          "similarity_score": 0.5539,
+          "description": "Deliver modern full stack features using a Python FastAPI REST backend paired with a React frontend. Implement JWT auth and PostgreSQL schemas.",
+          "required_skills": [
+            "Python",
+            "React",
+            "FastAPI",
+            "SQL",
+            "JavaScript"
+          ],
+          "preferred_skills": [
+            "PostgreSQL",
+            "Tailwind CSS",
+            "Docker"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "BCA",
+            "MCA"
+          ],
+          "experience_requirements": "Demonstrated full-stack project building both backend APIs and React components.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "6 months",
+          "stipend": "₹19,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Full Stack Python & React Developer Intern at PrimeStack Tech (Synthetic). Demonstrated proficiency in React, JavaScript directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "React",
+              "JavaScript"
+            ],
+            "relevant_projects": [
+              "Full Stack Collaborative Project Board: Developed using React, Node.js, Express, MongoDB, and Socket.io for live updates",
+              "Campus Event Booking Portal: Implemented responsive UI with Tailwind CSS and secure payment gateway integration"
+            ],
+            "missing_required_skills": [
+              "Python",
+              "FastAPI",
+              "SQL"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Python, FastAPI. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT022",
+          "title": "UI/UX & Web Developer Intern",
+          "company": "CreativeCanvas Labs (Synthetic)",
+          "similarity_score": 0.5303,
+          "description": "Bridge UI designs and code by translating Figma mockups into accessible, responsive web pages using modern HTML, SASS, and vanilla JavaScript.",
+          "required_skills": [
+            "HTML5",
+            "CSS3",
+            "JavaScript",
+            "Figma",
+            "Responsive Design"
+          ],
+          "preferred_skills": [
+            "Bootstrap",
+            "SASS",
+            "Web Accessibility (a11y)"
+          ],
+          "education_requirements": [
+            "B.Des",
+            "B.Tech",
+            "BCA",
+            "Any Graduate"
+          ],
+          "experience_requirements": "Eye for design detail, typography, and responsive grid layouts.",
+          "location": "Kochi",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹10,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with UI/UX & Web Developer Intern at CreativeCanvas Labs (Synthetic). Demonstrated proficiency in HTML5, CSS3, JavaScript directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "HTML5",
+              "CSS3",
+              "JavaScript"
+            ],
+            "relevant_projects": [
+              "General technical experience: Full Stack Collaborative Project Board: Developed using React, Node.js, Express, MongoDB, and Socket.io for live updates"
+            ],
+            "missing_required_skills": [
+              "Figma",
+              "Responsive Design"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Figma, Responsive Design. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT015",
+          "title": "AI Agent Systems Intern",
+          "company": "AgenticFlow AI (Synthetic)",
+          "similarity_score": 0.4974,
+          "description": "Develop multi-agent autonomous decision workflows, function calling tool chains, and stateful memory persistence using LangGraph and Python.",
+          "required_skills": [
+            "Python",
+            "Generative AI",
+            "AI Agents",
+            "LangGraph",
+            "REST APIs"
+          ],
+          "preferred_skills": [
+            "AsyncIO",
+            "FastAPI",
+            "Vector Search"
+          ],
+          "education_requirements": [
+            "B.Tech CSE",
+            "MCA"
+          ],
+          "experience_requirements": "Experience creating tool-augmented LLM applications or autonomous reasoning agents.",
+          "location": "Hyderabad",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹20,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with AI Agent Systems Intern at AgenticFlow AI (Synthetic). Demonstrated proficiency in REST APIs directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "REST APIs"
+            ],
+            "relevant_projects": [
+              "General technical experience: Full Stack Collaborative Project Board: Developed using React, Node.js, Express, MongoDB, and Socket.io for live updates"
+            ],
+            "missing_required_skills": [
+              "Python",
+              "Generative AI",
+              "AI Agents",
+              "LangGraph"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Python, Generative AI. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT018",
+          "title": "Python & Vue.js Full Stack Intern",
+          "company": "InnovateX Interactive (Synthetic)",
+          "similarity_score": 0.4797,
+          "description": "Collaborate on interactive product dashboards utilizing FastAPI as the backend engine and Vue.js / Pinia for frontend reactive UI rendering.",
+          "required_skills": [
+            "Python",
+            "FastAPI",
+            "Vue.js",
+            "JavaScript",
+            "HTML/CSS"
+          ],
+          "preferred_skills": [
+            "Tailwind CSS",
+            "SQLite",
+            "Axios"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "BCA",
+            "MCA"
+          ],
+          "experience_requirements": "Experience connecting Vue single-page apps with JSON REST APIs.",
+          "location": "Noida",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹15,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Python & Vue.js Full Stack Intern at InnovateX Interactive (Synthetic). Demonstrated proficiency in JavaScript directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "JavaScript"
+            ],
+            "relevant_projects": [
+              "Full Stack Collaborative Project Board: Developed using React, Node.js, Express, MongoDB, and Socket.io for live updates",
+              "Campus Event Booking Portal: Implemented responsive UI with Tailwind CSS and secure payment gateway integration"
+            ],
+            "missing_required_skills": [
+              "Python",
+              "FastAPI",
+              "Vue.js",
+              "HTML/CSS"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Python, FastAPI. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND07",
+      "candidate_name": "Vikram Rathore",
+      "scenario": "Cloud Computing",
+      "expected_relevant_ids": [
+        "INT025",
+        "INT023",
+        "INT026",
+        "INT053",
+        "INT024"
+      ],
+      "retrieved_ids": [
+        "INT023",
+        "INT024",
+        "INT053",
+        "INT035",
+        "INT005"
+      ],
+      "relevant_retrieved_ids": [
+        "INT023",
+        "INT024",
+        "INT053"
+      ],
+      "metrics": {
+        "precision_at_5": 0.6,
+        "recall_at_5": 0.6,
+        "reciprocal_rank": 1.0
+      },
+      "matches": [
+        {
+          "internship_id": "INT023",
+          "title": "AWS Cloud Engineering Intern",
+          "company": "CloudMatrix Systems (Synthetic)",
+          "similarity_score": 0.533,
+          "description": "Provision, configure, and monitor cloud workloads on AWS (EC2, S3, RDS, Lambda). Automate infrastructure provisioning using CloudFormation or Terraform.",
+          "required_skills": [
+            "AWS",
+            "Cloud Computing",
+            "Linux",
+            "Python",
+            "Networking"
+          ],
+          "preferred_skills": [
+            "Terraform",
+            "Docker",
+            "IAM",
+            "CloudWatch"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/IT/ECE",
+            "B.Tech Cloud Computing"
+          ],
+          "experience_requirements": "AWS certification or hands-on practice with AWS free-tier services.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "6 months",
+          "stipend": "₹20,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with AWS Cloud Engineering Intern at CloudMatrix Systems (Synthetic). Demonstrated proficiency in AWS, Cloud Computing, Linux directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "AWS",
+              "Cloud Computing",
+              "Linux",
+              "Python"
+            ],
+            "relevant_projects": [
+              "Multi-Tier Cloud Application on AWS: Deployed scalable application on EC2, S3, and RDS with ALB and Auto Scaling groups",
+              "Automated CI/CD Pipeline: Built GitHub Actions workflow to containerize Python services and push to Docker Hub"
+            ],
+            "missing_required_skills": [
+              "Networking"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Networking. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT024",
+          "title": "DevOps & CI/CD Pipeline Intern",
+          "company": "ReliabilityOps Global (Synthetic)",
+          "similarity_score": 0.4951,
+          "description": "Construct automated continuous integration and continuous deployment (CI/CD) pipelines using GitHub Actions, Docker, and Jenkins.",
+          "required_skills": [
+            "DevOps",
+            "Docker",
+            "CI/CD",
+            "Linux",
+            "Git"
+          ],
+          "preferred_skills": [
+            "GitHub Actions",
+            "Jenkins",
+            "Bash Scripting",
+            "Kubernetes"
+          ],
+          "education_requirements": [
+            "B.Tech Computer Science",
+            "MCA"
+          ],
+          "experience_requirements": "Familiarity with containerizing applications and version control workflows.",
+          "location": "Pune",
+          "work_mode": "Remote",
+          "duration": "4 months",
+          "stipend": "₹18,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with DevOps & CI/CD Pipeline Intern at ReliabilityOps Global (Synthetic). Demonstrated proficiency in DevOps, Docker, CI/CD directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "DevOps",
+              "Docker",
+              "CI/CD",
+              "Linux",
+              "Git"
+            ],
+            "relevant_projects": [
+              "Automated CI/CD Pipeline: Built GitHub Actions workflow to containerize Python services and push to Docker Hub"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Excellent alignment on core prerequisites. Highlight relevant project architecture and API design decisions in your interview discussions.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT053",
+          "title": "Cloud Security & Governance Intern",
+          "company": "SecureCloud Dynamics (Synthetic)",
+          "similarity_score": 0.4921,
+          "description": "Assess cloud configurations across AWS and Azure against CIS benchmarks. Write automated compliance checks using Python and CloudTrail.",
+          "required_skills": [
+            "Cloud Security",
+            "AWS",
+            "Cybersecurity",
+            "Python"
+          ],
+          "preferred_skills": [
+            "Azure",
+            "Terraform",
+            "Compliance"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/IT",
+            "B.Sc Cybersecurity"
+          ],
+          "experience_requirements": "Understanding of cloud IAM, encryption at rest, and audit logging.",
+          "location": "Noida",
+          "work_mode": "Hybrid",
+          "duration": "4 months",
+          "stipend": "₹17,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Cloud Security & Governance Intern at SecureCloud Dynamics (Synthetic). Demonstrated proficiency in AWS, Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "AWS",
+              "Python"
+            ],
+            "relevant_projects": [
+              "Multi-Tier Cloud Application on AWS: Deployed scalable application on EC2, S3, and RDS with ALB and Auto Scaling groups",
+              "Automated CI/CD Pipeline: Built GitHub Actions workflow to containerize Python services and push to Docker Hub"
+            ],
+            "missing_required_skills": [
+              "Cloud Security",
+              "Cybersecurity"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Cloud Security, Cybersecurity. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT035",
+          "title": "QA Automation Engineer Intern",
+          "company": "QualityEdge Labs (Synthetic)",
+          "similarity_score": 0.45,
+          "description": "Write automated end-to-end regression test suites using Selenium WebDriver, Python, and Pytest. Report defects and verify bug fixes.",
+          "required_skills": [
+            "QA Automation",
+            "Python",
+            "Selenium",
+            "Testing"
+          ],
+          "preferred_skills": [
+            "Pytest",
+            "Postman",
+            "Jira",
+            "CI/CD"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "BCA",
+            "B.Sc Computer Science"
+          ],
+          "experience_requirements": "Knowledge of software testing life cycle (STLC) and web element locators.",
+          "location": "Chennai",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹13,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with QA Automation Engineer Intern at QualityEdge Labs (Synthetic). Demonstrated proficiency in Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python"
+            ],
+            "relevant_projects": [
+              "Automated CI/CD Pipeline: Built GitHub Actions workflow to containerize Python services and push to Docker Hub"
+            ],
+            "missing_required_skills": [
+              "QA Automation",
+              "Selenium",
+              "Testing"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in QA Automation, Selenium. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT005",
+          "title": "Python Backend Developer Intern",
+          "company": "NextGen Software Labs (Synthetic)",
+          "similarity_score": 0.4434,
+          "description": "Develop asynchronous web services and backend pipelines using Python, FastAPI, and SQLAlchemy. Write comprehensive pytest unit tests.",
+          "required_skills": [
+            "Python",
+            "FastAPI",
+            "SQLAlchemy",
+            "PostgreSQL"
+          ],
+          "preferred_skills": [
+            "Docker",
+            "Redis",
+            "Celery",
+            "Git"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "BCA",
+            "MCA",
+            "B.Sc Computer Science"
+          ],
+          "experience_requirements": "Hands-on projects building web APIs with Python frameworks.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "3 months",
+          "stipend": "₹16,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Python Backend Developer Intern at NextGen Software Labs (Synthetic). Demonstrated proficiency in Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python"
+            ],
+            "relevant_projects": [
+              "Automated CI/CD Pipeline: Built GitHub Actions workflow to containerize Python services and push to Docker Hub"
+            ],
+            "missing_required_skills": [
+              "FastAPI",
+              "SQLAlchemy",
+              "PostgreSQL"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in FastAPI, SQLAlchemy. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND08",
+      "candidate_name": "Sneha Kulkarni",
+      "scenario": "Cybersecurity",
+      "expected_relevant_ids": [
+        "INT029",
+        "INT053",
+        "INT028",
+        "INT027"
+      ],
+      "retrieved_ids": [
+        "INT027",
+        "INT029",
+        "INT005",
+        "INT006",
+        "INT007"
+      ],
+      "relevant_retrieved_ids": [
+        "INT027",
+        "INT029"
+      ],
+      "metrics": {
+        "precision_at_5": 0.4,
+        "recall_at_5": 0.5,
+        "reciprocal_rank": 1.0
+      },
+      "matches": [
+        {
+          "internship_id": "INT027",
+          "title": "Cybersecurity & Vulnerability Assessment Intern",
+          "company": "ShieldPoint Security (Synthetic)",
+          "similarity_score": 0.6369,
+          "description": "Perform vulnerability scans, security assessments, and OWASP Top 10 remediation reviews across web applications and network devices.",
+          "required_skills": [
+            "Cybersecurity",
+            "Network Security",
+            "OWASP",
+            "Linux",
+            "Vulnerability Assessment"
+          ],
+          "preferred_skills": [
+            "Burp Suite",
+            "Nmap",
+            "Wireshark",
+            "Metasploit"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/Cybersecurity",
+            "B.Sc Information Security"
+          ],
+          "experience_requirements": "Coursework in cryptography, networking protocols, and basic penetration testing.",
+          "location": "Bengaluru",
+          "work_mode": "On-site",
+          "duration": "6 months",
+          "stipend": "₹20,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Cybersecurity & Vulnerability Assessment Intern at ShieldPoint Security (Synthetic). Demonstrated proficiency in Cybersecurity, Network Security, OWASP directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Cybersecurity",
+              "Network Security",
+              "OWASP",
+              "Linux",
+              "Vulnerability Assessment"
+            ],
+            "relevant_projects": [
+              "Intrusion Detection Telemetry Pipeline: Configured packet capture analysis using Wireshark and automated alerts via Python"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Excellent alignment on core prerequisites. Highlight relevant project architecture and API design decisions in your interview discussions.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT029",
+          "title": "Application Security (AppSec) Intern",
+          "company": "CodeDefend Systems (Synthetic)",
+          "similarity_score": 0.4984,
+          "description": "Review source code for common security bugs (SQL Injection, XSS, CSRF), configure static code analysis tools (SAST), and write security guidelines.",
+          "required_skills": [
+            "Application Security",
+            "OWASP",
+            "Python",
+            "Java",
+            "Secure Coding"
+          ],
+          "preferred_skills": [
+            "SonarQube",
+            "Git",
+            "Threat Modeling"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/IT"
+          ],
+          "experience_requirements": "Knowledge of software development lifecycle and defensive programming.",
+          "location": "Pune",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹17,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Application Security (AppSec) Intern at CodeDefend Systems (Synthetic). Demonstrated proficiency in OWASP, Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "OWASP",
+              "Python"
+            ],
+            "relevant_projects": [
+              "Web Application Security Audit: Performed penetration testing against test web applications identifying SQL Injection and XSS flaws",
+              "Intrusion Detection Telemetry Pipeline: Configured packet capture analysis using Wireshark and automated alerts via Python"
+            ],
+            "missing_required_skills": [
+              "Application Security",
+              "Java",
+              "Secure Coding"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Application Security, Java. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT005",
+          "title": "Python Backend Developer Intern",
+          "company": "NextGen Software Labs (Synthetic)",
+          "similarity_score": 0.4831,
+          "description": "Develop asynchronous web services and backend pipelines using Python, FastAPI, and SQLAlchemy. Write comprehensive pytest unit tests.",
+          "required_skills": [
+            "Python",
+            "FastAPI",
+            "SQLAlchemy",
+            "PostgreSQL"
+          ],
+          "preferred_skills": [
+            "Docker",
+            "Redis",
+            "Celery",
+            "Git"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "BCA",
+            "MCA",
+            "B.Sc Computer Science"
+          ],
+          "experience_requirements": "Hands-on projects building web APIs with Python frameworks.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "3 months",
+          "stipend": "₹16,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Python Backend Developer Intern at NextGen Software Labs (Synthetic). Demonstrated proficiency in Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python"
+            ],
+            "relevant_projects": [
+              "Intrusion Detection Telemetry Pipeline: Configured packet capture analysis using Wireshark and automated alerts via Python"
+            ],
+            "missing_required_skills": [
+              "FastAPI",
+              "SQLAlchemy",
+              "PostgreSQL"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in FastAPI, SQLAlchemy. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT006",
+          "title": "Django Web Application Intern",
+          "company": "AuraDigital Studios (Synthetic)",
+          "similarity_score": 0.4458,
+          "description": "Build web portals and internal business dashboards using Django, Python, SQLite, and Bootstrap. Maintain ORM migrations and user authentication.",
+          "required_skills": [
+            "Python",
+            "Django",
+            "HTML/CSS",
+            "SQLite"
+          ],
+          "preferred_skills": [
+            "JavaScript",
+            "PostgreSQL",
+            "Git"
+          ],
+          "education_requirements": [
+            "Any Graduate in Engineering or Computer Applications"
+          ],
+          "experience_requirements": "Completed at least one full-stack or backend web application project in Django.",
+          "location": "Chennai",
+          "work_mode": "Remote",
+          "duration": "3 months",
+          "stipend": "₹12,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Django Web Application Intern at AuraDigital Studios (Synthetic). Demonstrated proficiency in Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python"
+            ],
+            "relevant_projects": [
+              "Web Application Security Audit: Performed penetration testing against test web applications identifying SQL Injection and XSS flaws",
+              "Intrusion Detection Telemetry Pipeline: Configured packet capture analysis using Wireshark and automated alerts via Python"
+            ],
+            "missing_required_skills": [
+              "Django",
+              "HTML/CSS",
+              "SQLite"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Django, HTML/CSS. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT007",
+          "title": "Python Automation & Scripting Intern",
+          "company": "PulseWave Dynamics (Synthetic)",
+          "similarity_score": 0.445,
+          "description": "Automate routine data ingestion, web scraping, and workflow validation scripts using Python, BeautifulSoup, and Selenium. Parse JSON and XML feeds.",
+          "required_skills": [
+            "Python",
+            "BeautifulSoup",
+            "Automation",
+            "REST APIs"
+          ],
+          "preferred_skills": [
+            "Selenium",
+            "Pandas",
+            "Cron"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/ECE/EE",
+            "BCA"
+          ],
+          "experience_requirements": "Proficiency in scripting, file parsing, and API interactions.",
+          "location": "Hyderabad",
+          "work_mode": "Remote",
+          "duration": "2 months",
+          "stipend": "₹10,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Python Automation & Scripting Intern at PulseWave Dynamics (Synthetic). Demonstrated proficiency in Python directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python"
+            ],
+            "relevant_projects": [
+              "Intrusion Detection Telemetry Pipeline: Configured packet capture analysis using Wireshark and automated alerts via Python"
+            ],
+            "missing_required_skills": [
+              "BeautifulSoup",
+              "Automation",
+              "REST APIs"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in BeautifulSoup, Automation. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND09",
+      "candidate_name": "Aditya Sengupta",
+      "scenario": "Education-focused candidate",
+      "expected_relevant_ids": [
+        "INT034",
+        "INT001",
+        "INT041",
+        "INT003",
+        "INT033"
+      ],
+      "retrieved_ids": [
+        "INT033",
+        "INT034",
+        "INT041",
+        "INT003",
+        "INT001"
+      ],
+      "relevant_retrieved_ids": [
+        "INT033",
+        "INT034",
+        "INT041",
+        "INT003",
+        "INT001"
+      ],
+      "metrics": {
+        "precision_at_5": 1.0,
+        "recall_at_5": 1.0,
+        "reciprocal_rank": 1.0
+      },
+      "matches": [
+        {
+          "internship_id": "INT033",
+          "title": "Software Development Engineer (SDE) Intern",
+          "company": "NovaLogic Technologies (Synthetic)",
+          "similarity_score": 0.5233,
+          "description": "Write clean, modular code for core product features. Design efficient algorithms, solve data structure problems, and participate in code reviews.",
+          "required_skills": [
+            "Data Structures",
+            "Algorithms",
+            "Java",
+            "C++",
+            "Problem Solving"
+          ],
+          "preferred_skills": [
+            "Git",
+            "Linux",
+            "Unit Testing",
+            "System Design"
+          ],
+          "education_requirements": [
+            "B.Tech Computer Science",
+            "B.E. IT"
+          ],
+          "experience_requirements": "Solid foundation in algorithmic complexity, dynamic programming, and OOP.",
+          "location": "Hyderabad",
+          "work_mode": "Hybrid",
+          "duration": "6 months",
+          "stipend": "₹25,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Software Development Engineer (SDE) Intern at NovaLogic Technologies (Synthetic). Demonstrated proficiency in Data Structures, Algorithms, Java directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Data Structures",
+              "Algorithms",
+              "Java",
+              "C++",
+              "Problem Solving"
+            ],
+            "relevant_projects": [
+              "B-Tree and Hash Index Simulator: Built low-level in-memory storage engine demonstrating disk paging algorithms in C++",
+              "Graph Theory Pathfinding Visualizer: Developed interactive educational visualizer for Dijkstra and A* algorithms"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Candidate satisfies core requirements. Exploring preferred technologies such as Git, Linux can provide a competitive edge.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT034",
+          "title": "C++ Systems Software Intern",
+          "company": "SpeedByte Systems (Synthetic)",
+          "similarity_score": 0.4871,
+          "description": "Implement low-latency socket communication, memory-efficient data structures, and cross-platform utilities in C++20.",
+          "required_skills": [
+            "C++",
+            "Data Structures",
+            "Multithreading",
+            "Linux"
+          ],
+          "preferred_skills": [
+            "CMake",
+            "GDB",
+            "Memory Management",
+            "Socket Programming"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/ECE"
+          ],
+          "experience_requirements": "Strong understanding of pointers, RAII, STL, and systems programming.",
+          "location": "Bengaluru",
+          "work_mode": "On-site",
+          "duration": "6 months",
+          "stipend": "₹22,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with C++ Systems Software Intern at SpeedByte Systems (Synthetic). Demonstrated proficiency in C++, Data Structures directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "C++",
+              "Data Structures"
+            ],
+            "relevant_projects": [
+              "B-Tree and Hash Index Simulator: Built low-level in-memory storage engine demonstrating disk paging algorithms in C++"
+            ],
+            "missing_required_skills": [
+              "Multithreading",
+              "Linux"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Multithreading, Linux. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT041",
+          "title": "Reinforcement Learning & Robotics Intern",
+          "company": "RoboCognition Tech (Synthetic)",
+          "similarity_score": 0.4271,
+          "description": "Simulate decision-making policies and path planning algorithms using Gym environments, Q-learning, and policy gradient methods in Python.",
+          "required_skills": [
+            "Python",
+            "Reinforcement Learning",
+            "Algorithms",
+            "Mathematics"
+          ],
+          "preferred_skills": [
+            "Gym/Gymnasium",
+            "ROS",
+            "PyTorch"
+          ],
+          "education_requirements": [
+            "B.Tech ECE/Mechatronics/CSE",
+            "M.Tech Robotics"
+          ],
+          "experience_requirements": "Interest in autonomous systems and control theory.",
+          "location": "Chennai",
+          "work_mode": "Hybrid",
+          "duration": "4 months",
+          "stipend": "₹22,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Reinforcement Learning & Robotics Intern at RoboCognition Tech (Synthetic). Demonstrated proficiency in Algorithms directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Algorithms"
+            ],
+            "relevant_projects": [
+              "B-Tree and Hash Index Simulator: Built low-level in-memory storage engine demonstrating disk paging algorithms in C++",
+              "Graph Theory Pathfinding Visualizer: Developed interactive educational visualizer for Dijkstra and A* algorithms"
+            ],
+            "missing_required_skills": [
+              "Python",
+              "Reinforcement Learning",
+              "Mathematics"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Python, Reinforcement Learning. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT003",
+          "title": "Core Java Systems Intern",
+          "company": "DataBridge Informatics (Synthetic)",
+          "similarity_score": 0.4183,
+          "description": "Assist in building high-throughput message processing daemons and multithreaded core Java components. Write JDBC queries and automate integration tests.",
+          "required_skills": [
+            "Java",
+            "Multithreading",
+            "Data Structures",
+            "SQL"
+          ],
+          "preferred_skills": [
+            "Linux",
+            "Git",
+            "Maven"
+          ],
+          "education_requirements": [
+            "B.Tech CSE",
+            "B.Tech IT"
+          ],
+          "experience_requirements": "Solid understanding of Java collections, concurrency, and OOP principles.",
+          "location": "Pune",
+          "work_mode": "Hybrid",
+          "duration": "4 months",
+          "stipend": "₹14,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Core Java Systems Intern at DataBridge Informatics (Synthetic). Demonstrated proficiency in Java, Data Structures, SQL directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Java",
+              "Data Structures",
+              "SQL"
+            ],
+            "relevant_projects": [
+              "General technical experience: B-Tree and Hash Index Simulator: Built low-level in-memory storage engine demonstrating disk paging algorithms in C++"
+            ],
+            "missing_required_skills": [
+              "Multithreading"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Multithreading. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT001",
+          "title": "Java Backend Developer Intern",
+          "company": "TechNova Solutions (Synthetic)",
+          "similarity_score": 0.4131,
+          "description": "Design, build, and optimize enterprise backend microservices and RESTful APIs using Java and Spring Boot. Collaborate with database engineers on PostgreSQL queries and caching.",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "SQL",
+            "REST APIs"
+          ],
+          "preferred_skills": [
+            "Docker",
+            "PostgreSQL",
+            "Kafka",
+            "Git"
+          ],
+          "education_requirements": [
+            "B.Tech Computer Science",
+            "B.Tech Information Technology",
+            "MCA"
+          ],
+          "experience_requirements": "Students or fresh graduates with coursework in Object-Oriented Programming and relational databases.",
+          "location": "Hyderabad",
+          "work_mode": "Hybrid",
+          "duration": "3 months",
+          "stipend": "₹15,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Java Backend Developer Intern at TechNova Solutions (Synthetic). Demonstrated proficiency in Java, SQL directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Java",
+              "SQL"
+            ],
+            "relevant_projects": [
+              "General technical experience: B-Tree and Hash Index Simulator: Built low-level in-memory storage engine demonstrating disk paging algorithms in C++"
+            ],
+            "missing_required_skills": [
+              "Spring Boot",
+              "REST APIs"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Spring Boot, REST APIs. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        }
+      ]
+    },
+    {
+      "candidate_id": "CAND10",
+      "candidate_name": "Meera Krishnan",
+      "scenario": "Project-based candidate with multiple technical skills",
+      "expected_relevant_ids": [
+        "INT016",
+        "INT005",
+        "INT018",
+        "INT023",
+        "INT054"
+      ],
+      "retrieved_ids": [
+        "INT054",
+        "INT005",
+        "INT001",
+        "INT007",
+        "INT017"
+      ],
+      "relevant_retrieved_ids": [
+        "INT054",
+        "INT005"
+      ],
+      "metrics": {
+        "precision_at_5": 0.4,
+        "recall_at_5": 0.4,
+        "reciprocal_rank": 1.0
+      },
+      "matches": [
+        {
+          "internship_id": "INT054",
+          "title": "Full Stack Python & React Developer Intern",
+          "company": "PrimeStack Tech (Synthetic)",
+          "similarity_score": 0.5658,
+          "description": "Deliver modern full stack features using a Python FastAPI REST backend paired with a React frontend. Implement JWT auth and PostgreSQL schemas.",
+          "required_skills": [
+            "Python",
+            "React",
+            "FastAPI",
+            "SQL",
+            "JavaScript"
+          ],
+          "preferred_skills": [
+            "PostgreSQL",
+            "Tailwind CSS",
+            "Docker"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "BCA",
+            "MCA"
+          ],
+          "experience_requirements": "Demonstrated full-stack project building both backend APIs and React components.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "6 months",
+          "stipend": "₹19,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Full Stack Python & React Developer Intern at PrimeStack Tech (Synthetic). Demonstrated proficiency in Python, React, FastAPI directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "React",
+              "FastAPI",
+              "SQL",
+              "JavaScript"
+            ],
+            "relevant_projects": [
+              "Healthcare Appointment & Telehealth Platform: Built with FastAPI, React, PostgreSQL, Dockerized and deployed on AWS EC2",
+              "AI-Powered Resume ATS Scanner: Created parser service with Python, REST API backend, and clean modern React frontend",
+              "Smart Campus IoT Telemetry Hub: Collected sensor data with Python scripts, persisted to MySQL, displayed via interactive dashboard"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Excellent alignment on core prerequisites. Highlight relevant project architecture and API design decisions in your interview discussions.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT005",
+          "title": "Python Backend Developer Intern",
+          "company": "NextGen Software Labs (Synthetic)",
+          "similarity_score": 0.5589,
+          "description": "Develop asynchronous web services and backend pipelines using Python, FastAPI, and SQLAlchemy. Write comprehensive pytest unit tests.",
+          "required_skills": [
+            "Python",
+            "FastAPI",
+            "SQLAlchemy",
+            "PostgreSQL"
+          ],
+          "preferred_skills": [
+            "Docker",
+            "Redis",
+            "Celery",
+            "Git"
+          ],
+          "education_requirements": [
+            "B.Tech",
+            "BCA",
+            "MCA",
+            "B.Sc Computer Science"
+          ],
+          "experience_requirements": "Hands-on projects building web APIs with Python frameworks.",
+          "location": "Bengaluru",
+          "work_mode": "Hybrid",
+          "duration": "3 months",
+          "stipend": "₹16,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Python Backend Developer Intern at NextGen Software Labs (Synthetic). Demonstrated proficiency in Python, FastAPI, SQLAlchemy directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "FastAPI",
+              "SQLAlchemy",
+              "PostgreSQL"
+            ],
+            "relevant_projects": [
+              "Healthcare Appointment & Telehealth Platform: Built with FastAPI, React, PostgreSQL, Dockerized and deployed on AWS EC2",
+              "AI-Powered Resume ATS Scanner: Created parser service with Python, REST API backend, and clean modern React frontend",
+              "Smart Campus IoT Telemetry Hub: Collected sensor data with Python scripts, persisted to MySQL, displayed via interactive dashboard"
+            ],
+            "missing_required_skills": [],
+            "recommendation": "Excellent alignment on core prerequisites. Highlight relevant project architecture and API design decisions in your interview discussions.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT001",
+          "title": "Java Backend Developer Intern",
+          "company": "TechNova Solutions (Synthetic)",
+          "similarity_score": 0.5351,
+          "description": "Design, build, and optimize enterprise backend microservices and RESTful APIs using Java and Spring Boot. Collaborate with database engineers on PostgreSQL queries and caching.",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "SQL",
+            "REST APIs"
+          ],
+          "preferred_skills": [
+            "Docker",
+            "PostgreSQL",
+            "Kafka",
+            "Git"
+          ],
+          "education_requirements": [
+            "B.Tech Computer Science",
+            "B.Tech Information Technology",
+            "MCA"
+          ],
+          "experience_requirements": "Students or fresh graduates with coursework in Object-Oriented Programming and relational databases.",
+          "location": "Hyderabad",
+          "work_mode": "Hybrid",
+          "duration": "3 months",
+          "stipend": "₹15,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Java Backend Developer Intern at TechNova Solutions (Synthetic). Demonstrated proficiency in Java, SQL, REST APIs directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Java",
+              "SQL",
+              "REST APIs"
+            ],
+            "relevant_projects": [
+              "Healthcare Appointment & Telehealth Platform: Built with FastAPI, React, PostgreSQL, Dockerized and deployed on AWS EC2",
+              "AI-Powered Resume ATS Scanner: Created parser service with Python, REST API backend, and clean modern React frontend",
+              "Smart Campus IoT Telemetry Hub: Collected sensor data with Python scripts, persisted to MySQL, displayed via interactive dashboard"
+            ],
+            "missing_required_skills": [
+              "Spring Boot"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Spring Boot. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT007",
+          "title": "Python Automation & Scripting Intern",
+          "company": "PulseWave Dynamics (Synthetic)",
+          "similarity_score": 0.4936,
+          "description": "Automate routine data ingestion, web scraping, and workflow validation scripts using Python, BeautifulSoup, and Selenium. Parse JSON and XML feeds.",
+          "required_skills": [
+            "Python",
+            "BeautifulSoup",
+            "Automation",
+            "REST APIs"
+          ],
+          "preferred_skills": [
+            "Selenium",
+            "Pandas",
+            "Cron"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/ECE/EE",
+            "BCA"
+          ],
+          "experience_requirements": "Proficiency in scripting, file parsing, and API interactions.",
+          "location": "Hyderabad",
+          "work_mode": "Remote",
+          "duration": "2 months",
+          "stipend": "₹10,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Python Automation & Scripting Intern at PulseWave Dynamics (Synthetic). Demonstrated proficiency in Python, REST APIs directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Python",
+              "REST APIs"
+            ],
+            "relevant_projects": [
+              "AI-Powered Resume ATS Scanner: Created parser service with Python, REST API backend, and clean modern React frontend",
+              "Smart Campus IoT Telemetry Hub: Collected sensor data with Python scripts, persisted to MySQL, displayed via interactive dashboard"
+            ],
+            "missing_required_skills": [
+              "BeautifulSoup",
+              "Automation"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in BeautifulSoup, Automation. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
+          "internship_id": "INT017",
+          "title": "Java & React Full Stack Intern",
+          "company": "Horizon Enterprise Systems (Synthetic)",
+          "similarity_score": 0.4863,
+          "description": "Develop end-to-end web portals using Java Spring Boot on the backend and React with TypeScript on the frontend. Manage PostgreSQL schemas.",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "React",
+            "SQL",
+            "JavaScript"
+          ],
+          "preferred_skills": [
+            "TypeScript",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/IT",
+            "MCA"
+          ],
+          "experience_requirements": "Solid grounding in both client-side components and server-side REST controllers.",
+          "location": "Chennai",
+          "work_mode": "On-site",
+          "duration": "6 months",
+          "stipend": "₹19,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Java & React Full Stack Intern at Horizon Enterprise Systems (Synthetic). Demonstrated proficiency in Java, React, SQL directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Java",
+              "React",
+              "SQL",
+              "JavaScript"
+            ],
+            "relevant_projects": [
+              "Healthcare Appointment & Telehealth Platform: Built with FastAPI, React, PostgreSQL, Dockerized and deployed on AWS EC2",
+              "AI-Powered Resume ATS Scanner: Created parser service with Python, REST API backend, and clean modern React frontend",
+              "Smart Campus IoT Telemetry Hub: Collected sensor data with Python scripts, persisted to MySQL, displayed via interactive dashboard"
+            ],
+            "missing_required_skills": [
+              "Spring Boot"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in Spring Boot. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        }
+      ]
+    }
+  ]
+}

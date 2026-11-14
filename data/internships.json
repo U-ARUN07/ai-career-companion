@@ -1,0 +1,1547 @@
+[
+  {
+    "internship_id": "INT001",
+    "title": "Java Backend Developer Intern",
+    "company": "TechNova Solutions (Synthetic)",
+    "description": "Design, build, and optimize enterprise backend microservices and RESTful APIs using Java and Spring Boot. Collaborate with database engineers on PostgreSQL queries and caching.",
+    "required_skills": [
+      "Java",
+      "Spring Boot",
+      "SQL",
+      "REST APIs"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "PostgreSQL",
+      "Kafka",
+      "Git"
+    ],
+    "education_requirements": [
+      "B.Tech Computer Science",
+      "B.Tech Information Technology",
+      "MCA"
+    ],
+    "experience_requirements": "Students or fresh graduates with coursework in Object-Oriented Programming and relational databases.",
+    "location": "Hyderabad",
+    "work_mode": "Hybrid",
+    "duration": "3 months",
+    "stipend": "₹15,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT002",
+    "title": "Spring Boot API Engineer Intern",
+    "company": "ApexCloud Labs (Synthetic)",
+    "description": "Develop scalable API endpoints for banking and fintech service prototypes. Implement authentication, Hibernate ORM data models, and unit testing using JUnit.",
+    "required_skills": [
+      "Java",
+      "Spring Boot",
+      "Hibernate",
+      "MySQL"
+    ],
+    "preferred_skills": [
+      "JWT",
+      "Redis",
+      "Swagger",
+      "Maven"
+    ],
+    "education_requirements": [
+      "B.E.",
+      "B.Tech",
+      "MCA",
+      "B.Sc Computer Science"
+    ],
+    "experience_requirements": "Academic project experience in Spring Boot backend services.",
+    "location": "Bengaluru",
+    "work_mode": "On-site",
+    "duration": "6 months",
+    "stipend": "₹20,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT003",
+    "title": "Core Java Systems Intern",
+    "company": "DataBridge Informatics (Synthetic)",
+    "description": "Assist in building high-throughput message processing daemons and multithreaded core Java components. Write JDBC queries and automate integration tests.",
+    "required_skills": [
+      "Java",
+      "Multithreading",
+      "Data Structures",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "Linux",
+      "Git",
+      "Maven"
+    ],
+    "education_requirements": [
+      "B.Tech CSE",
+      "B.Tech IT"
+    ],
+    "experience_requirements": "Solid understanding of Java collections, concurrency, and OOP principles.",
+    "location": "Pune",
+    "work_mode": "Hybrid",
+    "duration": "4 months",
+    "stipend": "₹14,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT004",
+    "title": "Enterprise Java Microservices Intern",
+    "company": "InfraCore Systems (Synthetic)",
+    "description": "Modernize legacy services to containerized Spring Cloud microservices. Integrate message queues and assist in deployment pipeline automation.",
+    "required_skills": [
+      "Java",
+      "Spring Boot",
+      "Microservices",
+      "REST APIs"
+    ],
+    "preferred_skills": [
+      "Kubernetes",
+      "Docker",
+      "RabbitMQ"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "M.Tech Computer Science"
+    ],
+    "experience_requirements": "Understanding of distributed systems and REST architecture.",
+    "location": "Noida",
+    "work_mode": "Remote",
+    "duration": "6 months",
+    "stipend": "₹18,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT005",
+    "title": "Python Backend Developer Intern",
+    "company": "NextGen Software Labs (Synthetic)",
+    "description": "Develop asynchronous web services and backend pipelines using Python, FastAPI, and SQLAlchemy. Write comprehensive pytest unit tests.",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Redis",
+      "Celery",
+      "Git"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "BCA",
+      "MCA",
+      "B.Sc Computer Science"
+    ],
+    "experience_requirements": "Hands-on projects building web APIs with Python frameworks.",
+    "location": "Bengaluru",
+    "work_mode": "Hybrid",
+    "duration": "3 months",
+    "stipend": "₹16,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT006",
+    "title": "Django Web Application Intern",
+    "company": "AuraDigital Studios (Synthetic)",
+    "description": "Build web portals and internal business dashboards using Django, Python, SQLite, and Bootstrap. Maintain ORM migrations and user authentication.",
+    "required_skills": [
+      "Python",
+      "Django",
+      "HTML/CSS",
+      "SQLite"
+    ],
+    "preferred_skills": [
+      "JavaScript",
+      "PostgreSQL",
+      "Git"
+    ],
+    "education_requirements": [
+      "Any Graduate in Engineering or Computer Applications"
+    ],
+    "experience_requirements": "Completed at least one full-stack or backend web application project in Django.",
+    "location": "Chennai",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹12,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT007",
+    "title": "Python Automation & Scripting Intern",
+    "company": "PulseWave Dynamics (Synthetic)",
+    "description": "Automate routine data ingestion, web scraping, and workflow validation scripts using Python, BeautifulSoup, and Selenium. Parse JSON and XML feeds.",
+    "required_skills": [
+      "Python",
+      "BeautifulSoup",
+      "Automation",
+      "REST APIs"
+    ],
+    "preferred_skills": [
+      "Selenium",
+      "Pandas",
+      "Cron"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/ECE/EE",
+      "BCA"
+    ],
+    "experience_requirements": "Proficiency in scripting, file parsing, and API interactions.",
+    "location": "Hyderabad",
+    "work_mode": "Remote",
+    "duration": "2 months",
+    "stipend": "₹10,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT008",
+    "title": "Flask API Development Intern",
+    "company": "ZetaCore Tech (Synthetic)",
+    "description": "Construct lightweight RESTful micro-endpoints using Flask, Pytest, and MongoDB for IoT sensor streaming platforms.",
+    "required_skills": [
+      "Python",
+      "Flask",
+      "MongoDB",
+      "REST APIs"
+    ],
+    "preferred_skills": [
+      "MQTT",
+      "Docker",
+      "Postman"
+    ],
+    "education_requirements": [
+      "B.Tech IT/CSE",
+      "MCA"
+    ],
+    "experience_requirements": "Familiarity with NoSQL databases and HTTP protocols.",
+    "location": "Gurugram",
+    "work_mode": "On-site",
+    "duration": "4 months",
+    "stipend": "₹15,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT009",
+    "title": "Machine Learning Engineer Intern",
+    "company": "CognitiveMatrix AI (Synthetic)",
+    "description": "Train, evaluate, and fine-tune supervised and unsupervised machine learning algorithms using Scikit-Learn and PyTorch. Perform feature engineering and model benchmarking.",
+    "required_skills": [
+      "Python",
+      "Scikit-Learn",
+      "Machine Learning",
+      "Pandas",
+      "NumPy"
+    ],
+    "preferred_skills": [
+      "PyTorch",
+      "XGBoost",
+      "Matplotlib",
+      "MLflow"
+    ],
+    "education_requirements": [
+      "B.Tech CSE",
+      "B.Tech AI & Data Science",
+      "M.Sc Statistics"
+    ],
+    "experience_requirements": "Coursework in linear algebra, probability, and machine learning projects.",
+    "location": "Bengaluru",
+    "work_mode": "Hybrid",
+    "duration": "6 months",
+    "stipend": "₹22,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT010",
+    "title": "Data Science Research Intern",
+    "company": "InnoInsight Analytics (Synthetic)",
+    "description": "Clean, explore, and model structured and semi-structured customer datasets. Formulate predictive models, customer churn analyses, and regression pipelines.",
+    "required_skills": [
+      "Python",
+      "Data Science",
+      "Pandas",
+      "Statistics",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "Seaborn",
+      "Jupyter",
+      "Tableau"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "B.Stat",
+      "M.Sc Data Science"
+    ],
+    "experience_requirements": "Demonstrated exploratory data analysis and hypothesis testing experience.",
+    "location": "Mumbai",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹18,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT011",
+    "title": "Computer Vision Intern",
+    "company": "VisionCraft Labs (Synthetic)",
+    "description": "Implement object detection, image segmentation, and facial landmark pipelines using OpenCV, PyTorch, and YOLO architectures.",
+    "required_skills": [
+      "Python",
+      "OpenCV",
+      "PyTorch",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "YOLO",
+      "TensorFlow",
+      "CUDA"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/ECE",
+      "M.Tech AI/ML"
+    ],
+    "experience_requirements": "Academic exposure to convolution neural networks and image preprocessing.",
+    "location": "Bengaluru",
+    "work_mode": "On-site",
+    "duration": "6 months",
+    "stipend": "₹25,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT012",
+    "title": "NLP & Text Analytics Intern",
+    "company": "LinguisticAI Solutions (Synthetic)",
+    "description": "Analyze textual corpora, extract named entities, and build sentiment classifiers using Spacy, NLTK, and Hugging Face Transformers.",
+    "required_skills": [
+      "Python",
+      "NLP",
+      "Hugging Face",
+      "Transformers",
+      "Regex"
+    ],
+    "preferred_skills": [
+      "Spacy",
+      "BERT",
+      "Tokenizers"
+    ],
+    "education_requirements": [
+      "B.Tech CSE",
+      "M.S. Computational Linguistics"
+    ],
+    "experience_requirements": "Experience with text vectorization, TF-IDF, embeddings, and Transformer models.",
+    "location": "Hyderabad",
+    "work_mode": "Hybrid",
+    "duration": "4 months",
+    "stipend": "₹20,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT013",
+    "title": "Generative AI & RAG Solutions Intern",
+    "company": "Synthetix Intelligence (Synthetic)",
+    "description": "Build Retrieval-Augmented Generation (RAG) pipelines, semantic search engines, and prompt engineering chains using LangChain, FAISS, and vector embeddings.",
+    "required_skills": [
+      "Python",
+      "Generative AI",
+      "LangChain",
+      "Vector Databases",
+      "Embeddings"
+    ],
+    "preferred_skills": [
+      "FAISS",
+      "ChromaDB",
+      "LlamaIndex",
+      "Sentence Transformers"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT/AI",
+      "MCA"
+    ],
+    "experience_requirements": "Prior projects involving LLM integration, prompt orchestration, or vector embeddings.",
+    "location": "Bengaluru",
+    "work_mode": "Remote",
+    "duration": "4 months",
+    "stipend": "₹24,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT014",
+    "title": "LLM Fine-Tuning & Prompt Intern",
+    "company": "PromptSphere Tech (Synthetic)",
+    "description": "Benchmark open-source foundational models (Llama, Mistral), curate synthetic fine-tuning datasets, and evaluate prompt guardrails for customer service chatbots.",
+    "required_skills": [
+      "Python",
+      "Generative AI",
+      "LLMs",
+      "Hugging Face",
+      "Prompt Engineering"
+    ],
+    "preferred_skills": [
+      "LoRA",
+      "PEFT",
+      "Ollama",
+      "PyTorch"
+    ],
+    "education_requirements": [
+      "B.Tech Computer Science",
+      "M.Tech AI"
+    ],
+    "experience_requirements": "Understanding of prompt engineering patterns, instruction tuning, and model evaluation metrics.",
+    "location": "Pune",
+    "work_mode": "Hybrid",
+    "duration": "6 months",
+    "stipend": "₹22,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT015",
+    "title": "AI Agent Systems Intern",
+    "company": "AgenticFlow AI (Synthetic)",
+    "description": "Develop multi-agent autonomous decision workflows, function calling tool chains, and stateful memory persistence using LangGraph and Python.",
+    "required_skills": [
+      "Python",
+      "Generative AI",
+      "AI Agents",
+      "LangGraph",
+      "REST APIs"
+    ],
+    "preferred_skills": [
+      "AsyncIO",
+      "FastAPI",
+      "Vector Search"
+    ],
+    "education_requirements": [
+      "B.Tech CSE",
+      "MCA"
+    ],
+    "experience_requirements": "Experience creating tool-augmented LLM applications or autonomous reasoning agents.",
+    "location": "Hyderabad",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹20,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT016",
+    "title": "MERN Full Stack Developer Intern",
+    "company": "WebSpectrum Solutions (Synthetic)",
+    "description": "Construct responsive web applications using MongoDB, Express.js, React, and Node.js. Implement client-side routing, JWT authentication, and REST APIs.",
+    "required_skills": [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JavaScript"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Redux",
+      "Tailwind CSS",
+      "Git"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "BCA",
+      "B.Sc IT",
+      "MCA"
+    ],
+    "experience_requirements": "Portfolio of full stack web applications built from scratch.",
+    "location": "Bengaluru",
+    "work_mode": "Hybrid",
+    "duration": "6 months",
+    "stipend": "₹18,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT017",
+    "title": "Java & React Full Stack Intern",
+    "company": "Horizon Enterprise Systems (Synthetic)",
+    "description": "Develop end-to-end web portals using Java Spring Boot on the backend and React with TypeScript on the frontend. Manage PostgreSQL schemas.",
+    "required_skills": [
+      "Java",
+      "Spring Boot",
+      "React",
+      "SQL",
+      "JavaScript"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT",
+      "MCA"
+    ],
+    "experience_requirements": "Solid grounding in both client-side components and server-side REST controllers.",
+    "location": "Chennai",
+    "work_mode": "On-site",
+    "duration": "6 months",
+    "stipend": "₹19,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT018",
+    "title": "Python & Vue.js Full Stack Intern",
+    "company": "InnovateX Interactive (Synthetic)",
+    "description": "Collaborate on interactive product dashboards utilizing FastAPI as the backend engine and Vue.js / Pinia for frontend reactive UI rendering.",
+    "required_skills": [
+      "Python",
+      "FastAPI",
+      "Vue.js",
+      "JavaScript",
+      "HTML/CSS"
+    ],
+    "preferred_skills": [
+      "Tailwind CSS",
+      "SQLite",
+      "Axios"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "BCA",
+      "MCA"
+    ],
+    "experience_requirements": "Experience connecting Vue single-page apps with JSON REST APIs.",
+    "location": "Noida",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹15,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT019",
+    "title": "Next.js & TypeScript Full Stack Intern",
+    "company": "Vanguard Webworks (Synthetic)",
+    "description": "Build high-performance web applications using Next.js App Router, TypeScript, Prisma ORM, and Supabase. Optimize server-side rendering and SEO.",
+    "required_skills": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "Prisma",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "B.Sc Computer Science",
+      "MCA"
+    ],
+    "experience_requirements": "Completed projects in modern React / Next.js ecosystem.",
+    "location": "Mumbai",
+    "work_mode": "Remote",
+    "duration": "4 months",
+    "stipend": "₹18,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT020",
+    "title": "Frontend React Developer Intern",
+    "company": "PixelCraft Studio (Synthetic)",
+    "description": "Implement modern user interfaces, responsive layouts, and interactive charts using React 18, HTML5, CSS3, and styled components.",
+    "required_skills": [
+      "React",
+      "JavaScript",
+      "HTML5",
+      "CSS3"
+    ],
+    "preferred_skills": [
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "Figma",
+      "Git"
+    ],
+    "education_requirements": [
+      "Any Graduate or Diploma in Computer Science"
+    ],
+    "experience_requirements": "Strong CSS styling fundamentals and understanding of React hooks.",
+    "location": "Ahmedabad",
+    "work_mode": "Hybrid",
+    "duration": "3 months",
+    "stipend": "₹12,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT021",
+    "title": "Angular Frontend Engineer Intern",
+    "company": "EnterpriseEdge Tech (Synthetic)",
+    "description": "Maintain enterprise client portals using Angular, TypeScript, RxJS, and Material UI components. Connect with REST services and manage states.",
+    "required_skills": [
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "HTML/CSS"
+    ],
+    "preferred_skills": [
+      "Angular Material",
+      "REST APIs",
+      "Karma"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT",
+      "MCA"
+    ],
+    "experience_requirements": "Academic or internship project built with Angular framework.",
+    "location": "Hyderabad",
+    "work_mode": "On-site",
+    "duration": "6 months",
+    "stipend": "₹16,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT022",
+    "title": "UI/UX & Web Developer Intern",
+    "company": "CreativeCanvas Labs (Synthetic)",
+    "description": "Bridge UI designs and code by translating Figma mockups into accessible, responsive web pages using modern HTML, SASS, and vanilla JavaScript.",
+    "required_skills": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Figma",
+      "Responsive Design"
+    ],
+    "preferred_skills": [
+      "Bootstrap",
+      "SASS",
+      "Web Accessibility (a11y)"
+    ],
+    "education_requirements": [
+      "B.Des",
+      "B.Tech",
+      "BCA",
+      "Any Graduate"
+    ],
+    "experience_requirements": "Eye for design detail, typography, and responsive grid layouts.",
+    "location": "Kochi",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹10,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT023",
+    "title": "AWS Cloud Engineering Intern",
+    "company": "CloudMatrix Systems (Synthetic)",
+    "description": "Provision, configure, and monitor cloud workloads on AWS (EC2, S3, RDS, Lambda). Automate infrastructure provisioning using CloudFormation or Terraform.",
+    "required_skills": [
+      "AWS",
+      "Cloud Computing",
+      "Linux",
+      "Python",
+      "Networking"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "Docker",
+      "IAM",
+      "CloudWatch"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT/ECE",
+      "B.Tech Cloud Computing"
+    ],
+    "experience_requirements": "AWS certification or hands-on practice with AWS free-tier services.",
+    "location": "Bengaluru",
+    "work_mode": "Hybrid",
+    "duration": "6 months",
+    "stipend": "₹20,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT024",
+    "title": "DevOps & CI/CD Pipeline Intern",
+    "company": "ReliabilityOps Global (Synthetic)",
+    "description": "Construct automated continuous integration and continuous deployment (CI/CD) pipelines using GitHub Actions, Docker, and Jenkins.",
+    "required_skills": [
+      "DevOps",
+      "Docker",
+      "CI/CD",
+      "Linux",
+      "Git"
+    ],
+    "preferred_skills": [
+      "GitHub Actions",
+      "Jenkins",
+      "Bash Scripting",
+      "Kubernetes"
+    ],
+    "education_requirements": [
+      "B.Tech Computer Science",
+      "MCA"
+    ],
+    "experience_requirements": "Familiarity with containerizing applications and version control workflows.",
+    "location": "Pune",
+    "work_mode": "Remote",
+    "duration": "4 months",
+    "stipend": "₹18,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT025",
+    "title": "Kubernetes & Cloud Infrastructure Intern",
+    "company": "ScaleCluster Technologies (Synthetic)",
+    "description": "Manage container orchestration with Kubernetes, helm charts, and microservice service meshes. Assist with cluster health and logging.",
+    "required_skills": [
+      "Kubernetes",
+      "Docker",
+      "Linux",
+      "DevOps"
+    ],
+    "preferred_skills": [
+      "Helm",
+      "Prometheus",
+      "Grafana",
+      "Go"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT"
+    ],
+    "experience_requirements": "Knowledge of container lifecycle, pods, deployments, and services.",
+    "location": "Hyderabad",
+    "work_mode": "On-site",
+    "duration": "6 months",
+    "stipend": "₹22,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT026",
+    "title": "Microsoft Azure Cloud Intern",
+    "company": "BlueSky Solutions (Synthetic)",
+    "description": "Assist in deploying Azure App Services, virtual networks, and Azure SQL databases. Implement PowerShell scripts to automate resource monitoring.",
+    "required_skills": [
+      "Azure",
+      "Cloud Computing",
+      "PowerShell",
+      "Linux"
+    ],
+    "preferred_skills": [
+      "Azure DevOps",
+      "Docker",
+      "ARM Templates"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "MCA",
+      "B.Sc IT"
+    ],
+    "experience_requirements": "Understanding of IaaS, PaaS, SaaS models and Azure resource groups.",
+    "location": "Noida",
+    "work_mode": "Hybrid",
+    "duration": "3 months",
+    "stipend": "₹15,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT027",
+    "title": "Cybersecurity & Vulnerability Assessment Intern",
+    "company": "ShieldPoint Security (Synthetic)",
+    "description": "Perform vulnerability scans, security assessments, and OWASP Top 10 remediation reviews across web applications and network devices.",
+    "required_skills": [
+      "Cybersecurity",
+      "Network Security",
+      "OWASP",
+      "Linux",
+      "Vulnerability Assessment"
+    ],
+    "preferred_skills": [
+      "Burp Suite",
+      "Nmap",
+      "Wireshark",
+      "Metasploit"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/Cybersecurity",
+      "B.Sc Information Security"
+    ],
+    "experience_requirements": "Coursework in cryptography, networking protocols, and basic penetration testing.",
+    "location": "Bengaluru",
+    "work_mode": "On-site",
+    "duration": "6 months",
+    "stipend": "₹20,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT028",
+    "title": "SOC Analyst Intern",
+    "company": "CyberWatch Defense (Synthetic)",
+    "description": "Monitor real-time security alerts, triage intrusion detection logs, and investigate potential indicators of compromise using SIEM tools.",
+    "required_skills": [
+      "Cybersecurity",
+      "SIEM",
+      "Log Analysis",
+      "Network Security"
+    ],
+    "preferred_skills": [
+      "Splunk",
+      "Snort",
+      "Incident Response",
+      "Python"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "BCA",
+      "MCA",
+      "B.Sc Computer Science"
+    ],
+    "experience_requirements": "Understanding of TCP/IP stack, firewall logs, and security event correlation.",
+    "location": "Hyderabad",
+    "work_mode": "Hybrid",
+    "duration": "4 months",
+    "stipend": "₹16,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT029",
+    "title": "Application Security (AppSec) Intern",
+    "company": "CodeDefend Systems (Synthetic)",
+    "description": "Review source code for common security bugs (SQL Injection, XSS, CSRF), configure static code analysis tools (SAST), and write security guidelines.",
+    "required_skills": [
+      "Application Security",
+      "OWASP",
+      "Python",
+      "Java",
+      "Secure Coding"
+    ],
+    "preferred_skills": [
+      "SonarQube",
+      "Git",
+      "Threat Modeling"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT"
+    ],
+    "experience_requirements": "Knowledge of software development lifecycle and defensive programming.",
+    "location": "Pune",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹17,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT030",
+    "title": "Data Analyst Intern",
+    "company": "MetricHub Analytics (Synthetic)",
+    "description": "Extract, transform, and clean complex business datasets using SQL and Python. Build interactive performance dashboards in Power BI and Excel.",
+    "required_skills": [
+      "SQL",
+      "Power BI",
+      "Data Analytics",
+      "Excel",
+      "Python"
+    ],
+    "preferred_skills": [
+      "DAX",
+      "Pandas",
+      "Data Cleaning",
+      "Tableau"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "B.Com Analytics",
+      "BBA",
+      "B.Sc Statistics",
+      "MCA"
+    ],
+    "experience_requirements": "Proficiency writing complex SQL JOINs, aggregate queries, and pivot tables.",
+    "location": "Gurugram",
+    "work_mode": "Hybrid",
+    "duration": "3 months",
+    "stipend": "₹14,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT031",
+    "title": "Tableau & BI Developer Intern",
+    "company": "InsightForge Solutions (Synthetic)",
+    "description": "Design visual storytelling reports and executive dashboards in Tableau. Write data extraction pipelines from snowflake and SQL databases.",
+    "required_skills": [
+      "Tableau",
+      "SQL",
+      "Business Intelligence",
+      "Data Visualization"
+    ],
+    "preferred_skills": [
+      "Snowflake",
+      "Python",
+      "ETL"
+    ],
+    "education_requirements": [
+      "Any Graduate with analytical aptitude"
+    ],
+    "experience_requirements": "Demonstrated dashboard designs and data visualization charts.",
+    "location": "Bengaluru",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹15,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT032",
+    "title": "Financial & Operations Data Analyst Intern",
+    "company": "Quantix Capital Tech (Synthetic)",
+    "description": "Analyze operational metrics, cost models, and transactional logs using advanced Excel formulas, SQL, and Python scripts.",
+    "required_skills": [
+      "Excel",
+      "SQL",
+      "Financial Modeling",
+      "Data Analysis"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Power BI",
+      "Statistics"
+    ],
+    "education_requirements": [
+      "B.Com",
+      "B.Tech",
+      "MBA Finance",
+      "B.Sc Mathematics"
+    ],
+    "experience_requirements": "Strong numerical problem-solving skills and experience with spreadsheets.",
+    "location": "Mumbai",
+    "work_mode": "On-site",
+    "duration": "4 months",
+    "stipend": "₹18,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT033",
+    "title": "Software Development Engineer (SDE) Intern",
+    "company": "NovaLogic Technologies (Synthetic)",
+    "description": "Write clean, modular code for core product features. Design efficient algorithms, solve data structure problems, and participate in code reviews.",
+    "required_skills": [
+      "Data Structures",
+      "Algorithms",
+      "Java",
+      "C++",
+      "Problem Solving"
+    ],
+    "preferred_skills": [
+      "Git",
+      "Linux",
+      "Unit Testing",
+      "System Design"
+    ],
+    "education_requirements": [
+      "B.Tech Computer Science",
+      "B.E. IT"
+    ],
+    "experience_requirements": "Solid foundation in algorithmic complexity, dynamic programming, and OOP.",
+    "location": "Hyderabad",
+    "work_mode": "Hybrid",
+    "duration": "6 months",
+    "stipend": "₹25,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT034",
+    "title": "C++ Systems Software Intern",
+    "company": "SpeedByte Systems (Synthetic)",
+    "description": "Implement low-latency socket communication, memory-efficient data structures, and cross-platform utilities in C++20.",
+    "required_skills": [
+      "C++",
+      "Data Structures",
+      "Multithreading",
+      "Linux"
+    ],
+    "preferred_skills": [
+      "CMake",
+      "GDB",
+      "Memory Management",
+      "Socket Programming"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/ECE"
+    ],
+    "experience_requirements": "Strong understanding of pointers, RAII, STL, and systems programming.",
+    "location": "Bengaluru",
+    "work_mode": "On-site",
+    "duration": "6 months",
+    "stipend": "₹22,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT035",
+    "title": "QA Automation Engineer Intern",
+    "company": "QualityEdge Labs (Synthetic)",
+    "description": "Write automated end-to-end regression test suites using Selenium WebDriver, Python, and Pytest. Report defects and verify bug fixes.",
+    "required_skills": [
+      "QA Automation",
+      "Python",
+      "Selenium",
+      "Testing"
+    ],
+    "preferred_skills": [
+      "Pytest",
+      "Postman",
+      "Jira",
+      "CI/CD"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "BCA",
+      "B.Sc Computer Science"
+    ],
+    "experience_requirements": "Knowledge of software testing life cycle (STLC) and web element locators.",
+    "location": "Chennai",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹13,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT036",
+    "title": "Mobile App Developer (Flutter) Intern",
+    "company": "AppVelocity Studios (Synthetic)",
+    "description": "Build high-performance, cross-platform mobile apps for Android and iOS using Flutter and Dart. Integrate REST APIs and state management.",
+    "required_skills": [
+      "Flutter",
+      "Dart",
+      "Mobile App Development",
+      "REST APIs"
+    ],
+    "preferred_skills": [
+      "Firebase",
+      "Bloc/Provider",
+      "Git"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "BCA",
+      "MCA"
+    ],
+    "experience_requirements": "Published app on Play Store or GitHub mobile project repository.",
+    "location": "Pune",
+    "work_mode": "Hybrid",
+    "duration": "3 months",
+    "stipend": "₹15,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT037",
+    "title": "Android (Kotlin) Developer Intern",
+    "company": "DynaMobile Labs (Synthetic)",
+    "description": "Develop native Android components using Kotlin, Jetpack Compose, Room database, and Retrofit HTTP client. Follow MVVM architecture.",
+    "required_skills": [
+      "Kotlin",
+      "Android Development",
+      "Jetpack Compose",
+      "REST APIs"
+    ],
+    "preferred_skills": [
+      "Room DB",
+      "Coroutines",
+      "Git"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT",
+      "MCA"
+    ],
+    "experience_requirements": "Demonstrated Kotlin native Android app projects.",
+    "location": "Noida",
+    "work_mode": "Remote",
+    "duration": "4 months",
+    "stipend": "₹16,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT038",
+    "title": "Data Engineering Intern",
+    "company": "StreamData Platform (Synthetic)",
+    "description": "Construct scalable ETL data pipelines, orchestrate workflows with Apache Airflow, and process batch datasets using PySpark and PostgreSQL.",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Data Engineering",
+      "PySpark",
+      "ETL"
+    ],
+    "preferred_skills": [
+      "Apache Airflow",
+      "Kafka",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT/Data Science",
+      "MCA"
+    ],
+    "experience_requirements": "Understanding of relational schemas, data warehousing, and distributed data processing.",
+    "location": "Bengaluru",
+    "work_mode": "Hybrid",
+    "duration": "6 months",
+    "stipend": "₹21,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT039",
+    "title": "Big Data Hadoop & Spark Intern",
+    "company": "MegaScale DataWorks (Synthetic)",
+    "description": "Work on distributed data ingestion pipelines, HDFS storage architectures, and big data transformations using Spark SQL and Scala/Python.",
+    "required_skills": [
+      "Big Data",
+      "PySpark",
+      "Hadoop",
+      "SQL",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Hive",
+      "Scala",
+      "Linux"
+    ],
+    "education_requirements": [
+      "B.Tech Computer Science",
+      "M.Tech Data Engineering"
+    ],
+    "experience_requirements": "Academic exposure to map-reduce paradigms and large-scale data systems.",
+    "location": "Hyderabad",
+    "work_mode": "On-site",
+    "duration": "6 months",
+    "stipend": "₹20,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT040",
+    "title": "Deep Learning Research Intern",
+    "company": "NeuralFrontier Labs (Synthetic)",
+    "description": "Design and benchmark deep learning architectures for anomaly detection and sequential time-series forecasting using PyTorch and TensorFlow.",
+    "required_skills": [
+      "Deep Learning",
+      "PyTorch",
+      "Python",
+      "Neural Networks"
+    ],
+    "preferred_skills": [
+      "TensorFlow",
+      "Time Series",
+      "NumPy",
+      "Pandas"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/AI",
+      "M.Tech Computer Science"
+    ],
+    "experience_requirements": "Solid math foundations in backpropagation, optimization, and loss functions.",
+    "location": "Bengaluru",
+    "work_mode": "Remote",
+    "duration": "6 months",
+    "stipend": "₹24,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT041",
+    "title": "Reinforcement Learning & Robotics Intern",
+    "company": "RoboCognition Tech (Synthetic)",
+    "description": "Simulate decision-making policies and path planning algorithms using Gym environments, Q-learning, and policy gradient methods in Python.",
+    "required_skills": [
+      "Python",
+      "Reinforcement Learning",
+      "Algorithms",
+      "Mathematics"
+    ],
+    "preferred_skills": [
+      "Gym/Gymnasium",
+      "ROS",
+      "PyTorch"
+    ],
+    "education_requirements": [
+      "B.Tech ECE/Mechatronics/CSE",
+      "M.Tech Robotics"
+    ],
+    "experience_requirements": "Interest in autonomous systems and control theory.",
+    "location": "Chennai",
+    "work_mode": "Hybrid",
+    "duration": "4 months",
+    "stipend": "₹22,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT042",
+    "title": "Blockchain & Smart Contract Intern",
+    "company": "ChainTrust Systems (Synthetic)",
+    "description": "Develop and audit Solidity smart contracts, interact with Web3.js / Ethers.js, and deploy decentralized testnet prototypes.",
+    "required_skills": [
+      "Blockchain",
+      "Solidity",
+      "Smart Contracts",
+      "JavaScript"
+    ],
+    "preferred_skills": [
+      "Web3.js",
+      "Hardhat",
+      "Ethereum"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT"
+    ],
+    "experience_requirements": "Basic knowledge of cryptography and decentralized ledgers.",
+    "location": "Bengaluru",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹18,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT043",
+    "title": "Embedded Systems & IoT Firmware Intern",
+    "company": "PulseSensors Embedded (Synthetic)",
+    "description": "Write C/C++ firmware for ESP32 and ARM Cortex microcontrollers. Integrate I2C/SPI sensors and send telemetry over Wi-Fi/MQTT.",
+    "required_skills": [
+      "Embedded C",
+      "C++",
+      "Microcontrollers",
+      "IoT",
+      "Sensors"
+    ],
+    "preferred_skills": [
+      "ESP32",
+      "FreeRTOS",
+      "MQTT",
+      "Circuit Design"
+    ],
+    "education_requirements": [
+      "B.Tech ECE/EEE/Instrumentation"
+    ],
+    "experience_requirements": "Hands-on projects with Arduino, ESP32, or STM32 platforms.",
+    "location": "Coimbatore",
+    "work_mode": "On-site",
+    "duration": "4 months",
+    "stipend": "₹14,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT044",
+    "title": "Game Developer (Unity) Intern",
+    "company": "HyperPixel Interactive (Synthetic)",
+    "description": "Develop gameplay mechanics, physics interactions, and UI menus using Unity engine and C#. Optimize 3D asset rendering for mobile.",
+    "required_skills": [
+      "Unity",
+      "C#",
+      "Game Development",
+      "OOP"
+    ],
+    "preferred_skills": [
+      "3D Math",
+      "Shader Graph",
+      "Blender"
+    ],
+    "education_requirements": [
+      "Any Graduate or Gaming Diploma"
+    ],
+    "experience_requirements": "Playable game prototype built in Unity.",
+    "location": "Hyderabad",
+    "work_mode": "Hybrid",
+    "duration": "3 months",
+    "stipend": "₹15,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT045",
+    "title": "Site Reliability Engineering (SRE) Intern",
+    "company": "UptimePro Infrastructure (Synthetic)",
+    "description": "Automate system health monitoring, monitor latency metrics, configure alerting with Prometheus/Grafana, and draft incident runbooks.",
+    "required_skills": [
+      "Linux",
+      "Python",
+      "Monitoring",
+      "DevOps"
+    ],
+    "preferred_skills": [
+      "Prometheus",
+      "Grafana",
+      "Bash",
+      "Incident Management"
+    ],
+    "education_requirements": [
+      "B.Tech Computer Science/IT"
+    ],
+    "experience_requirements": "Passion for high-availability systems and server administration.",
+    "location": "Bengaluru",
+    "work_mode": "Remote",
+    "duration": "6 months",
+    "stipend": "₹20,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT046",
+    "title": "Product Management & Tech Strategy Intern",
+    "company": "SprintLaunch Ventures (Synthetic)",
+    "description": "Assist product managers in writing user stories, analyzing user engagement metrics, conducting competitor research, and coordinating sprint backlogs.",
+    "required_skills": [
+      "Product Management",
+      "Agile/Scrum",
+      "Data Analysis",
+      "Documentation"
+    ],
+    "preferred_skills": [
+      "Jira",
+      "Figma",
+      "SQL",
+      "Market Research"
+    ],
+    "education_requirements": [
+      "B.Tech with MBA or final year Engineering students"
+    ],
+    "experience_requirements": "Analytical mindset with exceptional communication and product vision.",
+    "location": "Mumbai",
+    "work_mode": "Hybrid",
+    "duration": "3 months",
+    "stipend": "₹16,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT047",
+    "title": "Technical Content & Developer Relations Intern",
+    "company": "DevAdvocate Network (Synthetic)",
+    "description": "Create technical tutorials, API documentation, and code samples for developer platforms. Engage with open-source communities.",
+    "required_skills": [
+      "Technical Writing",
+      "Python",
+      "API Documentation",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Markdown",
+      "Open Source",
+      "Public Speaking"
+    ],
+    "education_requirements": [
+      "Any Technical Graduate"
+    ],
+    "experience_requirements": "Prior blog posts, technical articles, or active open-source contribution.",
+    "location": "Remote",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹12,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT048",
+    "title": "Go / Golang Backend Intern",
+    "company": "HyperScale Cloud Systems (Synthetic)",
+    "description": "Build high-concurrency microservices in Go (Golang) using gRPC and Protocol Buffers. Optimize database connections and write benchmarks.",
+    "required_skills": [
+      "Golang",
+      "Go",
+      "REST APIs",
+      "SQL",
+      "Concurrency"
+    ],
+    "preferred_skills": [
+      "gRPC",
+      "Docker",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "education_requirements": [
+      "B.Tech Computer Science/IT"
+    ],
+    "experience_requirements": "Understanding of goroutines, channels, and backend microservice architecture.",
+    "location": "Bengaluru",
+    "work_mode": "Hybrid",
+    "duration": "4 months",
+    "stipend": "₹22,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT049",
+    "title": "Database Administrator (DBA) Intern",
+    "company": "DataVanguard Core (Synthetic)",
+    "description": "Assist in PostgreSQL and MySQL query optimization, indexing strategies, backup automation, and replication monitoring.",
+    "required_skills": [
+      "SQL",
+      "PostgreSQL",
+      "MySQL",
+      "Database Administration"
+    ],
+    "preferred_skills": [
+      "Query Tuning",
+      "Linux",
+      "Backup Strategies"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "MCA",
+      "B.Sc Computer Science"
+    ],
+    "experience_requirements": "Strong SQL background, query execution plans, and schema normalization.",
+    "location": "Chennai",
+    "work_mode": "On-site",
+    "duration": "3 months",
+    "stipend": "₹13,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT050",
+    "title": "RAG Applications & AI Integration Intern",
+    "company": "SemanticNexus AI (Synthetic)",
+    "description": "Implement vector retrieval pipelines, chunking strategies, and hybrid semantic-lexical search for enterprise knowledge bases using Python and FAISS.",
+    "required_skills": [
+      "Python",
+      "RAG",
+      "FAISS",
+      "Vector Search",
+      "Embeddings"
+    ],
+    "preferred_skills": [
+      "FastAPI",
+      "Sentence Transformers",
+      "LangChain"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT/AI"
+    ],
+    "experience_requirements": "Hands-on projects with vector similarity search and NLP pipelines.",
+    "location": "Hyderabad",
+    "work_mode": "Remote",
+    "duration": "6 months",
+    "stipend": "₹23,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT051",
+    "title": "Senior Java Developer Intern",
+    "company": "Apex Financial Systems (Synthetic)",
+    "description": "Work with senior architects to implement distributed transactions, Kafka event streams, and resilience patterns in Spring Boot enterprise services.",
+    "required_skills": [
+      "Java",
+      "Spring Boot",
+      "Kafka",
+      "SQL",
+      "Microservices"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Kubernetes",
+      "Redis"
+    ],
+    "education_requirements": [
+      "B.Tech CSE",
+      "M.Tech CSE"
+    ],
+    "experience_requirements": "Strong OOP, enterprise architecture, and distributed messaging coursework.",
+    "location": "Hyderabad",
+    "work_mode": "Hybrid",
+    "duration": "6 months",
+    "stipend": "₹21,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT052",
+    "title": "Python Data Automation Specialist Intern",
+    "company": "AlphaSync Labs (Synthetic)",
+    "description": "Construct automated data ingestion pipelines using Python, Pandas, and Airflow. Write custom extractors for CSV, JSON, and REST endpoints.",
+    "required_skills": [
+      "Python",
+      "Pandas",
+      "ETL",
+      "SQL",
+      "Automation"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "FastAPI",
+      "Git"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "MCA",
+      "BCA"
+    ],
+    "experience_requirements": "Practical experience parsing heterogeneous datasets with Python.",
+    "location": "Bengaluru",
+    "work_mode": "Remote",
+    "duration": "3 months",
+    "stipend": "₹16,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT053",
+    "title": "Cloud Security & Governance Intern",
+    "company": "SecureCloud Dynamics (Synthetic)",
+    "description": "Assess cloud configurations across AWS and Azure against CIS benchmarks. Write automated compliance checks using Python and CloudTrail.",
+    "required_skills": [
+      "Cloud Security",
+      "AWS",
+      "Cybersecurity",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Azure",
+      "Terraform",
+      "Compliance"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/IT",
+      "B.Sc Cybersecurity"
+    ],
+    "experience_requirements": "Understanding of cloud IAM, encryption at rest, and audit logging.",
+    "location": "Noida",
+    "work_mode": "Hybrid",
+    "duration": "4 months",
+    "stipend": "₹17,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT054",
+    "title": "Full Stack Python & React Developer Intern",
+    "company": "PrimeStack Tech (Synthetic)",
+    "description": "Deliver modern full stack features using a Python FastAPI REST backend paired with a React frontend. Implement JWT auth and PostgreSQL schemas.",
+    "required_skills": [
+      "Python",
+      "React",
+      "FastAPI",
+      "SQL",
+      "JavaScript"
+    ],
+    "preferred_skills": [
+      "PostgreSQL",
+      "Tailwind CSS",
+      "Docker"
+    ],
+    "education_requirements": [
+      "B.Tech",
+      "BCA",
+      "MCA"
+    ],
+    "experience_requirements": "Demonstrated full-stack project building both backend APIs and React components.",
+    "location": "Bengaluru",
+    "work_mode": "Hybrid",
+    "duration": "6 months",
+    "stipend": "₹19,000/month",
+    "is_synthetic": true
+  },
+  {
+    "internship_id": "INT055",
+    "title": "AI Quality & Model Evaluation Intern",
+    "company": "TrustWorth AI (Synthetic)",
+    "description": "Evaluate machine learning and generative AI models for bias, hallucinations, and safety. Develop automated evaluation test cases and ground-truth metrics.",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "Generative AI",
+      "Evaluation Metrics"
+    ],
+    "preferred_skills": [
+      "Pandas",
+      "Prompt Engineering",
+      "Statistics"
+    ],
+    "education_requirements": [
+      "B.Tech CSE/AI",
+      "M.Sc Data Science"
+    ],
+    "experience_requirements": "Experience testing and validating model outputs against ground truth datasets.",
+    "location": "Hyderabad",
+    "work_mode": "Remote",
+    "duration": "4 months",
+    "stipend": "₹20,000/month",
+    "is_synthetic": true
+  }
+]
