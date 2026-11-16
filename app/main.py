@@ -2,12 +2,15 @@
 
 import logging
 from contextlib import asynccontextmanager
+from pathlib import Path
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import RedirectResponse
+from fastapi.responses import FileResponse, RedirectResponse
+from fastapi.staticfiles import StaticFiles
 from app.config import settings
 from app.routes.health_routes import router as health_router
 from app.routes.matching_routes import router as matching_router
+from app.routes.platform_routes import router as platform_router
 from app.services.vector_store import vector_store
 
 # Configure logging
@@ -16,6 +19,8 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
 logger = logging.getLogger("rag_internship_matching")
+
+STATIC_DIR = Path(__file__).resolve().parent / "static"
 
 
 @asynccontextmanager
@@ -56,7 +61,12 @@ app = FastAPI(
     version=settings.app_version,
     description=(
         "Production-grade semantic internship matching system using Sentence Transformers "
-        "and FAISS vector embeddings for the Infosys Springboard Virtual Internship Program 7.0."
+        "and FAISS vector embeddings for the Infosys Springboard Virtual Internship Program 7.0.\n\n"
+        "Features:\n"
+        "- Vector Similarity Matching & Grounded Explanations\n"
+        "- Cover Letter Generation Agent & ATS Scoring Suggestions\n"
+        "- Application Tracking & Management Module\n"
+        "- Conversational Career Assistant (Chatbot with Safety Guardrails)"
     ),
     lifespan=lifespan,
     docs_url="/docs",
@@ -75,12 +85,22 @@ app.add_middleware(
 # Register route modules
 app.include_router(health_router)
 app.include_router(matching_router)
+app.include_router(platform_router)
 
 
-@app.get("/", include_in_schema=False)
-def root():
-    """Redirect root path to interactive Swagger API documentation."""
+@app.get("/", summary="Web Application Portal")
+def serve_portal():
+    """Serve the interactive web portal for Internship Matching and Application Tracking."""
+    index_file = STATIC_DIR / "index.html"
+    if index_file.exists():
+        return FileResponse(str(index_file))
     return RedirectResponse(url="/docs")
+
+
+@app.get("/portal", include_in_schema=False)
+def portal_redirect():
+    """Alternative route for the web application portal."""
+    return RedirectResponse(url="/")
 
 
 if __name__ == "__main__":
