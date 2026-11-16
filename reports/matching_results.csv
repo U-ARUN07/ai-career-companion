@@ -1,51 +1,51 @@
 candidate_id,candidate_name,scenario,rank,internship_id,title,company,similarity_score,is_ground_truth_relevant,matching_skills,missing_skills
-CAND01,Arun,Java Backend Development,1,INT001,Java Backend Developer Intern,TechNova Solutions (Synthetic),0.6453,True,"Java, Spring Boot, SQL, REST APIs",
-CAND01,Arun,Java Backend Development,2,INT017,Java & React Full Stack Intern,Horizon Enterprise Systems (Synthetic),0.5444,False,"Java, Spring Boot, SQL, JavaScript",React
-CAND01,Arun,Java Backend Development,3,INT002,Spring Boot API Engineer Intern,ApexCloud Labs (Synthetic),0.5423,True,"Java, Spring Boot, Hibernate, MySQL",
-CAND01,Arun,Java Backend Development,4,INT005,Python Backend Developer Intern,NextGen Software Labs (Synthetic),0.527,False,"SQLAlchemy, PostgreSQL","Python, FastAPI"
-CAND01,Arun,Java Backend Development,5,INT004,Enterprise Java Microservices Intern,InfraCore Systems (Synthetic),0.5081,True,"Java, Spring Boot, REST APIs",Microservices
-CAND02,Priya Nair,Python Development,1,INT005,Python Backend Developer Intern,NextGen Software Labs (Synthetic),0.645,True,"Python, FastAPI, SQLAlchemy, PostgreSQL",
-CAND02,Priya Nair,Python Development,2,INT007,Python Automation & Scripting Intern,PulseWave Dynamics (Synthetic),0.6234,True,"Python, REST APIs","BeautifulSoup, Automation"
-CAND02,Priya Nair,Python Development,3,INT052,Python Data Automation Specialist Intern,AlphaSync Labs (Synthetic),0.5699,True,"Python, SQL","Pandas, ETL, Automation"
-CAND02,Priya Nair,Python Development,4,INT009,Machine Learning Engineer Intern,CognitiveMatrix AI (Synthetic),0.5189,False,Python,"Scikit-Learn, Machine Learning, Pandas, NumPy"
-CAND02,Priya Nair,Python Development,5,INT006,Django Web Application Intern,AuraDigital Studios (Synthetic),0.5176,True,Python,"Django, HTML/CSS, SQLite"
-CAND03,Rohan Verma,Data Science,1,INT010,Data Science Research Intern,InnoInsight Analytics (Synthetic),0.6298,True,"Python, Data Science, Pandas, Statistics, SQL",
-CAND03,Rohan Verma,Data Science,2,INT030,Data Analyst Intern,MetricHub Analytics (Synthetic),0.596,True,"SQL, Power BI, Python","Data Analytics, Excel"
-CAND03,Rohan Verma,Data Science,3,INT039,Big Data Hadoop & Spark Intern,MegaScale DataWorks (Synthetic),0.5452,False,"SQL, Python","Big Data, PySpark, Hadoop"
-CAND03,Rohan Verma,Data Science,4,INT038,Data Engineering Intern,StreamData Platform (Synthetic),0.4954,False,"Python, SQL","Data Engineering, PySpark, ETL"
-CAND03,Rohan Verma,Data Science,5,INT031,Tableau & BI Developer Intern,InsightForge Solutions (Synthetic),0.4681,True,SQL,"Tableau, Business Intelligence, Data Visualization"
-CAND04,Ananya Iyer,AI/ML (Machine Learning),1,INT009,Machine Learning Engineer Intern,CognitiveMatrix AI (Synthetic),0.5478,True,"Python, Scikit-Learn, Machine Learning, NumPy",Pandas
-CAND04,Ananya Iyer,AI/ML (Machine Learning),2,INT040,Deep Learning Research Intern,NeuralFrontier Labs (Synthetic),0.5439,True,"Deep Learning, PyTorch, Python",Neural Networks
-CAND04,Ananya Iyer,AI/ML (Machine Learning),3,INT011,Computer Vision Intern,VisionCraft Labs (Synthetic),0.4753,True,"Python, OpenCV, PyTorch, Deep Learning",
-CAND04,Ananya Iyer,AI/ML (Machine Learning),4,INT041,Reinforcement Learning & Robotics Intern,RoboCognition Tech (Synthetic),0.4612,True,Python,"Reinforcement Learning, Algorithms, Mathematics"
-CAND04,Ananya Iyer,AI/ML (Machine Learning),5,INT055,AI Quality & Model Evaluation Intern,TrustWorth AI (Synthetic),0.3566,True,"Python, Machine Learning","Generative AI, Evaluation Metrics"
-CAND05,Karthik Menon,Generative AI,1,INT050,RAG Applications & AI Integration Intern,SemanticNexus AI (Synthetic),0.6736,True,"Python, FAISS, Embeddings","RAG, Vector Search"
-CAND05,Karthik Menon,Generative AI,2,INT013,Generative AI & RAG Solutions Intern,Synthetix Intelligence (Synthetic),0.6596,True,"Python, Generative AI, LangChain, Vector Databases, Embeddings",
-CAND05,Karthik Menon,Generative AI,3,INT015,AI Agent Systems Intern,AgenticFlow AI (Synthetic),0.6537,True,"Python, Generative AI","AI Agents, LangGraph, REST APIs"
-CAND05,Karthik Menon,Generative AI,4,INT055,AI Quality & Model Evaluation Intern,TrustWorth AI (Synthetic),0.521,True,"Python, Generative AI","Machine Learning, Evaluation Metrics"
-CAND05,Karthik Menon,Generative AI,5,INT009,Machine Learning Engineer Intern,CognitiveMatrix AI (Synthetic),0.49,False,Python,"Scikit-Learn, Machine Learning, Pandas, NumPy"
-CAND06,Neha Patel,Full Stack Development,1,INT016,MERN Full Stack Developer Intern,WebSpectrum Solutions (Synthetic),0.6018,True,"React, Node.js, Express.js, MongoDB, JavaScript",
-CAND06,Neha Patel,Full Stack Development,2,INT054,Full Stack Python & React Developer Intern,PrimeStack Tech (Synthetic),0.5539,True,"React, JavaScript","Python, FastAPI, SQL"
-CAND06,Neha Patel,Full Stack Development,3,INT022,UI/UX & Web Developer Intern,CreativeCanvas Labs (Synthetic),0.5303,False,"HTML5, CSS3, JavaScript","Figma, Responsive Design"
-CAND06,Neha Patel,Full Stack Development,4,INT015,AI Agent Systems Intern,AgenticFlow AI (Synthetic),0.4974,False,REST APIs,"Python, Generative AI, AI Agents, LangGraph"
-CAND06,Neha Patel,Full Stack Development,5,INT018,Python & Vue.js Full Stack Intern,InnovateX Interactive (Synthetic),0.4797,True,JavaScript,"Python, FastAPI, Vue.js, HTML/CSS"
-CAND07,Vikram Rathore,Cloud Computing,1,INT023,AWS Cloud Engineering Intern,CloudMatrix Systems (Synthetic),0.533,True,"AWS, Cloud Computing, Linux, Python",Networking
-CAND07,Vikram Rathore,Cloud Computing,2,INT024,DevOps & CI/CD Pipeline Intern,ReliabilityOps Global (Synthetic),0.4951,True,"DevOps, Docker, CI/CD, Linux, Git",
-CAND07,Vikram Rathore,Cloud Computing,3,INT053,Cloud Security & Governance Intern,SecureCloud Dynamics (Synthetic),0.4921,True,"AWS, Python","Cloud Security, Cybersecurity"
-CAND07,Vikram Rathore,Cloud Computing,4,INT035,QA Automation Engineer Intern,QualityEdge Labs (Synthetic),0.45,False,Python,"QA Automation, Selenium, Testing"
-CAND07,Vikram Rathore,Cloud Computing,5,INT005,Python Backend Developer Intern,NextGen Software Labs (Synthetic),0.4434,False,Python,"FastAPI, SQLAlchemy, PostgreSQL"
-CAND08,Sneha Kulkarni,Cybersecurity,1,INT027,Cybersecurity & Vulnerability Assessment Intern,ShieldPoint Security (Synthetic),0.6369,True,"Cybersecurity, Network Security, OWASP, Linux, Vulnerability Assessment",
-CAND08,Sneha Kulkarni,Cybersecurity,2,INT029,Application Security (AppSec) Intern,CodeDefend Systems (Synthetic),0.4984,True,"OWASP, Python","Application Security, Java, Secure Coding"
-CAND08,Sneha Kulkarni,Cybersecurity,3,INT005,Python Backend Developer Intern,NextGen Software Labs (Synthetic),0.4831,False,Python,"FastAPI, SQLAlchemy, PostgreSQL"
-CAND08,Sneha Kulkarni,Cybersecurity,4,INT006,Django Web Application Intern,AuraDigital Studios (Synthetic),0.4458,False,Python,"Django, HTML/CSS, SQLite"
-CAND08,Sneha Kulkarni,Cybersecurity,5,INT007,Python Automation & Scripting Intern,PulseWave Dynamics (Synthetic),0.445,False,Python,"BeautifulSoup, Automation, REST APIs"
-CAND09,Aditya Sengupta,Education-focused candidate,1,INT033,Software Development Engineer (SDE) Intern,NovaLogic Technologies (Synthetic),0.5233,True,"Data Structures, Algorithms, Java, C++, Problem Solving",
-CAND09,Aditya Sengupta,Education-focused candidate,2,INT034,C++ Systems Software Intern,SpeedByte Systems (Synthetic),0.4871,True,"C++, Data Structures","Multithreading, Linux"
-CAND09,Aditya Sengupta,Education-focused candidate,3,INT041,Reinforcement Learning & Robotics Intern,RoboCognition Tech (Synthetic),0.4271,True,Algorithms,"Python, Reinforcement Learning, Mathematics"
-CAND09,Aditya Sengupta,Education-focused candidate,4,INT003,Core Java Systems Intern,DataBridge Informatics (Synthetic),0.4183,True,"Java, Data Structures, SQL",Multithreading
-CAND09,Aditya Sengupta,Education-focused candidate,5,INT001,Java Backend Developer Intern,TechNova Solutions (Synthetic),0.4131,True,"Java, SQL","Spring Boot, REST APIs"
-CAND10,Meera Krishnan,Project-based candidate with multiple technical skills,1,INT054,Full Stack Python & React Developer Intern,PrimeStack Tech (Synthetic),0.5658,True,"Python, React, FastAPI, SQL, JavaScript",
-CAND10,Meera Krishnan,Project-based candidate with multiple technical skills,2,INT005,Python Backend Developer Intern,NextGen Software Labs (Synthetic),0.5589,True,"Python, FastAPI, SQLAlchemy, PostgreSQL",
-CAND10,Meera Krishnan,Project-based candidate with multiple technical skills,3,INT001,Java Backend Developer Intern,TechNova Solutions (Synthetic),0.5351,False,"Java, SQL, REST APIs",Spring Boot
-CAND10,Meera Krishnan,Project-based candidate with multiple technical skills,4,INT007,Python Automation & Scripting Intern,PulseWave Dynamics (Synthetic),0.4936,False,"Python, REST APIs","BeautifulSoup, Automation"
-CAND10,Meera Krishnan,Project-based candidate with multiple technical skills,5,INT017,Java & React Full Stack Intern,Horizon Enterprise Systems (Synthetic),0.4863,False,"Java, React, SQL, JavaScript",Spring Boot
+CAND01,Arun,Java Backend Development,1,INT001,Java Backend Developer Intern,TechNova Solutions (Synthetic),0.7625,True,"Java, Spring Boot, SQL, REST APIs",
+CAND01,Arun,Java Backend Development,2,INT002,Spring Boot API Engineer Intern,ApexCloud Labs (Synthetic),0.7205,True,"Java, Spring Boot, Hibernate, MySQL",
+CAND01,Arun,Java Backend Development,3,INT003,Core Java Systems Intern,DataBridge Informatics (Synthetic),0.7018,True,"Java, SQL","Multithreading, Data Structures"
+CAND01,Arun,Java Backend Development,4,INT051,Senior Java Developer Intern,Apex Financial Systems (Synthetic),0.6972,True,"Java, Spring Boot, SQL","Kafka, Microservices"
+CAND01,Arun,Java Backend Development,5,INT017,Java & React Full Stack Intern,Horizon Enterprise Systems (Synthetic),0.6898,False,"Java, Spring Boot, SQL, JavaScript",React
+CAND02,Priya Nair,Python Development,1,INT005,Python Backend Developer Intern,NextGen Software Labs (Synthetic),0.811,True,"Python, FastAPI, SQLAlchemy, PostgreSQL",
+CAND02,Priya Nair,Python Development,2,INT007,Python Automation & Scripting Intern,PulseWave Dynamics (Synthetic),0.7068,True,"Python, REST APIs","BeautifulSoup, Automation"
+CAND02,Priya Nair,Python Development,3,INT008,Flask API Development Intern,ZetaCore Tech (Synthetic),0.6922,True,"Python, Flask, REST APIs",MongoDB
+CAND02,Priya Nair,Python Development,4,INT054,Full Stack Python & React Developer Intern,PrimeStack Tech (Synthetic),0.6733,False,"Python, FastAPI, SQL","React, JavaScript"
+CAND02,Priya Nair,Python Development,5,INT052,Python Data Automation Specialist Intern,AlphaSync Labs (Synthetic),0.6697,True,"Python, SQL","Pandas, ETL, Automation"
+CAND03,Rohan Verma,Data Science,1,INT010,Data Science Research Intern,InnoInsight Analytics (Synthetic),0.7218,True,"Python, Data Science, Pandas, Statistics, SQL",
+CAND03,Rohan Verma,Data Science,2,INT030,Data Analyst Intern,MetricHub Analytics (Synthetic),0.7136,True,"SQL, Power BI, Python","Data Analytics, Excel"
+CAND03,Rohan Verma,Data Science,3,INT032,Financial & Operations Data Analyst Intern,Quantix Capital Tech (Synthetic),0.5827,True,"SQL, Data Analysis","Excel, Financial Modeling"
+CAND03,Rohan Verma,Data Science,4,INT031,Tableau & BI Developer Intern,InsightForge Solutions (Synthetic),0.5799,True,SQL,"Tableau, Business Intelligence, Data Visualization"
+CAND03,Rohan Verma,Data Science,5,INT038,Data Engineering Intern,StreamData Platform (Synthetic),0.5706,False,"Python, SQL","Data Engineering, PySpark, ETL"
+CAND04,Ananya Iyer,AI/ML (Machine Learning),1,INT011,Computer Vision Intern,VisionCraft Labs (Synthetic),0.7481,True,"Python, OpenCV, PyTorch, Deep Learning",
+CAND04,Ananya Iyer,AI/ML (Machine Learning),2,INT009,Machine Learning Engineer Intern,CognitiveMatrix AI (Synthetic),0.6491,True,"Python, Scikit-Learn, Machine Learning, NumPy",Pandas
+CAND04,Ananya Iyer,AI/ML (Machine Learning),3,INT040,Deep Learning Research Intern,NeuralFrontier Labs (Synthetic),0.6241,True,"Deep Learning, PyTorch, Python",Neural Networks
+CAND04,Ananya Iyer,AI/ML (Machine Learning),4,INT055,AI Quality & Model Evaluation Intern,TrustWorth AI (Synthetic),0.5221,True,"Python, Machine Learning","Generative AI, Evaluation Metrics"
+CAND04,Ananya Iyer,AI/ML (Machine Learning),5,INT015,AI Agent Systems Intern,AgenticFlow AI (Synthetic),0.473,False,Python,"Generative AI, AI Agents, LangGraph, REST APIs"
+CAND05,Karthik Menon,Generative AI,1,INT013,Generative AI & RAG Solutions Intern,Synthetix Intelligence (Synthetic),0.7894,True,"Python, Generative AI, LangChain, Vector Databases, Embeddings",
+CAND05,Karthik Menon,Generative AI,2,INT050,RAG Applications & AI Integration Intern,SemanticNexus AI (Synthetic),0.7609,True,"Python, FAISS, Embeddings","RAG, Vector Search"
+CAND05,Karthik Menon,Generative AI,3,INT015,AI Agent Systems Intern,AgenticFlow AI (Synthetic),0.7199,True,"Python, Generative AI","AI Agents, LangGraph, REST APIs"
+CAND05,Karthik Menon,Generative AI,4,INT055,AI Quality & Model Evaluation Intern,TrustWorth AI (Synthetic),0.6519,True,"Python, Generative AI","Machine Learning, Evaluation Metrics"
+CAND05,Karthik Menon,Generative AI,5,INT012,NLP & Text Analytics Intern,LinguisticAI Solutions (Synthetic),0.6518,False,"Python, Hugging Face","NLP, Transformers, Regex"
+CAND06,Neha Patel,Full Stack Development,1,INT016,MERN Full Stack Developer Intern,WebSpectrum Solutions (Synthetic),0.7818,True,"React, Node.js, Express.js, MongoDB, JavaScript",
+CAND06,Neha Patel,Full Stack Development,2,INT019,Next.js & TypeScript Full Stack Intern,Vanguard Webworks (Synthetic),0.7178,True,"React, TypeScript, Node.js","Next.js, SQL"
+CAND06,Neha Patel,Full Stack Development,3,INT022,UI/UX & Web Developer Intern,CreativeCanvas Labs (Synthetic),0.6641,False,"HTML5, CSS3, JavaScript","Figma, Responsive Design"
+CAND06,Neha Patel,Full Stack Development,4,INT017,Java & React Full Stack Intern,Horizon Enterprise Systems (Synthetic),0.6509,True,"Java, React, JavaScript","Spring Boot, SQL"
+CAND06,Neha Patel,Full Stack Development,5,INT042,Blockchain & Smart Contract Intern,ChainTrust Systems (Synthetic),0.6105,False,JavaScript,"Blockchain, Solidity, Smart Contracts"
+CAND07,Vikram Rathore,Cloud Computing,1,INT023,AWS Cloud Engineering Intern,CloudMatrix Systems (Synthetic),0.7581,True,"AWS, Cloud Computing, Linux, Python",Networking
+CAND07,Vikram Rathore,Cloud Computing,2,INT024,DevOps & CI/CD Pipeline Intern,ReliabilityOps Global (Synthetic),0.6894,True,"DevOps, Docker, CI/CD, Linux, Git",
+CAND07,Vikram Rathore,Cloud Computing,3,INT053,Cloud Security & Governance Intern,SecureCloud Dynamics (Synthetic),0.6759,True,"AWS, Python","Cloud Security, Cybersecurity"
+CAND07,Vikram Rathore,Cloud Computing,4,INT025,Kubernetes & Cloud Infrastructure Intern,ScaleCluster Technologies (Synthetic),0.6548,True,"Kubernetes, Docker, Linux, DevOps",
+CAND07,Vikram Rathore,Cloud Computing,5,INT004,Enterprise Java Microservices Intern,InfraCore Systems (Synthetic),0.6016,False,,"Java, Spring Boot, Microservices, REST APIs"
+CAND08,Sneha Kulkarni,Cybersecurity,1,INT027,Cybersecurity & Vulnerability Assessment Intern,ShieldPoint Security (Synthetic),0.7277,True,"Cybersecurity, Network Security, OWASP, Linux, Vulnerability Assessment",
+CAND08,Sneha Kulkarni,Cybersecurity,2,INT028,SOC Analyst Intern,CyberWatch Defense (Synthetic),0.6585,True,"Cybersecurity, Network Security","SIEM, Log Analysis"
+CAND08,Sneha Kulkarni,Cybersecurity,3,INT029,Application Security (AppSec) Intern,CodeDefend Systems (Synthetic),0.634,True,"OWASP, Python","Application Security, Java, Secure Coding"
+CAND08,Sneha Kulkarni,Cybersecurity,4,INT053,Cloud Security & Governance Intern,SecureCloud Dynamics (Synthetic),0.5768,True,"Cybersecurity, Python","Cloud Security, AWS"
+CAND08,Sneha Kulkarni,Cybersecurity,5,INT042,Blockchain & Smart Contract Intern,ChainTrust Systems (Synthetic),0.5355,False,,"Blockchain, Solidity, Smart Contracts, JavaScript"
+CAND09,Aditya Sengupta,Education-focused candidate,1,INT034,C++ Systems Software Intern,SpeedByte Systems (Synthetic),0.5625,True,"C++, Data Structures","Multithreading, Linux"
+CAND09,Aditya Sengupta,Education-focused candidate,2,INT009,Machine Learning Engineer Intern,CognitiveMatrix AI (Synthetic),0.5556,False,,"Python, Scikit-Learn, Machine Learning, Pandas, NumPy"
+CAND09,Aditya Sengupta,Education-focused candidate,3,INT033,Software Development Engineer (SDE) Intern,NovaLogic Technologies (Synthetic),0.5545,True,"Data Structures, Algorithms, Java, C++, Problem Solving",
+CAND09,Aditya Sengupta,Education-focused candidate,4,INT003,Core Java Systems Intern,DataBridge Informatics (Synthetic),0.5501,True,"Java, Data Structures, SQL",Multithreading
+CAND09,Aditya Sengupta,Education-focused candidate,5,INT001,Java Backend Developer Intern,TechNova Solutions (Synthetic),0.5078,True,"Java, SQL","Spring Boot, REST APIs"
+CAND10,Meera Krishnan,Project-based candidate with multiple technical skills,1,INT023,AWS Cloud Engineering Intern,CloudMatrix Systems (Synthetic),0.6942,True,"AWS, Python","Cloud Computing, Linux, Networking"
+CAND10,Meera Krishnan,Project-based candidate with multiple technical skills,2,INT054,Full Stack Python & React Developer Intern,PrimeStack Tech (Synthetic),0.6919,True,"Python, React, FastAPI, SQL, JavaScript",
+CAND10,Meera Krishnan,Project-based candidate with multiple technical skills,3,INT005,Python Backend Developer Intern,NextGen Software Labs (Synthetic),0.6912,True,"Python, FastAPI, SQLAlchemy, PostgreSQL",
+CAND10,Meera Krishnan,Project-based candidate with multiple technical skills,4,INT008,Flask API Development Intern,ZetaCore Tech (Synthetic),0.6886,False,"Python, REST APIs","Flask, MongoDB"
+CAND10,Meera Krishnan,Project-based candidate with multiple technical skills,5,INT016,MERN Full Stack Developer Intern,WebSpectrum Solutions (Synthetic),0.6805,True,"React, JavaScript","Node.js, Express.js, MongoDB"

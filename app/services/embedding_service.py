@@ -42,7 +42,10 @@ class EmbeddingService:
                 logger.info(f"Loading primary embedding model: {self.model_name}...")
                 from sentence_transformers import SentenceTransformer
 
-                model = SentenceTransformer(self.model_name)
+                try:
+                    model = SentenceTransformer(self.model_name, local_files_only=True)
+                except Exception:
+                    model = SentenceTransformer(self.model_name)
                 test_dim = model.get_sentence_embedding_dimension()
                 if test_dim:
                     self.dimension = test_dim

@@ -4,7 +4,7 @@
 **System:** RAG-Based Internship Matching System  
 **Embedding Model:** `sentence-transformers/all-MiniLM-L6-v2`  
 **Vector Store:** FAISS (Inner Product / Normalized Cosine Similarity)  
-**Evaluation Duration:** 2.46 seconds  
+**Evaluation Duration:** 8.04 seconds  
 
 ---
 
@@ -12,8 +12,8 @@
 
 | Metric | Formula | Score | Percentage |
 | :--- | :--- | :---: | :---: |
-| **Precision@5** | $\frac{\text{Relevant Retrieved}}{5}$ | **0.6800** | **68.0%** |
-| **Recall@5** | $\frac{\text{Relevant Retrieved}}{|\text{Total Expected Relevant}|}$ | **0.6900** | **69.0%** |
+| **Precision@5** | $\frac{\text{Relevant Retrieved}}{5}$ | **0.7800** | **78.0%** |
+| **Recall@5** | $\frac{\text{Relevant Retrieved}}{|\text{Total Expected Relevant}|}$ | **0.8000** | **80.0%** |
 | **Mean Reciprocal Rank (MRR)** | $\frac{1}{|Q|} \sum_{i=1}^{|Q|} \frac{1}{\text{Rank}_i}$ | **1.0000** | **100.0%** |
 
 > [!NOTE]
@@ -25,16 +25,16 @@
 
 | ID | Candidate Name | Scenario | P@5 | R@5 | Reciprocal Rank | Top Retrieved Internship |
 | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| `CAND01` | **Arun** | Java Backend Development | `0.60` | `0.60` | `1.00` | Java Backend Developer Intern (INT001) |
+| `CAND01` | **Arun** | Java Backend Development | `0.80` | `0.80` | `1.00` | Java Backend Developer Intern (INT001) |
 | `CAND02` | **Priya Nair** | Python Development | `0.80` | `0.80` | `1.00` | Python Backend Developer Intern (INT005) |
-| `CAND03` | **Rohan Verma** | Data Science | `0.60` | `0.60` | `1.00` | Data Science Research Intern (INT010) |
-| `CAND04` | **Ananya Iyer** | AI/ML (Machine Learning) | `1.00` | `1.00` | `1.00` | Machine Learning Engineer Intern (INT009) |
-| `CAND05` | **Karthik Menon** | Generative AI | `0.80` | `0.80` | `1.00` | RAG Applications & AI Integration Intern (INT050) |
+| `CAND03` | **Rohan Verma** | Data Science | `0.80` | `0.80` | `1.00` | Data Science Research Intern (INT010) |
+| `CAND04` | **Ananya Iyer** | AI/ML (Machine Learning) | `0.80` | `0.80` | `1.00` | Computer Vision Intern (INT011) |
+| `CAND05` | **Karthik Menon** | Generative AI | `0.80` | `0.80` | `1.00` | Generative AI & RAG Solutions Intern (INT013) |
 | `CAND06` | **Neha Patel** | Full Stack Development | `0.60` | `0.60` | `1.00` | MERN Full Stack Developer Intern (INT016) |
-| `CAND07` | **Vikram Rathore** | Cloud Computing | `0.60` | `0.60` | `1.00` | AWS Cloud Engineering Intern (INT023) |
-| `CAND08` | **Sneha Kulkarni** | Cybersecurity | `0.40` | `0.50` | `1.00` | Cybersecurity & Vulnerability Assessment Intern (INT027) |
-| `CAND09` | **Aditya Sengupta** | Education-focused candidate | `1.00` | `1.00` | `1.00` | Software Development Engineer (SDE) Intern (INT033) |
-| `CAND10` | **Meera Krishnan** | Project-based candidate with multiple technical skills | `0.40` | `0.40` | `1.00` | Full Stack Python & React Developer Intern (INT054) |
+| `CAND07` | **Vikram Rathore** | Cloud Computing | `0.80` | `0.80` | `1.00` | AWS Cloud Engineering Intern (INT023) |
+| `CAND08` | **Sneha Kulkarni** | Cybersecurity | `0.80` | `1.00` | `1.00` | Cybersecurity & Vulnerability Assessment Intern (INT027) |
+| `CAND09` | **Aditya Sengupta** | Education-focused candidate | `0.80` | `0.80` | `1.00` | C++ Systems Software Intern (INT034) |
+| `CAND10` | **Meera Krishnan** | Project-based candidate with multiple technical skills | `0.80` | `0.80` | `1.00` | AWS Cloud Engineering Intern (INT023) |
 
 ---
 
