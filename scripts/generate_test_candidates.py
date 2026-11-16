@@ -24,7 +24,7 @@ TEST_CANDIDATES = [
         "id": "CAND01",
         "scenario": "Java Backend Development",
         "resume": {
-            "name": "Aarav Sharma",
+            "name": "Arun",
             "summary": "Passionate Computer Science student specializing in Java enterprise backend development and RESTful web microservices.",
             "skills": ["Java", "Spring Boot", "SQL", "Hibernate", "REST APIs", "PostgreSQL", "Maven", "Git"],
             "education": ["B.Tech in Computer Science and Engineering, CGPA 8.8"],

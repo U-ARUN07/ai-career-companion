@@ -6,6 +6,20 @@
 [![Sentence--Transformers](https://img.shields.io/badge/Sentence--Transformers-all--MiniLM--L6--v2-orange.svg)](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+---
+
+### 🚀 Quick Access Buttons
+
+| Action | One-Click Button | Direct Link |
+| :--- | :--- | :--- |
+| **Launch Web Portal** | [![Open Local App](https://img.shields.io/badge/🚀_Open_Live_Portal-http%3A%2F%2Flocalhost%3A8000-007acc?style=for-the-badge)](http://localhost:8000) | [http://localhost:8000](http://localhost:8000) |
+| **Interactive API Docs** | [![Open Swagger Docs](https://img.shields.io/badge/📖_Swagger_API_Docs-http%3A%2F%2Flocalhost%3A8000%2Fdocs-009688?style=for-the-badge)](http://localhost:8000/docs) | [http://localhost:8000/docs](http://localhost:8000/docs) |
+| **Deploy to Cloud (Free)** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/U-ARUN07/rag-internship-matching) | [Deploy on Render](https://render.com/deploy?repo=https://github.com/U-ARUN07/rag-internship-matching) |
+
+> 💡 *Note: The local links (`http://localhost:8000`) open instantly in your browser whenever the server is running on your computer.*
+
+---
+
 An enterprise-grade, locally executable **Retrieval-Augmented Generation (RAG) Internship Matching System** engineered for the **Infosys Springboard Virtual Internship Program 7.0**.
 
 The system ingests structured candidate resumes (extracted from the preceding Resume Parsing milestone), transforms them into normalized semantic embeddings, queries a pre-indexed **FAISS vector database** populated with diverse internship opportunities, and retrieves the most relevant internships ranked by cosine similarity with optional grounded, anti-hallucinatory matching rationales.
@@ -209,7 +223,7 @@ Candidate JSON is converted into a semantically dense representation using `Resu
 - Strips null values and empty arrays safely.
 - Normalizes technical skills and project descriptions.
 - Generates structured sections:
-  `"Candidate Profile: Aarav Sharma. Professional Summary: Backend student. Technical and Core Skills: Java, Spring Boot, SQL. Key Projects: E-Commerce REST API. Education: B.Tech CSE."`
+  `"Candidate Profile: Arun. Professional Summary: Backend student. Technical and Core Skills: Java, Spring Boot, SQL. Key Projects: E-Commerce REST API. Education: B.Tech CSE."`
 
 ### 2. Embedding Generation
 `EmbeddingService` utilizes `sentence-transformers/all-MiniLM-L6-v2`:

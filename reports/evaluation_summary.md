@@ -4,7 +4,7 @@
 **System:** RAG-Based Internship Matching System  
 **Embedding Model:** `sentence-transformers/all-MiniLM-L6-v2`  
 **Vector Store:** FAISS (Inner Product / Normalized Cosine Similarity)  
-**Evaluation Duration:** 1.57 seconds  
+**Evaluation Duration:** 2.46 seconds  
 
 ---
 
@@ -25,7 +25,7 @@
 
 | ID | Candidate Name | Scenario | P@5 | R@5 | Reciprocal Rank | Top Retrieved Internship |
 | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
-| `CAND01` | **Aarav Sharma** | Java Backend Development | `0.60` | `0.60` | `1.00` | Java Backend Developer Intern (INT001) |
+| `CAND01` | **Arun** | Java Backend Development | `0.60` | `0.60` | `1.00` | Java Backend Developer Intern (INT001) |
 | `CAND02` | **Priya Nair** | Python Development | `0.80` | `0.80` | `1.00` | Python Backend Developer Intern (INT005) |
 | `CAND03` | **Rohan Verma** | Data Science | `0.60` | `0.60` | `1.00` | Data Science Research Intern (INT010) |
 | `CAND04` | **Ananya Iyer** | AI/ML (Machine Learning) | `1.00` | `1.00` | `1.00` | Machine Learning Engineer Intern (INT009) |

@@ -1,9 +1,9 @@
 candidate_id,candidate_name,scenario,rank,internship_id,title,company,similarity_score,is_ground_truth_relevant,matching_skills,missing_skills
-CAND01,Aarav Sharma,Java Backend Development,1,INT001,Java Backend Developer Intern,TechNova Solutions (Synthetic),0.6469,True,"Java, Spring Boot, SQL, REST APIs",
-CAND01,Aarav Sharma,Java Backend Development,2,INT002,Spring Boot API Engineer Intern,ApexCloud Labs (Synthetic),0.5436,True,"Java, Spring Boot, Hibernate, MySQL",
-CAND01,Aarav Sharma,Java Backend Development,3,INT005,Python Backend Developer Intern,NextGen Software Labs (Synthetic),0.5345,False,"SQLAlchemy, PostgreSQL","Python, FastAPI"
-CAND01,Aarav Sharma,Java Backend Development,4,INT017,Java & React Full Stack Intern,Horizon Enterprise Systems (Synthetic),0.5338,False,"Java, Spring Boot, SQL, JavaScript",React
-CAND01,Aarav Sharma,Java Backend Development,5,INT004,Enterprise Java Microservices Intern,InfraCore Systems (Synthetic),0.5093,True,"Java, Spring Boot, REST APIs",Microservices
+CAND01,Arun,Java Backend Development,1,INT001,Java Backend Developer Intern,TechNova Solutions (Synthetic),0.6453,True,"Java, Spring Boot, SQL, REST APIs",
+CAND01,Arun,Java Backend Development,2,INT017,Java & React Full Stack Intern,Horizon Enterprise Systems (Synthetic),0.5444,False,"Java, Spring Boot, SQL, JavaScript",React
+CAND01,Arun,Java Backend Development,3,INT002,Spring Boot API Engineer Intern,ApexCloud Labs (Synthetic),0.5423,True,"Java, Spring Boot, Hibernate, MySQL",
+CAND01,Arun,Java Backend Development,4,INT005,Python Backend Developer Intern,NextGen Software Labs (Synthetic),0.527,False,"SQLAlchemy, PostgreSQL","Python, FastAPI"
+CAND01,Arun,Java Backend Development,5,INT004,Enterprise Java Microservices Intern,InfraCore Systems (Synthetic),0.5081,True,"Java, Spring Boot, REST APIs",Microservices
 CAND02,Priya Nair,Python Development,1,INT005,Python Backend Developer Intern,NextGen Software Labs (Synthetic),0.645,True,"Python, FastAPI, SQLAlchemy, PostgreSQL",
 CAND02,Priya Nair,Python Development,2,INT007,Python Automation & Scripting Intern,PulseWave Dynamics (Synthetic),0.6234,True,"Python, REST APIs","BeautifulSoup, Automation"
 CAND02,Priya Nair,Python Development,3,INT052,Python Data Automation Specialist Intern,AlphaSync Labs (Synthetic),0.5699,True,"Python, SQL","Pandas, ETL, Automation"

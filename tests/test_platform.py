@@ -27,7 +27,7 @@ def test_cover_letter_generation_agent():
     """Verify Cover Letter Agent produces tailored letter and ATS scores."""
     req = CoverLetterRequest(
         candidate=CandidateResume(
-            name="Aarav Sharma",
+            name="Arun",
             skills=["Java", "Spring Boot", "SQL", "PostgreSQL"],
             projects=["Developed E-Commerce Spring Boot microservice"],
         ),
@@ -35,7 +35,7 @@ def test_cover_letter_generation_agent():
     )
     result = generate_cover_letter(req)
 
-    assert result.candidate_name == "Aarav Sharma"
+    assert result.candidate_name == "Arun"
     assert result.internship_id == "INT001"
     assert "TechNova" in result.company_name
     assert 50 <= result.ats_score <= 100

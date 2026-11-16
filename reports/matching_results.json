@@ -4,25 +4,25 @@
     "mean_precision_at_5": 0.68,
     "mean_recall_at_5": 0.69,
     "mean_reciprocal_rank": 1.0,
-    "evaluation_duration_seconds": 1.57
+    "evaluation_duration_seconds": 2.46
   },
   "candidates": [
     {
       "candidate_id": "CAND01",
-      "candidate_name": "Aarav Sharma",
+      "candidate_name": "Arun",
       "scenario": "Java Backend Development",
       "expected_relevant_ids": [
         "INT051",
-        "INT001",
+        "INT004",
         "INT003",
         "INT002",
-        "INT004"
+        "INT001"
       ],
       "retrieved_ids": [
         "INT001",
+        "INT017",
         "INT002",
         "INT005",
-        "INT017",
         "INT004"
       ],
       "relevant_retrieved_ids": [
@@ -40,7 +40,7 @@
           "internship_id": "INT001",
           "title": "Java Backend Developer Intern",
           "company": "TechNova Solutions (Synthetic)",
-          "similarity_score": 0.6469,
+          "similarity_score": 0.6453,
           "description": "Design, build, and optimize enterprise backend microservices and RESTful APIs using Java and Spring Boot. Collaborate with database engineers on PostgreSQL queries and caching.",
           "required_skills": [
             "Java",
@@ -81,10 +81,55 @@
           }
         },
         {
+          "internship_id": "INT017",
+          "title": "Java & React Full Stack Intern",
+          "company": "Horizon Enterprise Systems (Synthetic)",
+          "similarity_score": 0.5444,
+          "description": "Develop end-to-end web portals using Java Spring Boot on the backend and React with TypeScript on the frontend. Manage PostgreSQL schemas.",
+          "required_skills": [
+            "Java",
+            "Spring Boot",
+            "React",
+            "SQL",
+            "JavaScript"
+          ],
+          "preferred_skills": [
+            "TypeScript",
+            "PostgreSQL",
+            "Docker"
+          ],
+          "education_requirements": [
+            "B.Tech CSE/IT",
+            "MCA"
+          ],
+          "experience_requirements": "Solid grounding in both client-side components and server-side REST controllers.",
+          "location": "Chennai",
+          "work_mode": "On-site",
+          "duration": "6 months",
+          "stipend": "₹19,000/month",
+          "explanation": {
+            "match_reason": "Candidate's background demonstrates strong alignment with Java & React Full Stack Intern at Horizon Enterprise Systems (Synthetic). Demonstrated proficiency in Java, Spring Boot, SQL directly supports the primary responsibilities outlined in the role.",
+            "matching_skills": [
+              "Java",
+              "Spring Boot",
+              "SQL",
+              "JavaScript"
+            ],
+            "relevant_projects": [
+              "E-Commerce Microservices Engine: Built Spring Boot REST APIs with PostgreSQL database and JWT token security"
+            ],
+            "missing_required_skills": [
+              "React"
+            ],
+            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in React. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
+            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
+          }
+        },
+        {
           "internship_id": "INT002",
           "title": "Spring Boot API Engineer Intern",
           "company": "ApexCloud Labs (Synthetic)",
-          "similarity_score": 0.5436,
+          "similarity_score": 0.5423,
           "description": "Develop scalable API endpoints for banking and fintech service prototypes. Implement authentication, Hibernate ORM data models, and unit testing using JUnit.",
           "required_skills": [
             "Java",
@@ -130,7 +175,7 @@
           "internship_id": "INT005",
           "title": "Python Backend Developer Intern",
           "company": "NextGen Software Labs (Synthetic)",
-          "similarity_score": 0.5345,
+          "similarity_score": 0.527,
           "description": "Develop asynchronous web services and backend pipelines using Python, FastAPI, and SQLAlchemy. Write comprehensive pytest unit tests.",
           "required_skills": [
             "Python",
@@ -173,55 +218,10 @@
           }
         },
         {
-          "internship_id": "INT017",
-          "title": "Java & React Full Stack Intern",
-          "company": "Horizon Enterprise Systems (Synthetic)",
-          "similarity_score": 0.5338,
-          "description": "Develop end-to-end web portals using Java Spring Boot on the backend and React with TypeScript on the frontend. Manage PostgreSQL schemas.",
-          "required_skills": [
-            "Java",
-            "Spring Boot",
-            "React",
-            "SQL",
-            "JavaScript"
-          ],
-          "preferred_skills": [
-            "TypeScript",
-            "PostgreSQL",
-            "Docker"
-          ],
-          "education_requirements": [
-            "B.Tech CSE/IT",
-            "MCA"
-          ],
-          "experience_requirements": "Solid grounding in both client-side components and server-side REST controllers.",
-          "location": "Chennai",
-          "work_mode": "On-site",
-          "duration": "6 months",
-          "stipend": "₹19,000/month",
-          "explanation": {
-            "match_reason": "Candidate's background demonstrates strong alignment with Java & React Full Stack Intern at Horizon Enterprise Systems (Synthetic). Demonstrated proficiency in Java, Spring Boot, SQL directly supports the primary responsibilities outlined in the role.",
-            "matching_skills": [
-              "Java",
-              "Spring Boot",
-              "SQL",
-              "JavaScript"
-            ],
-            "relevant_projects": [
-              "E-Commerce Microservices Engine: Built Spring Boot REST APIs with PostgreSQL database and JWT token security"
-            ],
-            "missing_required_skills": [
-              "React"
-            ],
-            "recommendation": "To strengthen candidacy for this role, prioritize developing hands-on competency in React. Building a dedicated portfolio project highlighting these skills will bridge the gap.",
-            "disclaimer": "Similarity score represents semantic vector proximity in embedding space, not a probability or guarantee of job selection."
-          }
-        },
-        {
           "internship_id": "INT004",
           "title": "Enterprise Java Microservices Intern",
           "company": "InfraCore Systems (Synthetic)",
-          "similarity_score": 0.5093,
+          "similarity_score": 0.5081,
           "description": "Modernize legacy services to containerized Spring Cloud microservices. Integrate message queues and assist in deployment pipeline automation.",
           "required_skills": [
             "Java",
@@ -267,11 +267,11 @@
       "candidate_name": "Priya Nair",
       "scenario": "Python Development",
       "expected_relevant_ids": [
-        "INT005",
-        "INT052",
-        "INT007",
         "INT006",
-        "INT008"
+        "INT007",
+        "INT052",
+        "INT008",
+        "INT005"
       ],
       "retrieved_ids": [
         "INT005",
@@ -523,11 +523,11 @@
       "candidate_name": "Rohan Verma",
       "scenario": "Data Science",
       "expected_relevant_ids": [
-        "INT010",
-        "INT031",
+        "INT030",
         "INT009",
         "INT032",
-        "INT030"
+        "INT010",
+        "INT031"
       ],
       "retrieved_ids": [
         "INT010",
@@ -786,10 +786,10 @@
       "scenario": "AI/ML (Machine Learning)",
       "expected_relevant_ids": [
         "INT040",
-        "INT055",
-        "INT041",
         "INT011",
-        "INT009"
+        "INT009",
+        "INT055",
+        "INT041"
       ],
       "retrieved_ids": [
         "INT009",
@@ -1039,9 +1039,9 @@
       "expected_relevant_ids": [
         "INT014",
         "INT050",
-        "INT055",
+        "INT013",
         "INT015",
-        "INT013"
+        "INT055"
       ],
       "retrieved_ids": [
         "INT050",
@@ -1295,11 +1295,11 @@
       "candidate_name": "Neha Patel",
       "scenario": "Full Stack Development",
       "expected_relevant_ids": [
-        "INT016",
         "INT019",
         "INT018",
         "INT054",
-        "INT017"
+        "INT017",
+        "INT016"
       ],
       "retrieved_ids": [
         "INT016",
@@ -1560,11 +1560,11 @@
       "candidate_name": "Vikram Rathore",
       "scenario": "Cloud Computing",
       "expected_relevant_ids": [
-        "INT025",
-        "INT023",
         "INT026",
         "INT053",
-        "INT024"
+        "INT025",
+        "INT024",
+        "INT023"
       ],
       "retrieved_ids": [
         "INT023",
@@ -1818,10 +1818,10 @@
       "candidate_name": "Sneha Kulkarni",
       "scenario": "Cybersecurity",
       "expected_relevant_ids": [
-        "INT029",
-        "INT053",
+        "INT027",
         "INT028",
-        "INT027"
+        "INT029",
+        "INT053"
       ],
       "retrieved_ids": [
         "INT027",
@@ -2069,11 +2069,11 @@
       "candidate_name": "Aditya Sengupta",
       "scenario": "Education-focused candidate",
       "expected_relevant_ids": [
+        "INT033",
         "INT034",
-        "INT001",
-        "INT041",
         "INT003",
-        "INT033"
+        "INT041",
+        "INT001"
       ],
       "retrieved_ids": [
         "INT033",
@@ -2323,11 +2323,11 @@
       "candidate_name": "Meera Krishnan",
       "scenario": "Project-based candidate with multiple technical skills",
       "expected_relevant_ids": [
+        "INT018",
+        "INT054",
         "INT016",
         "INT005",
-        "INT018",
-        "INT023",
-        "INT054"
+        "INT023"
       ],
       "retrieved_ids": [
         "INT054",
