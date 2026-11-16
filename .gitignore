@@ -43,7 +43,9 @@ htmlcov/
 .ipynb_checkpoints/
 
 # IDE / Editor artifacts
-.vscode/
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
 .idea/
 *.swp
 *.swo
