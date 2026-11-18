@@ -6,7 +6,7 @@ with cover letter records and status tracking.
 
 import uuid
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 from app.schemas.cover_letter import ApplicationRecord, ApplicationSubmissionRequest
 from app.services.cover_letter_service import cover_letter_service
 from app.services.internship_loader import InternshipLoader
@@ -47,6 +47,14 @@ class ApplicationService:
     def list_applications(self) -> List[ApplicationRecord]:
         """Return all submitted applications."""
         return self._applications
+
+    def update_status(self, app_id: str, new_status: str, notes: Optional[str] = None) -> Optional[ApplicationRecord]:
+        """Update status of a tracked application."""
+        for app in self._applications:
+            if app.application_id == app_id:
+                app.status = new_status
+                return app
+        return None
 
 
 application_service = ApplicationService()

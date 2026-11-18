@@ -1,6 +1,5 @@
 """Configuration settings for the RAG-based Internship Matching System."""
 
-import os
 from pathlib import Path
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -20,17 +19,31 @@ class Settings(BaseSettings):
 
     # General App Settings
     app_name: str = "RAG Internship Matching System"
-    app_version: str = "1.0.0"
+    app_version: str = "2.0.0"
     app_env: str = "development"
     log_level: str = "INFO"
     host: str = "127.0.0.1"
     port: int = 8000
+
+    # Auth & Database Settings
+    database_url: str = Field(
+        default=f"sqlite:///{BASE_DIR / 'app.db'}",
+        description="Database connection string (SQLite default, PostgreSQL supported)",
+    )
+    secret_key: str = Field(
+        default="infosys-vip-springboard-secret-key-2025-token-auth-dev",
+        description="Secret key for signing JWT tokens",
+    )
+    algorithm: str = "HS256"
+    access_token_expire_minutes: int = 60
+    refresh_token_expire_days: int = 7
 
     # Paths
     base_dir: Path = BASE_DIR
     data_dir: Path = BASE_DIR / "data"
     vector_store_dir: Path = BASE_DIR / "vector_store"
     reports_dir: Path = BASE_DIR / "reports"
+    uploads_dir: Path = BASE_DIR / "uploads" / "resumes"
 
     internships_file: Path = BASE_DIR / "data" / "internships.json"
     test_candidates_file: Path = BASE_DIR / "data" / "test_candidates.json"
@@ -61,3 +74,4 @@ settings = Settings()
 settings.data_dir.mkdir(parents=True, exist_ok=True)
 settings.vector_store_dir.mkdir(parents=True, exist_ok=True)
 settings.reports_dir.mkdir(parents=True, exist_ok=True)
+settings.uploads_dir.mkdir(parents=True, exist_ok=True)

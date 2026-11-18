@@ -53,3 +53,8 @@ htmlcov/
 # OS files
 Thumbs.db
 .DS_Store
+
+# Database & Uploads
+app.db
+uploads/
+legacy_app_ref/

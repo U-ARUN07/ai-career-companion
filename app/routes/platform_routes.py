@@ -1,7 +1,14 @@
 """Routes for Cover Letter Generation, Application Tracking, and Career Chatbot."""
 
-from typing import List
-from fastapi import APIRouter, HTTPException, status
+from typing import List, Optional
+from fastapi import APIRouter, HTTPException, status, Depends
+from pydantic import BaseModel, Field
+from sqlalchemy.orm import Session
+
+from app import crud
+from app.database import get_db
+from app.models import User
+from app.routes.auth_routes import get_optional_current_user
 from app.schemas.cover_letter import (
     ApplicationRecord,
     ApplicationSubmissionRequest,
@@ -15,6 +22,11 @@ from app.services.chatbot_service import chatbot_service
 from app.services.cover_letter_service import cover_letter_service
 
 router = APIRouter(prefix="/api/v1", tags=["Milestone Extensions"])
+
+
+class StatusUpdateRequest(BaseModel):
+    status: str = Field(description="New status: 'Applied', 'Under Review', 'Interview Scheduled', 'Offer', 'Rejected'")
+    notes: Optional[str] = Field(default=None, description="Optional reviewer or student notes")
 
 
 @router.post(
@@ -38,10 +50,31 @@ def generate_cover_letter(request: CoverLetterRequest):
     status_code=status.HTTP_201_CREATED,
     summary="Submit Internship Application (Application Tracking Module)",
 )
-def apply_to_internship(request: ApplicationSubmissionRequest):
+def apply_to_internship(
+    request: ApplicationSubmissionRequest,
+    db: Session = Depends(get_db),
+    current_user: Optional[User] = Depends(get_optional_current_user),
+):
     """Submit an internship application with verified cover letter and recorded timestamp."""
     try:
-        return application_service.submit_application(request)
+        record = application_service.submit_application(request)
+        # If user is logged in, also record in database
+        if current_user:
+            try:
+                crud.create_application_record(
+                    db=db,
+                    user_id=current_user.id,
+                    internship_id=request.internship_id,
+                    internship_title=record.internship_title,
+                    company_name=record.company_name,
+                    match_score=float(record.ats_score),
+                    status=record.status,
+                    cover_letter=record.cover_letter,
+                    notes=f"Candidate: {request.candidate.name}",
+                )
+            except Exception:
+                pass
+        return record
     except ValueError as ve:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=str(ve))
     except Exception as e:
@@ -56,6 +89,21 @@ def apply_to_internship(request: ApplicationSubmissionRequest):
 def get_applications():
     """Retrieve history of student internship applications."""
     return application_service.list_applications()
+
+
+@router.patch(
+    "/applications/{app_id}/status",
+    summary="Update Application Tracking Status",
+)
+def update_application_status(
+    app_id: str,
+    payload: StatusUpdateRequest,
+):
+    """Update status (e.g. Applied -> Under Review -> Interview Scheduled -> Offer)."""
+    updated = application_service.update_status(app_id, payload.status, payload.notes)
+    if not updated:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Application '{app_id}' not found.")
+    return updated
 
 
 @router.post(

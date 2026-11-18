@@ -49,11 +49,7 @@ class InternshipLoader:
 
     @classmethod
     def format_internship_to_text(cls, item: Internship) -> str:
-        """Compose comprehensive textual representation of an internship for embedding generation.
-
-        Combines title, company, description, required skills, preferred skills,
-        education requirements, experience requirements, work mode, and location.
-        """
+        """Compose comprehensive textual representation of an internship for embedding generation."""
         parts = []
 
         title = clean_text(item.title)
@@ -89,3 +85,6 @@ class InternshipLoader:
         if not full_text.endswith("."):
             full_text += "."
         return full_text
+
+
+internship_loader = InternshipLoader()
