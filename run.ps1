@@ -1,8 +1,8 @@
 # Infosys Springboard VIP 7.0 - 1-Click Launch Script
 Write-Host "======================================================================" -ForegroundColor Cyan
-Write-Host "  IntelliIntern AI - Unified Internship Platform (Infosys VIP 7.0)" -ForegroundColor Cyan
+Write-Host "  IntelliIntern AI - Unified RAG Career Intelligence Platform" -ForegroundColor Cyan
 Write-Host "======================================================================" -ForegroundColor Cyan
-Write-Host "  Candidate:    Arun" -ForegroundColor Green
+Write-Host "  Platform:     Infosys Springboard VIP 7.0" -ForegroundColor Green
 Write-Host "  Web Portal:   http://localhost:8000" -ForegroundColor Yellow
 Write-Host "  Swagger Docs: http://localhost:8000/docs" -ForegroundColor Yellow
 Write-Host "======================================================================" -ForegroundColor Cyan

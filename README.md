@@ -105,9 +105,9 @@ python -m pytest
 
 ---
 
-## 👥 Candidate & Project Metadata
+## 👥 Project & Program Metadata
 
 - **Internship Program**: Infosys Springboard Virtual Internship Program 7.0
-- **Candidate Name**: **Arun**
+- **Platform Architecture**: Multi-Agent RAG Intelligence (9 Unified Modules)
 - **Repository**: [https://github.com/U-ARUN07/rag-internship-matching](https://github.com/U-ARUN07/rag-internship-matching)
 - **Zero Configuration**: Runs with zero manual setup via bundled SQLite database and pre-indexed FAISS vectors.

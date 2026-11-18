@@ -1,9 +1,9 @@
 @echo off
 cd /d "%~dp0"
 echo ======================================================================
-echo   IntelliIntern AI - Unified Internship Platform (Infosys VIP 7.0)
+echo   IntelliIntern AI - Unified RAG Career Intelligence Platform
 echo ======================================================================
-echo   Candidate:    Arun
+echo   Platform:     Infosys Springboard VIP 7.0
 echo   Web Portal:   http://localhost:8000
 echo   Swagger Docs: http://localhost:8000/docs
 echo ======================================================================
