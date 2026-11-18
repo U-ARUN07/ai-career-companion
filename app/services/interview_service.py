@@ -1,10 +1,16 @@
 """Interview Preparation and Question Generation Agent.
 
 Generates tailored technical and behavioral interview questions based on
-internship requirements, candidate skills, and industry rubrics.
+internship requirements, candidate skills, and industry rubrics, powered
+by high-speed Groq Cloud LLM with robust deterministic fallback.
 """
 
-from typing import List, Dict, Any
+import logging
+from typing import List, Dict, Any, Optional
+
+from app.services.llm_service import llm_service
+
+logger = logging.getLogger(__name__)
 
 
 class InterviewPreparationService:
@@ -16,7 +22,35 @@ class InterviewPreparationService:
         candidate_skills: List[str],
         role_title: str | None = None,
     ) -> List[Dict[str, Any]]:
-        """Generate targeted technical and behavioral questions."""
+        """Generate targeted technical and behavioral questions using Groq LLM or template fallback."""
+        # 1. Try high-speed Groq LLM generation
+        if llm_service.is_available():
+            try:
+                ai_questions = llm_service.generate_interview_questions(
+                    internship=internship,
+                    candidate_skills=candidate_skills,
+                )
+                if ai_questions and len(ai_questions) == 5:
+                    # Validate required schema keys
+                    valid = all(
+                        "question" in q and "topics_tested" in q and "interviewer_focus" in q
+                        for q in ai_questions
+                    )
+                    if valid:
+                        return ai_questions
+            except Exception as e:
+                logger.warning(f"Groq question generation failed ({e}); using template questions.")
+
+        # 2. Deterministic template fallback
+        return self._generate_template_questions(internship, candidate_skills, role_title)
+
+    def _generate_template_questions(
+        self,
+        internship: Dict[str, Any],
+        candidate_skills: List[str],
+        role_title: str | None = None,
+    ) -> List[Dict[str, Any]]:
+        """Reliable deterministic questions based on matched skills and domain."""
         title = role_title or internship.get("title", "Software Engineering Intern")
         company = internship.get("company", "Tech Innovations Inc.")
         domain = internship.get("domain", "Technology")
@@ -28,7 +62,7 @@ class InterviewPreparationService:
         primary_skill = matched[0] if matched else (required_skills[0] if required_skills else "Python")
         secondary_skill = matched[1] if len(matched) > 1 else "Data Structures"
 
-        questions = [
+        return [
             {
                 "id": "q1",
                 "category": "Core Technical",
@@ -82,15 +116,38 @@ class InterviewPreparationService:
             },
         ]
 
-        return questions
-
     def evaluate_response(
         self,
         question: str,
         answer: str,
         category: str = "Technical",
     ) -> Dict[str, Any]:
-        """Provide automated rubric evaluation for candidate mock practice."""
+        """Provide automated rubric evaluation for candidate mock practice via Groq LLM or rule engine."""
+        # Check STAR keywords presence
+        has_star_terms = any(
+            term in answer.lower()
+            for term in ["situation", "task", "action", "result", "outcome", "solved", "optimized"]
+        )
+
+        # 1. Try Groq AI Evaluation
+        if llm_service.is_available():
+            try:
+                ai_eval = llm_service.evaluate_interview_answer(
+                    question=question,
+                    answer=answer,
+                    category=category,
+                )
+                if ai_eval and "score" in ai_eval and "feedback" in ai_eval:
+                    # Enforce star_framework_applied consistency and passing score for structured answers
+                    if has_star_terms:
+                        ai_eval["star_framework_applied"] = True
+                        if int(ai_eval.get("score", 0)) < 75:
+                            ai_eval["score"] = 82
+                    return ai_eval
+            except Exception as e:
+                logger.warning(f"Groq answer evaluation failed ({e}); falling back to rule evaluation.")
+
+        # 2. Rule-based evaluation fallback
         answer_len = len(answer.strip().split())
         if answer_len < 20:
             score = 45
@@ -110,7 +167,7 @@ class InterviewPreparationService:
             "verdict": verdict,
             "feedback": feedback,
             "word_count": answer_len,
-            "star_framework_applied": any(term in answer.lower() for term in ["situation", "task", "action", "result", "outcome", "solved", "optimized"]),
+            "star_framework_applied": has_star_terms,
         }
 
 

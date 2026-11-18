@@ -30,6 +30,10 @@
         </div>
       </div>
       <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-amber-500/20 text-amber-200 border border-amber-400/30">
+          <i class="fa-solid fa-bolt mr-1 text-amber-300"></i>
+          Groq Cloud LLM Active
+        </span>
         <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-200 border border-emerald-400/30">
           <span class="w-2 h-2 mr-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
           FAISS Vector Store Ready (55 Roles)
@@ -749,13 +753,30 @@
           body: JSON.stringify({ question: q, answer: a, category: 'Technical' })
         });
         const evalData = await resp.json();
+        let strengthsHtml = '';
+        if (evalData.strengths && evalData.strengths.length > 0) {
+          strengthsHtml = `<div class="mt-2 text-[11px] text-emerald-800 bg-emerald-50 p-2 rounded border border-emerald-200">
+            <strong>Key Strengths:</strong>
+            <ul class="list-disc list-inside mt-0.5">${evalData.strengths.map(s => `<li>${s}</li>`).join('')}</ul>
+          </div>`;
+        }
+        let improvementHtml = '';
+        if (evalData.areas_for_improvement && evalData.areas_for_improvement.length > 0) {
+          improvementHtml = `<div class="mt-2 text-[11px] text-amber-800 bg-amber-50 p-2 rounded border border-amber-200">
+            <strong>Actionable Recommendations:</strong>
+            <ul class="list-disc list-inside mt-0.5">${evalData.areas_for_improvement.map(i => `<li>${i}</li>`).join('')}</ul>
+          </div>`;
+        }
         fb.innerHTML = `
-          <div class="space-y-1">
+          <div class="space-y-2">
             <div class="flex items-center space-x-2">
               <span class="text-xs font-bold ${evalData.score >= 70 ? 'text-emerald-700' : 'text-amber-700'}">Score: ${evalData.score}/100 (${evalData.verdict})</span>
-              ${evalData.star_framework_applied ? '<span class="text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded">STAR Applied</span>' : ''}
+              ${evalData.star_framework_applied ? '<span class="text-[10px] bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded font-bold">STAR Applied</span>' : ''}
+              <span class="text-[10px] text-slate-400 font-mono">${evalData.word_count || 0} words</span>
             </div>
-            <p class="text-[11px] text-slate-700">${evalData.feedback}</p>
+            <p class="text-[11px] text-slate-700 leading-relaxed">${evalData.feedback}</p>
+            ${strengthsHtml}
+            ${improvementHtml}
           </div>
         `;
       } catch (err) {

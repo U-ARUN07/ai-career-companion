@@ -13,6 +13,7 @@ from app.config import settings
 from app.schemas.matching import MatchingExplanation
 from app.schemas.resume import CandidateResume
 from app.utils.text_utils import clean_text, find_matching_and_missing_skills
+from app.services.llm_service import llm_service
 
 logger = logging.getLogger(__name__)
 
@@ -63,6 +64,27 @@ class ExplanationService:
         similarity_score: float,
     ) -> MatchingExplanation:
         """Generate a grounded explanation using configured provider or rule-based fallback."""
+        if (self.provider == "groq" or settings.explanation_provider == "groq") and llm_service.is_available():
+            try:
+                candidate_str = json.dumps(candidate.model_dump(), indent=2)
+                internship_str = (
+                    f"ID: {internship.get('internship_id')}\n"
+                    f"Title: {internship.get('title')}\n"
+                    f"Company: {internship.get('company')}\n"
+                    f"Description: {internship.get('description')}\n"
+                    f"Required Skills: {', '.join(internship.get('required_skills', []))}\n"
+                    f"Preferred Skills: {', '.join(internship.get('preferred_skills', []))}"
+                )
+                groq_exp = llm_service.generate_matching_explanation(
+                    candidate_context=candidate_str,
+                    internship_details=internship_str,
+                    similarity_score=similarity_score,
+                )
+                if groq_exp:
+                    return MatchingExplanation(**groq_exp)
+            except Exception as e:
+                logger.warning(f"Groq API explanation failed ({e}); falling back to grounded rule engine.")
+
         if self.provider == "gemini" and settings.gemini_api_key:
             try:
                 return self._generate_gemini_explanation(candidate, internship, similarity_score)

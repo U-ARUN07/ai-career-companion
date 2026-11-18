@@ -85,16 +85,25 @@ class MatchingService:
                 duration=metadata.get("duration"),
                 stipend=metadata.get("stipend"),
             )
-
-            # 4. Optional grounded explanation
-            if include_explanation:
-                match_item.explanation = self.explanation_service.generate_explanation(
-                    candidate=candidate,
-                    internship=metadata,
-                    similarity_score=score,
-                )
-
             matches.append(match_item)
+
+        # 4. Optional grounded explanation (executed concurrently for low latency)
+        if include_explanation and matches:
+            from concurrent.futures import ThreadPoolExecutor
+
+            def _attach_explanation(pair):
+                m_item, (meta, sc) = pair
+                try:
+                    m_item.explanation = self.explanation_service.generate_explanation(
+                        candidate=candidate,
+                        internship=meta,
+                        similarity_score=sc,
+                    )
+                except Exception as e:
+                    logger.warning(f"Error attaching explanation to {m_item.internship_id}: {e}")
+
+            with ThreadPoolExecutor(max_workers=min(5, len(matches))) as executor:
+                list(executor.map(_attach_explanation, zip(matches, raw_results)))
 
         # Sort descending by similarity score
         matches.sort(key=lambda m: m.similarity_score, reverse=True)
