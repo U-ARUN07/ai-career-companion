@@ -1,4 +1,4 @@
-# Unified AI Internship Matching & Career Assistant System
+# IntelliIntern AI: Unified Internship Matching & Career Assistant Platform
 
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115%2B-009688.svg)](https://fastapi.tiangolo.com/)

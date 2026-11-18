@@ -1,6 +1,6 @@
 # Infosys Springboard VIP 7.0 - 1-Click Launch Script
 Write-Host "======================================================================" -ForegroundColor Cyan
-Write-Host "  Infosys Springboard VIP 7.0 - Unified AI Internship System" -ForegroundColor Cyan
+Write-Host "  IntelliIntern AI - Unified Internship Platform (Infosys VIP 7.0)" -ForegroundColor Cyan
 Write-Host "======================================================================" -ForegroundColor Cyan
 Write-Host "  Candidate:    Arun" -ForegroundColor Green
 Write-Host "  Web Portal:   http://localhost:8000" -ForegroundColor Yellow

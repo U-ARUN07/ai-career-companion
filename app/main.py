@@ -1,5 +1,6 @@
-"""Main FastAPI application entry point for the Unified RAG Internship Matching System.
+"""Main FastAPI application entry point for IntelliIntern AI.
 
+Unified Full-Stack AI Internship & Career Intelligence Platform (Infosys VIP 7.0).
 Fully integrates all 9 VIP 7.0 system modules:
 1. Student Profile & Resume Management (Auth, JWT, Session Rotation, Profiles)
 2. Resume Parsing & Skill Extraction (PDF, DOCX, Auto-extraction)

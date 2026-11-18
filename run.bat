@@ -1,7 +1,7 @@
 @echo off
 cd /d "%~dp0"
 echo ======================================================================
-echo   Infosys Springboard VIP 7.0 - Unified AI Internship System
+echo   IntelliIntern AI - Unified Internship Platform (Infosys VIP 7.0)
 echo ======================================================================
 echo   Candidate:    Arun
 echo   Web Portal:   http://localhost:8000

@@ -18,7 +18,7 @@ class Settings(BaseSettings):
     )
 
     # General App Settings
-    app_name: str = "RAG Internship Matching System"
+    app_name: str = "IntelliIntern AI - Unified Internship Platform"
     app_version: str = "2.0.0"
     app_env: str = "development"
     log_level: str = "INFO"
