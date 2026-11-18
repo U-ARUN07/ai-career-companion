@@ -59,12 +59,20 @@ class Settings(BaseSettings):
     default_top_k: int = 5
     max_top_k: int = 50
 
-    # Optional LLM Explanation Settings
+    # Optional LLM Explanation & Chatbot Settings
+    groq_api_key: str = Field(
+        default="",
+        description="Groq Cloud API Key for LLM Career Assistant and Agents (read from .env)",
+    )
+    groq_model: str = Field(
+        default="qwen/qwen3.8-27b",
+        description="Groq high-speed LLM model",
+    )
     gemini_api_key: str = Field(default="")
     openai_api_key: str = Field(default="")
     explanation_provider: str = Field(
-        default="rule_based",
-        description="Options: 'rule_based', 'mock', 'gemini', 'openai'",
+        default="groq",
+        description="Options: 'groq', 'rule_based', 'mock', 'gemini', 'openai'",
     )
 
 

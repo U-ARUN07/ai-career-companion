@@ -12,6 +12,7 @@ from app.schemas.cover_letter import CoverLetterResponse
 from app.schemas.resume import CandidateResume
 from app.services.internship_loader import InternshipLoader
 from app.utils.text_utils import clean_text, find_matching_and_missing_skills
+from app.services.llm_service import llm_service
 
 logger = logging.getLogger(__name__)
 
@@ -128,6 +129,14 @@ class CoverLetterService:
             f"Sincerely,\n"
             f"{cand_name}"
         )
+
+        # Enhance with Groq LLM if available
+        if llm_service.is_available():
+            cand_summary = f"Name: {cand_name}\nSkills: {', '.join(cand_skills)}\nEducation: {', '.join(candidate.education)}\nProjects: {', '.join(candidate.projects)}"
+            intern_details = f"Title: {internship.title}\nCompany: {internship.company}\nLocation: {internship.location} ({internship.work_mode})\nRequired Skills: {', '.join(req_skills)}"
+            ai_generated = llm_service.generate_cover_letter(cand_summary, intern_details)
+            if ai_generated:
+                cover_letter_text = ai_generated
 
         return CoverLetterResponse(
             candidate_name=cand_name,

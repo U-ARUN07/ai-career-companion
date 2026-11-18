@@ -15,6 +15,7 @@ from app.schemas.resume import CandidateResume
 from app.services.embedding_service import embedding_service
 from app.services.internship_loader import InternshipLoader
 from app.services.vector_store import vector_store
+from app.services.llm_service import llm_service
 
 logger = logging.getLogger(__name__)
 
@@ -123,25 +124,41 @@ class CareerChatbotService:
 
         # 5. Format Grounded Response
         top_items = [item for item, score in results]
-        lines = [
-            f"Here are the most relevant internship opportunities found in our catalog for '{clean_q}':\n"
-        ]
-
-        for idx, (item, score) in enumerate(results, start=1):
-            lines.append(
-                f"{idx}. **{item['title']}** at **{item['company']}**\n"
-                f"   - **ID:** `{item['internship_id']}` | **Location:** {item['location']} ({item['work_mode']})\n"
-                f"   - **Required Skills:** {', '.join(item.get('required_skills', [])[:4])}\n"
-                f"   - **Stipend:** {item.get('stipend', 'N/A')} | **Duration:** {item.get('duration', 'N/A')}\n"
-                f"   - **Semantic Similarity Score:** `{score:.4f}`"
+        
+        # Try generating conversational response with Groq LLM if available
+        llm_reply = None
+        if llm_service.is_available():
+            context_summary = "\n".join([
+                f"- {item['title']} at {item['company']} ({item['location']}, {item['work_mode']}): "
+                f"Skills: {', '.join(item.get('required_skills', []))}. Stipend: {item.get('stipend', 'N/A')}."
+                for item in top_items
+            ])
+            llm_reply = llm_service.generate_chat_response(
+                user_message=clean_q,
+                retrieved_context=context_summary,
             )
 
-        lines.append(
-            "\nYou can apply directly to any of these roles using the Application Tracking module or generate a tailored cover letter!"
-        )
+        if llm_reply:
+            reply_text = llm_reply
+        else:
+            lines = [
+                f"Here are the most relevant internship opportunities found in our catalog for '{clean_q}':\n"
+            ]
+            for idx, (item, score) in enumerate(results, start=1):
+                lines.append(
+                    f"{idx}. **{item['title']}** at **{item['company']}**\n"
+                    f"   - **ID:** `{item['internship_id']}` | **Location:** {item['location']} ({item['work_mode']})\n"
+                    f"   - **Required Skills:** {', '.join(item.get('required_skills', [])[:4])}\n"
+                    f"   - **Stipend:** {item.get('stipend', 'N/A')} | **Duration:** {item.get('duration', 'N/A')}\n"
+                    f"   - **Semantic Similarity Score:** `{score:.4f}`"
+                )
+            lines.append(
+                "\nYou can apply directly to any of these roles using the Application Tracking module or generate a tailored cover letter!"
+            )
+            reply_text = "\n".join(lines)
 
         return ChatbotQueryResponse(
-            reply="\n".join(lines),
+            reply=reply_text,
             is_out_of_scope=False,
             guardrail_triggered=False,
             retrieved_internships=top_items,
