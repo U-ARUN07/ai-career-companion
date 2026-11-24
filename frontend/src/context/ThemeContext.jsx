@@ -7,7 +7,8 @@ export function ThemeProvider({ children }) {
     try {
       const saved = localStorage.getItem("theme");
       if (saved === "dark" || saved === "light") return saved;
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      // Default directly to light theme
+      return "light";
     } catch {
       return "light";
     }
