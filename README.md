@@ -239,7 +239,7 @@ ai-career-companion/
 
 ## 👨‍💻 Author & Acknowledgments
 
-* **Candidate:** Arun
+* **Candidate:** U Arun
 * **Mentor:** Vijay Parmar
 * **Program:** Infosys Springboard Virtual Internship Program 7.0
 * **Project Title:** AI Career Companion Agent for Internship Matching and Interview Preparation
