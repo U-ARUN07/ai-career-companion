@@ -1,83 +1,60 @@
-# IntelliIntern AI: Project Handover & Complete System State
+# AI Career Companion: Project Summary & Architecture Overview
 
 ## Overview
-- **Project Name**: IntelliIntern AI: Unified RAG Career Intelligence Platform
+- **Project Name**: AI Career Companion: Intelligent Internship Matching, ATS Resume Scoring & Interview Preparation Platform
 - **Program**: Infosys Springboard Virtual Internship Program 7.0
-- **Working Directory**: `C:\infosys Internship\IntelliIntern AI - Unified RAG Career Intelligence Platform`
-- **Candidate Name**: Configurable via Profile / UI (Default demo: Arun)
-- **Database**: Zero-config SQLite (`app.db`), auto-migrated on startup; supports PostgreSQL if `DATABASE_URL` is configured.
-- **LLM Engine**: High-Speed Groq Cloud API integrated (`qwen/qwen3.8-27b`) via `.env` (`GROQ_API_KEY`).
-- **Embeddings**: `sentence-transformers/all-MiniLM-L6-v2` (384 dimensions)
-- **Vector Index**: FAISS IndexFlatIP with 55 synthetic internship opportunities in `vector_store/`
-- **Test Suite**: 30 passing unit/integration tests with 100% pass rate (`python -m pytest`)
+- **Working Directory**: `C:\infosys Internship\AI Career Companion`
+- **Frontend**: React 18 + Vite (Tailwind CSS, Lucide icons, Axios, Web Speech API) running on `http://localhost:5173`
+- **Backend**: FastAPI Python Backend (Uvicorn) running on `http://127.0.0.1:8001`
+- **LLM Engine**: Groq Cloud API (`qwen/qwen3.8-27b`) with automatic fallback to `openai/gpt-oss-120b`
+- **Document Generation**: Python `reportlab.platypus` for 1-Click CV PDF generation
+- **Test Suite**: 9 passing test cases in `backend/tests/test_all_8_modules.py` (100% pass rate)
 
 ---
 
-## ⚡ Groq Cloud AI Engine Integration (Full Coverage)
+## 8 Core Modules Implemented
 
-Groq high-speed inference powers all intelligent tasks across the platform:
-1. **Conversational Career Companion** (`app/services/chatbot_service.py`):
-   - Grounded RAG synthesis with strict safety guardrails and anti-hallucination boundary checks.
-2. **Tailored Cover Letter Generation** (`app/services/cover_letter_service.py`):
-   - High-accuracy 3-paragraph tailored cover letters dynamically highlighting candidate projects and skills.
-   - ATS Compatibility Scoring (0-100%) and keyword suggestions.
-3. **Grounded Matching Rationales** (`app/services/explanation_service.py`, `app/services/matching_service.py`):
-   - High-speed JSON explanations generated concurrently via `ThreadPoolExecutor` for low latency (~1.5s total).
-4. **Dynamic Interview Question Generation** (`app/services/interview_service.py`):
-   - 5 role-specific questions across Core Technical, Domain, Algorithmic, Behavioral, and Fit categories.
-5. **Interview Mock Practice Evaluation** (`app/services/interview_service.py`):
-   - AI rubric grading assessing score (0-100), key strengths, actionable recommendations, and STAR method compliance.
+### Module 1: Student Profile and Resume Management
+- **Routes**: `/profile`, `GET /api/profile/me`, `PUT /api/profile/me`, `GET /resumes/my`, `POST /resumes/upload`
+- **Features**: User authentication with JWT bearer tokens, profile personalization (target role, university, technical skills), and active resume storage.
 
-*Graceful Fault-Tolerance: Every Groq-powered task includes deterministic rule-based fallback logic, ensuring continuous operation even offline or during network disruptions.*
+### Module 2: Resume Parsing and Skill/Experience Extraction
+- **Routes**: `/resume-parser`, `POST /api/documents/upload`
+- **Features**: Multi-format document parser (`PyMuPDF`, `python-docx`, `pypdf`) extracting personal info, technical skills, developer tools, soft skills, experience, projects, education, and career recommendations via Groq.
 
----
+### Module 3: Internship Knowledge Base with RAG Retrieval
+- **Routes**: `/knowledge-base`, `GET /api/knowledge-base/internships`, `GET /api/knowledge-base/domains`, `POST /api/knowledge-base/rag-query`
+- **Features**: Verified catalog across 12+ domains with real-time grounded RAG question answering, verified citations, and stipend/work-mode filters.
 
-## 9 Unified Modules Implemented
+### Module 4: Job-Resume Matching and Compatibility Scoring
+- **Routes**: `/job-matching`, `GET /matching/compatibility`
+- **Features**: Semantic matching against active resume profile, compatibility scoring (0-100%), matched vs missing skills breakdown, and grounded retrieval explanations.
 
-1. **Student Profile and Resume Management**:
-   - `app/routes/auth_routes.py`, `app/models.py`, `app/security.py`, `app/crud.py`
-   - User registration (`POST /auth/register`), login (`POST /auth/login`), JWT access & refresh tokens with rotation (`POST /auth/refresh`), profile management (`GET/PUT /auth/profile`), protected user info (`GET /auth/me`).
+### Module 5: Skill Gap Analysis and Improvement Recommendations
+- **Routes**: `/skill-gap`, `GET /api/skill-gap/roles`, `POST /api/skill-gap/analyze`
+- **Features**: Role-specific gap analysis with match %, critical & secondary skill gaps, structured 6-week learning roadmap, recommended online courses, and resume-ready portfolio projects.
 
-2. **Resume Parsing and Skill Extraction**:
-   - `app/services/resume_parser.py`, `app/routes/resume_routes.py`
-   - Ingests PDF (`PyMuPDF`) and DOCX (`python-docx`), extracts structured candidate fields (Skills, Education, Projects, Experience).
-   - Direct 1-click upload and match: `POST /resume/upload-and-match`.
+### Module 6: Role-specific Resume and Cover Letter Customization
+- **Routes**: `/customizer`, `POST /api/customization/tailor-resume`, `POST /api/customization/generate-cover-letter`, `POST /api/customization/download-cv-pdf`
+- **Features**: Tailored resume bullet points and ATS keywords, personalized cover letters with tone selection, and **1-Click Executive CV PDF Generator** (Modern, Classic, Minimal templates).
 
-3. **Internship Knowledge Base and RAG Indexing**:
-   - `data/internships.json` (55 curated opportunities across 13 domains).
-   - `vector_store/faiss_index.bin` and `vector_store/internships_metadata.json`.
+### Module 7: Interview Preparation with Role-specific Questions & Strategies
+- **Routes**: `/interview-prep`, `GET /api/interview/roles`, `GET /api/interview/questions`, `POST /api/interview/evaluate-answer`
+- **Features**: Role-specific technical & behavioral STAR questions with answering strategies, mock answer practice, and Groq AI Answer Evaluator with score /10, strengths, and model responses.
 
-4. **Job-Resume Matching and Compatibility Scoring Agent**:
-   - `app/services/matching_service.py`, `app/routes/matching_routes.py`
-   - Cosine similarity matching against 384-dimensional dense vectors with requirement coverage score and anti-hallucination explanations.
-
-5. **Skill Gap Analysis and Recommendation Agent**:
-   - `app/services/explanation_service.py`
-   - Analyzes matched vs missing skills and produces structured learning roadmaps.
-
-6. **Resume and Cover Letter Customization Agent**:
-   - `app/services/cover_letter_service.py`, `app/routes/platform_routes.py`
-   - Generates tailored cover letters powered by Groq LLM with ATS Compatibility Score (0-100%) and keyword suggestions.
-
-7. **Interview Preparation and Question Generation Agent**:
-   - `app/services/interview_service.py`, `app/routes/interview_routes.py`
-   - Generates 5 tailored technical, domain, and behavioral interview questions with scoring rubrics and mock answer evaluation (`POST /api/v1/interview/questions`, `POST /api/v1/interview/evaluate`).
-
-8. **Application Tracking and Management**:
-   - `app/services/application_service.py`, `app/routes/platform_routes.py`
-   - Status progression: Applied → Under Review → Interview Scheduled → Offer.
-
-9. **Conversational Career Assistant**:
-   - `app/services/chatbot_service.py`, `app/routes/platform_routes.py`
-   - RAG-powered chatbot with strict safety guardrails and Groq LLM synthesis (`POST /api/v1/assistant/chat`).
+### Module 8: Conversational Career Assistant for Ongoing Guidance
+- **Routes**: `/career-assistant`, `POST /api/assistant/chat`, `POST /api/export/chat`
+- **Features**: Context-aware career chatbot grounded in the student's active resume, Web Speech voice dictation, multi-format export (PDF, Word DOCX, TXT), and Floating AI Copilot widget across all views.
 
 ---
 
-## Quick Execution
+## ⚡ 1-Click Execution
 
-- **VS Code**: Press `Ctrl + Shift + B` (runs `run.ps1`, frees port 8000, opens browser).
-- **Batch Script**: Double-click `run.bat`.
-- **Manual Command**: `python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000`
-- **Web Portal**: `http://localhost:8000`
-- **Swagger Docs**: `http://localhost:8000/docs`
-- **Tests**: `python -m pytest` (30/30 passed, 100% pass rate)
+- **VS Code**: Press `Ctrl + Shift + B` (executes `run.ps1`, clears ports, starts backend & frontend, opens browser).
+- **Batch Launcher**: Double-click `run.bat`.
+- **Manual Launch**:
+  1. Backend: `cd backend && python -m uvicorn app.main:app --host 127.0.0.1 --port 8001`
+  2. Frontend: `cd frontend && npm run dev`
+  3. Open: `http://localhost:5173`
+- **Run Verification Tests**:
+  `cd backend && python -m pytest tests/test_all_8_modules.py`

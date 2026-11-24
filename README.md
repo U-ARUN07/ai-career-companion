@@ -1,113 +1,167 @@
-# IntelliIntern AI: Unified RAG Internship & Career Intelligence Platform
+# 🚀 AI Career Companion
+### Intelligent Internship Matching, ATS Resume Scoring & Interview Preparation Platform
 
-[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.115%2B-009688.svg)](https://fastapi.tiangolo.com/)
-[![FAISS](https://img.shields.io/badge/FAISS-CPU_1.16%2B-green.svg)](https://github.com/facebookresearch/faiss)
-[![Sentence--Transformers](https://img.shields.io/badge/Sentence--Transformers-all--MiniLM--L6--v2-orange.svg)](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
-[![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0%2B-red.svg)](https://www.sqlalchemy.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.109.0-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![React](https://img.shields.io/badge/React-18.x-61DAFB.svg?logo=react&logoColor=black)](https://reactjs.org)
+[![Vite](https://img.shields.io/badge/Vite-5.x-646CFF.svg?logo=vite&logoColor=white)](https://vitejs.dev)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB.svg?logo=python&logoColor=white)](https://www.python.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
----
-
-### 🚀 1-Click Launch & Quick Access Buttons
-
-| Action | One-Click Button | Direct Link |
-| :--- | :--- | :--- |
-| **Launch Web Portal** | [![Open Local App](https://img.shields.io/badge/🚀_Open_Live_Portal-http%3A%2F%2Flocalhost%3A8000-007acc?style=for-the-badge)](http://localhost:8000) | [http://localhost:8000](http://localhost:8000) |
-| **Interactive API Docs** | [![Open Swagger Docs](https://img.shields.io/badge/📖_Swagger_API_Docs-http%3A%2F%2Flocalhost%3A8000%2Fdocs-009688?style=for-the-badge)](http://localhost:8000/docs) | [http://localhost:8000/docs](http://localhost:8000/docs) |
-| **Deploy to Cloud (Free)** | [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/U-ARUN07/rag-internship-matching) | [Deploy on Render](https://render.com/deploy?repo=https://github.com/U-ARUN07/rag-internship-matching) |
-
-> 💡 *Clicking the blue **Open Live Portal** button immediately opens `http://localhost:8000` in your browser.*
+An end-to-end full-stack AI career platform designed to empower students and job seekers through automated resume parsing, intelligent RAG-driven Q&A, hands-free voice dictation, ATS compatibility scoring, and 1-click executive CV generation.
 
 ---
 
-## 📌 Executive Summary
+## 🌐 Live Public Deployment (ngrok Tunnel)
 
-Engineered as a single, unified full-stack platform for the **Infosys Springboard Virtual Internship Program 7.0**, this system unifies all planned academic milestones and modules into a cohesive production application:
-
-1. **Student Profile and Resume Management**: User registration, login, JWT access & refresh tokens with token rotation, bcrypt password hashing, and customizable student profiles.
-2. **Resume Parsing and Skill Extraction**: Native document parser ingesting PDF (`PyMuPDF`) and DOCX (`python-docx`), extracting skills, education, and projects.
-3. **Internship Knowledge Base and RAG Indexing**: 55 curated synthetic internship opportunities across 13 domains indexed into a 384-dimensional FAISS vector database.
-4. **Job-Resume Matching and Compatibility Scoring Agent**: Semantic dense vector search with cosine similarity scoring and grounded anti-hallucinatory explanations.
-5. **Skill Gap Analysis and Recommendation Agent**: Identifies matched vs missing technical skills and generates customized learning roadmaps.
-6. **Resume and Cover Letter Customization Agent**: Generates professional, company-specific cover letters with ATS Compatibility Scoring and keyword suggestions.
-7. **Interview Preparation and Question Generation Agent**: Generates 5 tailored technical, algorithmic, and behavioral interview questions with scoring rubrics and mock practice feedback.
-8. **Application Tracking and Management**: Application submission, status lifecycle management (*Applied*, *Under Review*, *Interview Scheduled*, *Offer*), and cover letter archiving.
-9. **Conversational Career Assistant**: RAG-powered chatbot with strict safety guardrails preventing out-of-scope queries.
+- **Live Application URL**: [https://eclair-modulator-express.ngrok-free.dev](https://eclair-modulator-express.ngrok-free.dev)
+- **Architecture**:
+  - React 18 + Vite Frontend running locally, exposed via ngrok secure HTTPS tunnel.
+  - FastAPI Python Backend (Uvicorn) with high-speed Groq LPU inference (`qwen/qwen3.8-27b`).
+  - Seamless reverse proxying for all API routes and Single Page Application (SPA) navigation.
 
 ---
 
-## 🏗️ Unified Architecture
+## 📁 Repository Structure
 
-```mermaid
-flowchart TD
-    subgraph Data_Layer ["1. Persistence & Vector Index Layer"]
-        DB[("app.db (SQLite / PostgreSQL)\nUsers, Resumes, Profiles, Apps")]
-        FS[("vector_store/faiss_index.bin\n55 Indexed Internships (384-dim)")]
-        UP[("uploads/resumes/\nStored PDF & DOCX Files")]
-    end
+The project follows a clean monorepo architecture separating the backend REST API services from the frontend user interface:
 
-    subgraph Core_Services ["2. AI & Processing Services"]
-        AUTH["Security & Token Service\n(Bcrypt + JWT HS256)"]
-        PARSE["Resume Parser\n(PyMuPDF + docx + Heuristics)"]
-        VEC["Vector Store & Embeddings\n(SentenceTransformers all-MiniLM-L6-v2)"]
-        MATCH["Matching & Explanation Service\n(Cosine Similarity + RAG)"]
-        CL["Cover Letter & ATS Agent"]
-        INT["Interview Prep Coach Agent"]
-        CHAT["Conversational Career Assistant\n(Safety Guardrails)"]
-    end
-
-    subgraph API_Routers ["3. FastAPI Endpoints"]
-        R_AUTH["/auth (register, login, refresh, me, profile)"]
-        R_RES["/resume (upload, download, upload-and-match)"]
-        R_MATCH["/api/v1/matching (match, internships)"]
-        R_EXT["/api/v1 (cover-letter, applications, chat)"]
-        R_INT["/api/v1/interview (questions, evaluate)"]
-    end
-
-    subgraph Web_UI ["4. Frontend & User Interface"]
-        UI["Unified Web Portal\n(http://localhost:8000)"]
-    end
-
-    Data_Layer --> Core_Services
-    Core_Services --> API_Routers
-    API_Routers --> UI
+```
+.
+├── 📂 backend/               # FastAPI Python Backend Service
+│   ├── 📂 app/               # Application logic (routers, models, schemas, services)
+│   │   ├── 📂 models/        # SQLAlchemy database models
+│   │   ├── 📂 routers/       # REST API endpoints (Auth, Career Copilot, CV, etc.)
+│   │   ├── 📂 schemas/       # Pydantic request & response validation
+│   │   ├── 📂 services/      # Groq Qwen/Llama, ReportLab PDF, NLP & RAG matching
+│   │   ├── 📂 utils/         # Security & JWT authorization utilities
+│   │   ├── config.py         # Application configuration & .env loader
+│   │   ├── database.py       # Database connection & session factory
+│   │   └── main.py           # FastAPI entry point & CORS configuration
+│   ├── 📂 tests/             # Automated test suite (pytest)
+│   ├── 📂 docs/              # System & RAG documentation
+│   ├── 📂 uploads/           # Ephemeral storage for uploaded resumes
+│   ├── requirements.txt      # Python dependencies
+│   └── .env.example          # Backend environment variables template
+│
+├── 📂 frontend/              # React 18 + Vite Web Application
+│   ├── 📂 public/            # Static assets
+│   ├── 📂 src/
+│   │   ├── 📂 components/    # Reusable UI widgets (Sidebar, Layout, Copilot)
+│   │   ├── 📂 pages/         # Application pages (Auth, Dashboard, CareerAssistant, Customizer)
+│   │   ├── 📂 services/      # Axios HTTP client with JWT interceptor
+│   │   ├── App.jsx           # Main routing & state
+│   │   └── App.css           # Styling & print stylesheets
+│   ├── package.json          # Node dependencies & build scripts
+│   └── vite.config.js        # Vite dev server & backend reverse-proxy
+│
+├── 📄 .gitignore             # Unified Git ignore rules
+├── 📄 LICENSE                # Open-source MIT License
+└── 📄 README.md              # Project documentation & setup instructions
 ```
 
 ---
 
-## ⚡ How to Run Locally
+## 🌟 Key Features
 
-### Option 1: VS Code Shortcut (Recommended)
-Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd> in VS Code.
-- Automatically frees port 8000 if occupied.
-- Starts the server and opens `http://localhost:8000` in your browser.
-
-### Option 2: 1-Click Batch Script
-Double-click `run.bat` (or in terminal: `.\run.bat`).
-- Automatically checks port 8000, starts `uvicorn`, and launches your browser.
-
-### Option 3: Manual Terminal Command
-```powershell
-python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
-```
-Open **http://localhost:8000** in your browser.
-
----
-
-## 🧪 Comprehensive Verification Suite
-
-Run all 30 unit, integration, and platform test cases:
-```powershell
-python -m pytest
-```
-*Current Result: 30 Passed (100% Pass Rate).*
+- **🔐 Secure Authentication & Session Management**:
+  - Encrypted credential registration with auto-redirect to login and pre-filled email.
+  - JWT (JSON Web Token) bearer authorization with automatic client-side interceptors.
+- **📄 Multi-Format Resume Ingestion**:
+  - Drag-and-drop file upload supporting **PDF**, **DOCX**, and **TXT** formats up to 10 MB.
+  - Spatial, multi-column text extraction using `pdfplumber` and `python-docx`.
+- **🤖 Context-Grounded RAG Chatbot**:
+  - Vector embeddings powered by SentenceTransformers (`all-MiniLM-L6-v2`).
+  - High-speed LLM reasoning via Groq API (`qwen/qwen3.8-27b`).
+  - Hallucination-resistant answers grounded strictly in the candidate's actual qualifications.
+- **🎙️ Speech-to-Text Voice Dictation**:
+  - Hands-free natural language question input via browser Web Speech API with live audio feedback.
+- **📊 Automated ATS Resume Scorer**:
+  - Evaluates keyword density, quantifiable metrics, section completeness, and action verbs.
+  - Generates an actionable 0–100% ATS score with targeted improvement suggestions.
+- **📝 Executive CV Builder & 1-Click PDF Generator**:
+  - Interactive multi-section CV customizer with **Modern**, **Classic**, and **Minimal** templates.
+  - High-definition, vector-crisp PDF generation powered by Python's `reportlab.platypus` engine.
+- **💾 Multi-Format Chat Export**:
+  - Download interview preparation dialogues into **PDF**, Word (**DOCX**), and plain text (**TXT**).
 
 ---
 
-## 👥 Project & Program Metadata
+## 🚀 Running with ngrok Tunnel
 
-- **Internship Program**: Infosys Springboard Virtual Internship Program 7.0
-- **Platform Architecture**: Multi-Agent RAG Intelligence (9 Unified Modules)
-- **Repository**: [https://github.com/U-ARUN07/rag-internship-matching](https://github.com/U-ARUN07/rag-internship-matching)
-- **Zero Configuration**: Runs with zero manual setup via bundled SQLite database and pre-indexed FAISS vectors.
+### 1. Start Backend Server
+```bash
+cd backend
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8001
+```
+
+### 2. Start Frontend Dev Server
+```bash
+cd frontend
+npm run dev
+```
+
+### 3. Launch ngrok HTTPS Tunnel
+```bash
+ngrok http http://127.0.0.1:5173 --url=eclair-modulator-express.ngrok-free.dev
+```
+Your application will be live at: [https://eclair-modulator-express.ngrok-free.dev](https://eclair-modulator-express.ngrok-free.dev)
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/bharathkumarjm/Al-Career-Companion-Agent-for-Internship-Matching-and-Interview-Preparation.git
+cd Al-Career-Companion-Agent-for-Internship-Matching-and-Interview-Preparation
+```
+
+### 2. Backend Setup
+```bash
+cd backend
+
+# Create and activate virtual environment
+python -m venv .venv
+# On Windows:
+.\.venv\Scripts\activate
+# On Linux/macOS:
+# source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure environment variables
+copy .env.example .env
+
+# Run FastAPI server
+uvicorn app.main:app --host 127.0.0.1 --port 8001 --reload
+```
+Interactive API documentation will be available at: [http://127.0.0.1:8001/docs](http://127.0.0.1:8001/docs)
+
+### 3. Frontend Setup
+```bash
+cd frontend
+
+# Install npm packages
+npm install
+
+# Launch Vite dev server
+npm run dev
+```
+Open [http://127.0.0.1:5173](http://127.0.0.1:5173) in your browser.
+
+---
+
+## 🔌 API Reference Overview
+
+| Method | Endpoint | Description | Auth Required |
+| :--- | :--- | :--- | :---: |
+| `GET` | `/health` | Health check endpoint for system uptime monitors | No |
+| `POST` | `/api/auth/register` | Register new user account | No |
+| `POST` | `/api/auth/login` | Authenticate user & return JWT token | No |
+| `GET` | `/api/auth/me` | Retrieve authenticated user profile | Yes |
+| `POST` | `/api/documents/upload` | Upload & parse resume (PDF/DOCX/TXT) | Yes |
+| `POST` | `/api/assistant/chat` | AI Career Companion dialogue | Yes |
+| `POST` | `/api/customization/download-cv-pdf` | Generate & download custom CV PDF | Yes |
+| `POST` | `/api/export/chat` | Export conversation (PDF/DOCX/TXT) | Yes |
+
+---
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

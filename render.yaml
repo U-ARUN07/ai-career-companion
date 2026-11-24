@@ -1,12 +1,13 @@
 services:
   - type: web
-    name: rag-internship-matching
-    env: python
-    buildCommand: "pip install -r requirements.txt && python scripts/build_vector_database.py"
-    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
-    plan: free
+    name: ai-career-companion
+    runtime: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
     envVars:
-      - key: APP_ENV
-        value: production
-      - key: LOG_LEVEL
-        value: INFO
+      - key: DATABASE_URL
+        value: sqlite:///./backend/app.db
+      - key: SECRET_KEY
+        value: InfosysAIInternship_2026_SecureKey_8392
+      - key: GROQ_API_KEY
+        sync: false
