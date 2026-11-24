@@ -11,13 +11,17 @@ An end-to-end full-stack AI career platform designed to empower students and job
 
 ---
 
-## 🌐 Live Public Deployment (ngrok Tunnel)
+## 🌐 Live Production Deployment
 
-- **Live Application URL**: [https://eclair-modulator-express.ngrok-free.dev](https://eclair-modulator-express.ngrok-free.dev)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-brightgreen?style=for-the-badge&logo=render)](https://ai-career-companion-mg65.onrender.com)
+[![Swagger API Docs](https://img.shields.io/badge/Swagger-API%20Docs-blue?style=for-the-badge&logo=fastapi)](https://ai-career-companion-mg65.onrender.com/docs)
+
+- **Live Application URL**: [https://ai-career-companion-mg65.onrender.com](https://ai-career-companion-mg65.onrender.com)
+- **Interactive Swagger API Docs**: [https://ai-career-companion-mg65.onrender.com/docs](https://ai-career-companion-mg65.onrender.com/docs)
 - **Architecture**:
-  - React 18 + Vite Frontend running locally, exposed via ngrok secure HTTPS tunnel.
-  - FastAPI Python Backend (Uvicorn) with high-speed Groq LPU inference (`qwen/qwen3.8-27b`).
-  - Seamless reverse proxying for all API routes and Single Page Application (SPA) navigation.
+  - React 18 + Vite Frontend compiled and served directly via FastAPI Python Backend.
+  - High-speed Groq LPU inference (`qwen/qwen3.8-27b`) with multi-domain grounded fallback.
+  - Seamless reverse proxying for all 8 AI Intelligence modules and Single Page Application (SPA) routing.
 
 ---
 
