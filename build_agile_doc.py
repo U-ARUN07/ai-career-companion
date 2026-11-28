@@ -1,9 +1,14 @@
+import os
+import io
+from PIL import Image
 import docx
 from docx.shared import Inches, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
 from docx.oxml import OxmlElement, parse_xml
 from docx.oxml.ns import nsdecls, qn
+
+MEDIA_DIR = r"C:\Users\ASUS\.gemini\antigravity\brain\31f3ad5b-9efd-4d5e-bce6-334266677ed6\.user_uploaded"
 
 def create_element(name):
     return OxmlElement(name)
@@ -35,7 +40,6 @@ def add_heading_styled(doc, text, level, space_before=14, space_after=6):
     if level == 1:
         run.font.size = Pt(16)
         run.font.color.rgb = RGBColor(15, 30, 80) # Navy
-        # Add bottom border or line
     elif level == 2:
         run.font.size = Pt(13)
         run.font.color.rgb = RGBColor(20, 60, 120)
@@ -65,6 +69,37 @@ def add_body_p(doc, text="", bold_prefix="", space_after=4, bullet=False):
         r.font.size = Pt(10)
         r.font.color.rgb = RGBColor(51, 65, 85)
     return p
+
+def add_figure(doc, filename, caption_text, width_inches=5.8):
+    img_path = os.path.join(MEDIA_DIR, filename)
+    if not os.path.exists(img_path):
+        print(f"Warning: Image file not found: {img_path}")
+        return
+    try:
+        im = Image.open(img_path).convert('RGB')
+        stream = io.BytesIO()
+        im.save(stream, format='PNG')
+        stream.seek(0)
+        
+        p = doc.add_paragraph()
+        p.paragraph_format.space_before = Pt(10)
+        p.paragraph_format.space_after = Pt(3)
+        p.paragraph_format.keep_with_next = True
+        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        run = p.add_run()
+        run.add_picture(stream, width=Inches(width_inches))
+        
+        p_cap = doc.add_paragraph()
+        p_cap.paragraph_format.space_before = Pt(2)
+        p_cap.paragraph_format.space_after = Pt(12)
+        p_cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        r_cap = p_cap.add_run(caption_text)
+        r_cap.font.name = "Arial"
+        r_cap.font.size = Pt(9)
+        r_cap.font.italic = True
+        r_cap.font.color.rgb = RGBColor(71, 85, 105)
+    except Exception as e:
+        print(f"Error adding image {filename}: {e}")
 
 def format_table(table, col_widths, headers, data, header_bg="1E3A8A"):
     set_table_borders(table)
@@ -146,7 +181,7 @@ def build_full_documentation():
     r_title.font.color.rgb = RGBColor(15, 30, 80)
 
     p_sub = doc.add_paragraph()
-    p_sub.paragraph_format.space_after = Pt(28)
+    p_sub.paragraph_format.space_after = Pt(26)
     r_sub = p_sub.add_run("Unified RAG Career Intelligence & Internship Matching Platform\nAgile Project Documentation & Comprehensive Technical Report")
     r_sub.font.name = "Arial"
     r_sub.font.size = Pt(13)
@@ -157,7 +192,7 @@ def build_full_documentation():
     cov_table.alignment = WD_TABLE_ALIGNMENT.CENTER
     cov_data = [
         ("Project Title:", "AI Career Companion (Unified RAG Career Intelligence Platform)"),
-        ("Prepared By:", "Arun (Candidate / Intern)"),
+        ("Prepared By:", "U ARUN (Candidate / Intern)"),
         ("Project Duration:", "October 2026 – November 2026"),
         ("Program Track:", "Artificial Intelligence & RAG Career Intelligence"),
         ("Project Mentor:", "Vijay Parmar")
@@ -194,15 +229,15 @@ def build_full_documentation():
         ["2", "Project Objective", "4"],
         ["3", "Technology Stack", "5"],
         ["4", "Project Requirements (Functional & Non-Functional)", "6"],
-        ["5", "System Architecture & End-to-End Workflow", "7"],
+        ["5", "System Architecture & End-to-End Workflow (With Diagram)", "7"],
         ["6", "Product Backlog (User Stories & Epics)", "8"],
         ["7", "Sprint Planning & Timeline Breakdown", "9"],
         ["8", "Sprint Tasks & Execution Status", "10"],
-        ["9", "Implementation & Detailed Key Modules (8 Modules)", "11"],
-        ["10", "Testing Strategy & Comprehensive Test Results", "13"],
-        ["11", "Challenges Encountered & Engineering Solutions", "14"],
-        ["12", "Final Project Status, Live Deliverables & Access Credentials", "15"],
-        ["Appendix", "10-Slide Project Presentation Script", "16"]
+        ["9", "Implementation & Detailed Key Modules (With Screenshots)", "11"],
+        ["10", "Testing Strategy & Comprehensive Test Results", "15"],
+        ["11", "Challenges Encountered & Engineering Solutions", "16"],
+        ["12", "Final Project Status, Live Deliverables & Access Credentials", "17"],
+        ["Appendix", "10-Slide Project Presentation Script", "19"]
     ]
     idx_tbl = doc.add_table(rows=1, cols=3)
     format_table(idx_tbl, [0.8, 4.27, 1.2], index_headers, index_data, header_bg="0F172A")
@@ -222,17 +257,17 @@ def build_full_documentation():
 
     add_heading_styled(doc, "1.3 Problem Statement", 2)
     add_body_p(doc, "College graduates and internship candidates face systemic hurdles in the modern employment landscape:")
-    add_body_p(doc, "Traditional job boards require candidates to sift through hundreds of irrelevant listings without understanding their true fit.", bullet=True, bold_prefix="Fragmented Internship Discovery: ")
-    add_body_p(doc, "Over 75% of candidate resumes are filtered out by automated Applicant Tracking Systems due to keyword mismatches and layout parsing errors.", bullet=True, bold_prefix="The ATS 'Black Box': ")
-    add_body_p(doc, "Students receive binary rejections without actionable diagnostic feedback on exactly what technical skills or certifications they lack.", bullet=True, bold_prefix="Invisible Skill Deficits: ")
-    add_body_p(doc, "Generic interview coaching fails to simulate authentic company and role-specific technical questions or provide instant objective evaluation.", bullet=True, bold_prefix="Superficial Interview Preparation: ")
+    add_body_p(doc, "Traditional job boards require candidates to sift through hundreds of irrelevant listings without understanding their true fit.", bold_prefix="Fragmented Internship Discovery: ", bullet=True)
+    add_body_p(doc, "Over 75% of candidate resumes are filtered out by automated Applicant Tracking Systems due to keyword mismatches and layout parsing errors.", bold_prefix="The ATS 'Black Box': ", bullet=True)
+    add_body_p(doc, "Students receive binary rejections without actionable diagnostic feedback on exactly what technical skills or certifications they lack.", bold_prefix="Invisible Skill Deficits: ", bullet=True)
+    add_body_p(doc, "Generic interview coaching fails to simulate authentic company and role-specific technical questions or provide instant objective evaluation.", bold_prefix="Superficial Interview Preparation: ", bullet=True)
 
     add_heading_styled(doc, "1.4 Target Users", 2)
     add_body_p(doc, "The platform is engineered to serve the following primary stakeholders:")
-    add_body_p(doc, "College and university students looking for tailored technical internships and real-world placement guidance.", bullet=True, bold_prefix="Internship Candidates & Students: ")
-    add_body_p(doc, "Counselors tracking student readiness, resume health, and industry competency benchmarks.", bullet=True, bold_prefix="University Placement Cells & Academic Mentors: ")
-    add_body_p(doc, "HR teams seeking qualified candidate profiles ranked by objective vector similarity and verifiable skills.", bullet=True, bold_prefix="Corporate Talent Acquisition Teams: ")
-    add_body_p(doc, "Supervisors assessing project milestones, code execution, and system architecture.", bullet=True, bold_prefix="Project Evaluators & Industry Reviewers: ")
+    add_body_p(doc, "College and university students looking for tailored technical internships and real-world placement guidance.", bold_prefix="Internship Candidates & Students: ", bullet=True)
+    add_body_p(doc, "Counselors tracking student readiness, resume health, and industry competency benchmarks.", bold_prefix="University Placement Cells & Academic Mentors: ", bullet=True)
+    add_body_p(doc, "HR teams seeking qualified candidate profiles ranked by objective vector similarity and verifiable skills.", bold_prefix="Corporate Talent Acquisition Teams: ", bullet=True)
+    add_body_p(doc, "Supervisors assessing project milestones, code execution, and system architecture.", bold_prefix="Project Evaluators & Industry Reviewers: ", bullet=True)
 
     # --------------------------------------------------------------------------
     # SECTION 2: PROJECT OBJECTIVE
@@ -240,13 +275,13 @@ def build_full_documentation():
     add_heading_styled(doc, "2. Project Objective", 1)
     add_body_p(doc, "The overarching mission of the project is to build an intelligent, transparent, and automated career acceleration pipeline for aspiring interns. The core engineering objectives achieved include:")
     
-    add_body_p(doc, "Develop an automated extraction pipeline for PDF and DOCX files that extracts contact info, skills, education, projects, and work history into structured JSON schemas.", bullet=True, bold_prefix="1. High-Precision Resume Ingestion: ")
-    add_body_p(doc, "Implement ChromaDB vector store with sentence-transformers (all-MiniLM-L6-v2) embeddings to store, index, and retrieve company internship descriptions using semantic similarity.", bullet=True, bold_prefix="2. Semantic RAG Knowledge Retrieval: ")
-    add_body_p(doc, "Create a hybrid scoring algorithm combining TF-IDF keyword density and dense vector cosine similarity to eliminate bias and produce explainable compatibility scores.", bullet=True, bold_prefix="3. Dual-Engine Compatibility Scoring: ")
-    add_body_p(doc, "Build an algorithmic diagnostic engine that compares candidate resumes against target job descriptions, categorizing deficits into critical, secondary, and recommended learning pathways.", bullet=True, bold_prefix="4. Automated Skill Gap Diagnostics: ")
-    add_body_p(doc, "Leverage Groq LLaMA 3.3 70B to rewrite resumes and draft personalized cover letters customized to specific job descriptions.", bullet=True, bold_prefix="5. Context-Aware Application Tailoring: ")
-    add_body_p(doc, "Implement voice-enabled mock interviews featuring role-specific questions, speech-to-text recording, and multi-dimensional scoring (relevance, depth, clarity).", bullet=True, bold_prefix="6. Interactive Mock Interview Simulation: ")
-    add_body_p(doc, "Deploy a fully operational, cloud-hosted production system on Render with automated CI/CD from GitHub, interactive Swagger documentation, and a dual Light/Dark theme React frontend.", bullet=True, bold_prefix="7. Full Cloud Deployment & CI/CD: ")
+    add_body_p(doc, "Develop an automated extraction pipeline for PDF and DOCX files that extracts contact info, skills, education, projects, and work history into structured JSON schemas.", bold_prefix="1. High-Precision Resume Ingestion: ", bullet=True)
+    add_body_p(doc, "Implement ChromaDB vector store with sentence-transformers (all-MiniLM-L6-v2) embeddings to store, index, and retrieve company internship descriptions using semantic similarity.", bold_prefix="2. Semantic RAG Knowledge Retrieval: ", bullet=True)
+    add_body_p(doc, "Create a hybrid scoring algorithm combining TF-IDF keyword density and dense vector cosine similarity to eliminate bias and produce explainable compatibility scores.", bold_prefix="3. Dual-Engine Compatibility Scoring: ", bullet=True)
+    add_body_p(doc, "Build an algorithmic diagnostic engine that compares candidate resumes against target job descriptions, categorizing deficits into critical, secondary, and recommended learning pathways.", bold_prefix="4. Automated Skill Gap Diagnostics: ", bullet=True)
+    add_body_p(doc, "Leverage Groq LLaMA 3.3 70B to rewrite resumes and draft personalized cover letters customized to specific job descriptions.", bold_prefix="5. Context-Aware Application Tailoring: ", bullet=True)
+    add_body_p(doc, "Implement voice-enabled mock interviews featuring role-specific questions, speech-to-text recording, and multi-dimensional scoring (relevance, depth, clarity).", bold_prefix="6. Interactive Mock Interview Simulation: ", bullet=True)
+    add_body_p(doc, "Deploy a fully operational, cloud-hosted production system on Render with automated CI/CD from GitHub, interactive Swagger documentation, and a dual Light/Dark theme React frontend.", bold_prefix="7. Full Cloud Deployment & CI/CD: ", bullet=True)
 
     doc.add_page_break()
 
@@ -280,21 +315,21 @@ def build_full_documentation():
     add_heading_styled(doc, "4. Project Requirements", 1)
     
     add_heading_styled(doc, "4.1 Functional Requirements (FR)", 2)
-    add_body_p(doc, "Secure registration, login with JWT tokens, role management, and immutable candidate talent DNA profile persistence.", bullet=True, bold_prefix="FR1 - Authentication & Student Profile: ")
-    add_body_p(doc, "Upload and parse PDF/DOCX resumes, extract technical skills, contact details, work history, and calculate ATS readiness score.", bullet=True, bold_prefix="FR2 - Resume Ingestion & Parsing: ")
-    add_body_p(doc, "Vectorized repository of 22+ multi-department internships with natural language semantic search and RAG synthesis.", bullet=True, bold_prefix="FR3 - Knowledge Base & Semantic Search: ")
-    add_body_p(doc, "Hybrid compatibility scoring (TF-IDF keyword overlap + dense vector cosine similarity) displaying match percentage and gap breakdown.", bullet=True, bold_prefix="FR4 - Job-Resume Compatibility Engine: ")
-    add_body_p(doc, "Automated diagnosis of missing technical skills, categorized into critical, secondary, and recommended certifications with actionable courses.", bullet=True, bold_prefix="FR5 - Skill Gap Analysis: ")
-    add_body_p(doc, "Generation of job-targeted resumes and persuasive, formal cover letters tailored to specific internship descriptions.", bullet=True, bold_prefix="FR6 - Application Customization: ")
-    add_body_p(doc, "Speech-to-text voice dictation, role-specific question generation, response evaluation, and instant STAR-method scorecards.", bullet=True, bold_prefix="FR7 - Interactive AI Interview Simulator: ")
-    add_body_p(doc, "Persistent conversational copilot providing real-time career advice, salary estimates, and internship navigation.", bullet=True, bold_prefix="FR8 - 24/7 Conversational Career Assistant: ")
+    add_body_p(doc, "Secure registration, login with JWT tokens, role management, and immutable candidate talent DNA profile persistence.", bold_prefix="FR1 - Authentication & Student Profile: ", bullet=True)
+    add_body_p(doc, "Upload and parse PDF/DOCX resumes, extract technical skills, contact details, work history, and calculate ATS readiness score.", bold_prefix="FR2 - Resume Ingestion & Parsing: ", bullet=True)
+    add_body_p(doc, "Vectorized repository of 22+ multi-department internships with natural language semantic search and RAG synthesis.", bold_prefix="FR3 - Knowledge Base & Semantic Search: ", bullet=True)
+    add_body_p(doc, "Hybrid compatibility scoring (TF-IDF keyword overlap + dense vector cosine similarity) displaying match percentage and gap breakdown.", bold_prefix="FR4 - Job-Resume Compatibility Engine: ", bullet=True)
+    add_body_p(doc, "Automated diagnosis of missing technical skills, categorized into critical, secondary, and recommended certifications with actionable courses.", bold_prefix="FR5 - Skill Gap Analysis: ", bullet=True)
+    add_body_p(doc, "Generation of job-targeted resumes and persuasive, formal cover letters tailored to specific internship descriptions.", bold_prefix="FR6 - Application Customization: ", bullet=True)
+    add_body_p(doc, "Speech-to-text voice dictation, role-specific question generation, response evaluation, and instant STAR-method scorecards.", bold_prefix="FR7 - Interactive AI Interview Simulator: ", bullet=True)
+    add_body_p(doc, "Persistent conversational copilot providing real-time career advice, salary estimates, and internship navigation.", bold_prefix="FR8 - 24/7 Conversational Career Assistant: ", bullet=True)
 
     add_heading_styled(doc, "4.2 Non-Functional Requirements (NFR)", 2)
-    add_body_p(doc, "FastAPI asynchronous handlers and Groq LPU inference ensure full LLM responses in under 1.5 seconds.", bullet=True, bold_prefix="NFR1 - Performance & Latency: ")
-    add_body_p(doc, "Bcrypt password hashing (12 rounds), stateless JWT tokens with expiry, and strict client-side credential protection.", bullet=True, bold_prefix="NFR2 - Security & Data Protection: ")
-    add_body_p(doc, "Decoupled 3-tier architecture with modular APIRouters enabling easy scaling and migration to cloud PostgreSQL.", bullet=True, bold_prefix="NFR3 - Modularity & Scalability: ")
-    add_body_p(doc, "Responsive design supporting mobile and desktop, instant Light/Dark theme switching, and 1-click demo autofill.", bullet=True, bold_prefix="NFR4 - Usability & Accessibility: ")
-    add_body_p(doc, "24/7 continuous availability enabled via Cron-Job keep-alive pinger preventing free-tier instance sleep.", bullet=True, bold_prefix="NFR5 - High Availability: ")
+    add_body_p(doc, "FastAPI asynchronous handlers and Groq LPU inference ensure full LLM responses in under 1.5 seconds.", bold_prefix="NFR1 - Performance & Latency: ", bullet=True)
+    add_body_p(doc, "Bcrypt password hashing (12 rounds), stateless JWT tokens with expiry, and strict client-side credential protection.", bold_prefix="NFR2 - Security & Data Protection: ", bullet=True)
+    add_body_p(doc, "Decoupled 3-tier architecture with modular APIRouters enabling easy scaling and migration to cloud PostgreSQL.", bold_prefix="NFR3 - Modularity & Scalability: ", bullet=True)
+    add_body_p(doc, "Responsive design supporting mobile and desktop, instant Light/Dark theme switching, and 1-click demo autofill.", bold_prefix="NFR4 - Usability & Accessibility: ", bullet=True)
+    add_body_p(doc, "24/7 continuous availability enabled via Cron-Job keep-alive pinger preventing free-tier instance sleep.", bold_prefix="NFR5 - High Availability: ", bullet=True)
 
     doc.add_page_break()
 
@@ -305,11 +340,11 @@ def build_full_documentation():
     add_body_p(doc, "The system follows an enterprise Multi-Tier Clean Architecture pattern, decoupling user presentation, business logic orchestration, vector storage, and external AI foundation models:")
 
     add_heading_styled(doc, "5.1 Architectural Tier Breakdown", 2)
-    add_body_p(doc, "React 19 SPA with Vite, ThemeContext (Light/Dark mode), Lucide React iconography, and Axios HTTP client with Bearer token interceptors.", bullet=True, bold_prefix="Presentation Tier (Client): ")
-    add_body_p(doc, "FastAPI application mounting modular APIRouters (`/auth`, `/resumes`, `/internships`, `/matching`, `/cv`, `/interview`, `/agent`, `/health`).", bullet=True, bold_prefix="API & Application Tier (Backend): ")
-    add_body_p(doc, "Encapsulates business rules across AuthService, ResumeParserService, RAGService, MatchingEngine, and InterviewService.", bullet=True, bold_prefix="Service & Logic Tier: ")
-    add_body_p(doc, "SQLAlchemy ORM with SQLite database for structured entities alongside ChromaDB vector collection storing 384-dimensional dense embeddings.", bullet=True, bold_prefix="Data & Vector Tier: ")
-    add_body_p(doc, "Groq Cloud LPU running LLaMA 3.3 70B Versatile for high-speed deterministic generation and reasoning.", bullet=True, bold_prefix="Inference Engine (LLM): ")
+    add_body_p(doc, "React 19 SPA with Vite, ThemeContext (Light/Dark mode), Lucide React iconography, and Axios HTTP client with Bearer token interceptors.", bold_prefix="Presentation Tier (Client): ", bullet=True)
+    add_body_p(doc, "FastAPI application mounting modular APIRouters (`/auth`, `/resumes`, `/internships`, `/matching`, `/cv`, `/interview`, `/agent`, `/health`).", bold_prefix="API & Application Tier (Backend): ", bullet=True)
+    add_body_p(doc, "Encapsulates business rules across AuthService, ResumeParserService, RAGService, MatchingEngine, and InterviewService.", bold_prefix="Service & Logic Tier: ", bullet=True)
+    add_body_p(doc, "SQLAlchemy ORM with SQLite database for structured entities alongside ChromaDB vector collection storing 384-dimensional dense embeddings.", bold_prefix="Data & Vector Tier: ", bullet=True)
+    add_body_p(doc, "Groq Cloud LPU running LLaMA 3.3 70B Versatile for high-speed deterministic generation and reasoning.", bold_prefix="Inference Engine (LLM): ", bullet=True)
 
     add_heading_styled(doc, "5.2 End-to-End RAG & Processing Workflow", 2)
     add_body_p(doc, "The core RAG pipeline operates through the following deterministic sequence:")
@@ -320,6 +355,9 @@ def build_full_documentation():
     add_body_p(doc, "User prompts/queries are embedded and queried against ChromaDB using cosine distance (Top-k).", bold_prefix="5. Dense Retrieval: ", bullet=True)
     add_body_p(doc, "Retrieved context chunks are combined with system prompts and candidate talent profile.", bold_prefix="6. Context Injection: ", bullet=True)
     add_body_p(doc, "Groq LLaMA 3.3 synthesizes response with strict factual grounding and structured JSON schemas.", bold_prefix="7. LLM Generation: ", bullet=True)
+
+    # ADD FIGURE 1: Panoramic Console
+    add_figure(doc, "media_1795109911202_c75507e7.png", "Figure 1: AI Career Companion Panoramic System Architecture & Operational Console", width_inches=5.8)
 
     # --------------------------------------------------------------------------
     # SECTION 6: PRODUCT BACKLOG
@@ -389,25 +427,25 @@ def build_full_documentation():
     # SECTION 8: SPRINT TASKS & STATUS
     # --------------------------------------------------------------------------
     add_heading_styled(doc, "8. Sprint Tasks & Status", 1)
-    add_body_p(doc, "Tracking of sprint task execution across the internship development cycles:")
+    add_body_p(doc, "Tracking of sprint task execution across the internship development cycles (Assigned to U ARUN):")
 
     sprint_tasks_headers = ["Sprint", "Task Description", "Assigned To", "Status"]
     sprint_tasks_data = [
-        ["Sprint 1", "FastAPI architecture & environment setup", "Arun", "Done"],
-        ["Sprint 1", "SQLAlchemy database schemas & migrations", "Arun", "Done"],
-        ["Sprint 1", "JWT authentication & password hashing", "Arun", "Done"],
-        ["Sprint 1", "Candidate Talent Profile UI & state", "Arun", "Done"],
-        ["Sprint 2", "PDF/DOCX file upload & parsing engine", "Arun", "Done"],
-        ["Sprint 2", "Skill extraction & ATS score computation", "Arun", "Done"],
-        ["Sprint 2", "ChromaDB vector database integration", "Arun", "Done"],
-        ["Sprint 2", "Seed 22 multi-department internships", "Arun", "Done"],
-        ["Sprint 3", "Hybrid compatibility scoring algorithm", "Arun", "Done"],
-        ["Sprint 3", "Skill gap diagnostic & roadmaps", "Arun", "Done"],
-        ["Sprint 3", "Targeted cover letter & resume generator", "Arun", "Done"],
-        ["Sprint 4", "Voice-enabled AI mock interview simulator", "Arun", "Done"],
-        ["Sprint 4", "24/7 Conversational career copilot", "Arun", "Done"],
-        ["Sprint 4", "Dual Light/Dark theme design system", "Arun", "Done"],
-        ["Sprint 4", "Render cloud deployment & keep-alive cron", "Arun", "Done"]
+        ["Sprint 1", "FastAPI architecture & environment setup", "U ARUN", "Done"],
+        ["Sprint 1", "SQLAlchemy database schemas & migrations", "U ARUN", "Done"],
+        ["Sprint 1", "JWT authentication & password hashing", "U ARUN", "Done"],
+        ["Sprint 1", "Candidate Talent Profile UI & state", "U ARUN", "Done"],
+        ["Sprint 2", "PDF/DOCX file upload & parsing engine", "U ARUN", "Done"],
+        ["Sprint 2", "Skill extraction & ATS score computation", "U ARUN", "Done"],
+        ["Sprint 2", "ChromaDB vector database integration", "U ARUN", "Done"],
+        ["Sprint 2", "Seed 22 multi-department internships", "U ARUN", "Done"],
+        ["Sprint 3", "Hybrid compatibility scoring algorithm", "U ARUN", "Done"],
+        ["Sprint 3", "Skill gap diagnostic & roadmaps", "U ARUN", "Done"],
+        ["Sprint 3", "Targeted cover letter & resume generator", "U ARUN", "Done"],
+        ["Sprint 4", "Voice-enabled AI mock interview simulator", "U ARUN", "Done"],
+        ["Sprint 4", "24/7 Conversational career copilot", "U ARUN", "Done"],
+        ["Sprint 4", "Dual Light/Dark theme design system", "U ARUN", "Done"],
+        ["Sprint 4", "Render cloud deployment & keep-alive cron", "U ARUN", "Done"]
     ]
     sprint_tbl = doc.add_table(rows=1, cols=4)
     format_table(sprint_tbl, [1.0, 3.27, 1.2, 0.8], sprint_tasks_headers, sprint_tasks_data, header_bg="1E3A8A")
@@ -415,7 +453,7 @@ def build_full_documentation():
     doc.add_page_break()
 
     # --------------------------------------------------------------------------
-    # SECTION 9: IMPLEMENTATION & KEY FEATURES (THE 8 MODULES)
+    # SECTION 9: IMPLEMENTATION & KEY FEATURES (THE 8 MODULES + SCREENSHOTS)
     # --------------------------------------------------------------------------
     add_heading_styled(doc, "9. Implementation / Key Features", 1)
     add_body_p(doc, "The platform is structured into eight production modules, each solving a distinct aspect of the career preparation lifecycle:")
@@ -424,49 +462,59 @@ def build_full_documentation():
         ("Module 1: Student Academic & Career Profile (/profile)",
          "Central repository of the candidate's verified identity, talent DNA, contact details, academic background, GPA, technical skills inventory, and preferred career tracks.",
          "Implemented using FastAPI `/api/profile` endpoints backed by SQLite ORM. Includes full CRUD operations and safeguards candidate identity during resume uploads.",
-         "Endpoint: GET/PUT `/api/profile/me` | Output: Structured JSON talent profile and interactive UI cards."),
+         "Endpoint: GET/PUT `/api/profile/me` | Output: Structured JSON talent profile and interactive UI cards.",
+         None, None),
 
         ("Module 2: Resume Parsing & ATS Skill Extraction (/resume-parser)",
          "Automated ingestion of PDF/DOCX resumes, extracting contact information, detected technical and soft skills, work experience, education, and ATS readiness scores.",
          "Employs `pypdf` and `docx2txt` with regex and pattern matching. Features an ATS scoring rubric evaluating length, action verbs, quantified results, and skill density.",
-         "Endpoint: POST `/resumes/upload` | Output: Extracted JSON talent graph, ATS score (0-100%), and 1-click sample demo profile."),
+         "Endpoint: POST `/resumes/upload` | Output: Extracted JSON talent graph, ATS score (0-100%), and 1-click sample demo profile.",
+         "media_1795109899964_b11fc62d.png", "Figure 2: Module 2 — Deep ATS Resume Parser & Candidate Profile Intelligence"),
 
         ("Module 3: Internship Knowledge Base with RAG Retrieval (/knowledge-base)",
          "Curated database of 22 active multi-department internships (AI, Data Science, Full-Stack, Cloud, DevOps) queryable via semantic natural language search.",
          "Indexed in ChromaDB using `all-MiniLM-L6-v2` dense vector embeddings. Natural language user queries perform top-k cosine similarity retrieval with metadata filtering.",
-         "Endpoint: GET `/internships` & POST `/internships/search` | Output: Ranked internship cards with stipend, duration, and requirements."),
+         "Endpoint: GET `/internships` & POST `/internships/search` | Output: Ranked internship cards with stipend, duration, and requirements.",
+         None, None),
 
         ("Module 4: Job-Resume Compatibility & Match Scoring (/job-matching)",
          "Objective mathematical matching between parsed candidate resume profiles and internship listings.",
          "Combines TF-IDF keyword overlap (40% weight) with dense vector cosine similarity (60% weight). Displays overall match percentage, matched skills, and missing competencies.",
-         "Endpoint: POST `/matching/score` | Output: Match score breakdown (e.g., 88% Strong Match) with visual match badges."),
+         "Endpoint: POST `/matching/score` | Output: Match score breakdown (e.g., 88% Strong Match) with visual match badges.",
+         "media_1795109889684_072f1503.png", "Figure 3: Modules 3 & 4 — Enterprise Intelligence Matrix & Multi-Module RAG Suite"),
 
         ("Module 5: Skill Gap Analysis & Improvement Recommendations (/skill-gap)",
          "Diagnostic assessment identifying skill deficiencies against target roles and generating step-by-step upskilling roadmaps.",
          "Compares candidate skill vectors with job prerequisites, separating gaps into Critical Gaps, Secondary Deficits, and Recommended Certifications with direct course links.",
-         "Endpoint: POST `/matching/skill-gap` | Output: Actionable learning roadmap with estimated time-to-competency."),
+         "Endpoint: POST `/matching/skill-gap` | Output: Actionable learning roadmap with estimated time-to-competency.",
+         None, None),
 
         ("Module 6: Role-Specific Resume & Cover Letter Customization (/cover-letter)",
          "AI-powered generation of tailored cover letters and customized resume bullet points aligned to specific job descriptions.",
          "Prompts Groq LLaMA 3.3 70B with candidate credentials and job requirements, enforcing formal business letter etiquette and highlighting relevant achievements.",
-         "Endpoint: POST `/cv/generate-cover-letter` | Output: Ready-to-send personalized cover letter and tailored resume copy."),
+         "Endpoint: POST `/cv/generate-cover-letter` | Output: Ready-to-send personalized cover letter and tailored resume copy.",
+         None, None),
 
         ("Module 7: AI Interview Preparation & Voice Simulation (/interview-prep)",
          "Simulates role-specific technical, behavioral, and situational mock interviews with real-time speech-to-text dictation and objective STAR scoring.",
          "Generates targeted interview questions based on role. Captures audio via Web Speech API, analyzes candidate answers, and scores on Technical Depth, Relevance, and Structure.",
-         "Endpoint: POST `/interview/generate` & `/interview/evaluate` | Output: Instant interview scorecards and improvement tips."),
+         "Endpoint: POST `/interview/generate` & `/interview/evaluate` | Output: Instant interview scorecards and improvement tips.",
+         None, None),
 
         ("Module 8: Conversational Career Assistant (/career-assistant)",
          "24/7 intelligent career co-pilot providing continuous guidance, resume advice, market salary insights, and placement preparation.",
          "FastAPI chat endpoint integrated with Groq LLaMA 3.3 70B with full conversation history and domain-constrained system prompts.",
-         "Endpoint: POST `/agent/chat` | Output: Real-time contextual career responses and guided next-action recommendations.")
+         "Endpoint: POST `/agent/chat` | Output: Real-time contextual career responses and guided next-action recommendations.",
+         "media_1795113941122_da88cef8.png", "Figure 4: Modules 7 & 8 — Interactive Command Dock & AI Career Assistant Interface")
     ]
 
-    for m_title, desc, impl, out in modules_data:
+    for m_title, desc, impl, out, fig_file, fig_cap in modules_data:
         add_heading_styled(doc, m_title, 2, space_before=8, space_after=2)
         add_body_p(doc, desc, bold_prefix="Description: ")
         add_body_p(doc, impl, bold_prefix="Implementation: ")
         add_body_p(doc, out, bold_prefix="Deliverable: ", space_after=6)
+        if fig_file and fig_cap:
+            add_figure(doc, fig_file, fig_cap, width_inches=5.6)
 
     doc.add_page_break()
 
@@ -493,10 +541,10 @@ def build_full_documentation():
     format_table(test_tbl, [0.6, 2.0, 1.87, 1.3, 0.5], test_headers, test_data, header_bg="1E3A8A")
 
     add_heading_styled(doc, "10.1 Testing Types Performed", 2, space_before=10)
-    add_body_p(doc, "Verified all 8 module endpoints using FastAPI TestClient and Swagger UI.", bullet=True, bold_prefix="API Integration Testing: ")
-    add_body_p(doc, "Validated user flows from login to resume upload, matching, and interview evaluation.", bullet=True, bold_prefix="End-to-End Functional Testing: ")
-    add_body_p(doc, "Verified responsive design across mobile, tablet, and desktop screens in both Light and Dark themes.", bullet=True, bold_prefix="UI & Cross-Device Testing: ")
-    add_body_p(doc, "Measured Groq LPU inference latency (< 1.5s) and ChromaDB retrieval latency (< 250ms).", bullet=True, bold_prefix="Performance Testing: ")
+    add_body_p(doc, "Verified all 8 module endpoints using FastAPI TestClient and Swagger UI.", bold_prefix="API Integration Testing: ", bullet=True)
+    add_body_p(doc, "Validated user flows from login to resume upload, matching, and interview evaluation.", bold_prefix="End-to-End Functional Testing: ", bullet=True)
+    add_body_p(doc, "Verified responsive design across mobile, tablet, and desktop screens in both Light and Dark themes.", bold_prefix="UI & Cross-Device Testing: ", bullet=True)
+    add_body_p(doc, "Measured Groq LPU inference latency (< 1.5s) and ChromaDB retrieval latency (< 250ms).", bold_prefix="Performance Testing: ", bullet=True)
 
     # --------------------------------------------------------------------------
     # SECTION 11: CHALLENGES & ENGINEERING SOLUTIONS
@@ -528,26 +576,32 @@ def build_full_documentation():
     doc.add_page_break()
 
     # --------------------------------------------------------------------------
-    # SECTION 12: FINAL PROJECT STATUS
+    # SECTION 12: FINAL PROJECT STATUS & LIVE DELIVERABLES
     # --------------------------------------------------------------------------
     add_heading_styled(doc, "12. Final Project Status", 1)
     add_body_p(doc, "The AI Career Companion platform has been 100% developed, thoroughly tested, and successfully deployed to live cloud infrastructure.")
 
     add_heading_styled(doc, "12.1 Completed Modules Checklist", 2)
-    add_body_p(doc, "Module 1: Student Academic & Career Profile (Talent DNA)", bullet=True, bold_prefix="[100% Complete] ")
-    add_body_p(doc, "Module 2: Resume Parsing & ATS Intelligence Extraction", bullet=True, bold_prefix="[100% Complete] ")
-    add_body_p(doc, "Module 3: Internship Knowledge Base & ChromaDB RAG Retrieval", bullet=True, bold_prefix="[100% Complete] ")
-    add_body_p(doc, "Module 4: Job-Resume Compatibility & Hybrid Match Scoring", bullet=True, bold_prefix="[100% Complete] ")
-    add_body_p(doc, "Module 5: Skill Gap Diagnostics & Upskilling Roadmaps", bullet=True, bold_prefix="[100% Complete] ")
-    add_body_p(doc, "Module 6: Role-Specific Resume & Cover Letter Tailoring", bullet=True, bold_prefix="[100% Complete] ")
-    add_body_p(doc, "Module 7: AI Voice/Text Mock Interview Preparation Simulator", bullet=True, bold_prefix="[100% Complete] ")
-    add_body_p(doc, "Module 8: 24/7 Conversational Career Assistant Copilot", bullet=True, bold_prefix="[100% Complete] ")
+    add_body_p(doc, "Module 1: Student Academic & Career Profile (Talent DNA)", bold_prefix="[100% Complete] ", bullet=True)
+    add_body_p(doc, "Module 2: Resume Parsing & ATS Intelligence Extraction", bold_prefix="[100% Complete] ", bullet=True)
+    add_body_p(doc, "Module 3: Internship Knowledge Base & ChromaDB RAG Retrieval", bold_prefix="[100% Complete] ", bullet=True)
+    add_body_p(doc, "Module 4: Job-Resume Compatibility & Hybrid Match Scoring", bold_prefix="[100% Complete] ", bullet=True)
+    add_body_p(doc, "Module 5: Skill Gap Diagnostics & Upskilling Roadmaps", bold_prefix="[100% Complete] ", bullet=True)
+    add_body_p(doc, "Module 6: Role-Specific Resume & Cover Letter Tailoring", bold_prefix="[100% Complete] ", bullet=True)
+    add_body_p(doc, "Module 7: AI Voice/Text Mock Interview Preparation Simulator", bold_prefix="[100% Complete] ", bullet=True)
+    add_body_p(doc, "Module 8: 24/7 Conversational Career Assistant Copilot", bold_prefix="[100% Complete] ", bullet=True)
 
     add_heading_styled(doc, "12.2 Production Links & Access Deliverables", 2)
     add_body_p(doc, "https://ai-career-companion-mg65.onrender.com", bold_prefix="Live Web Application: ")
     add_body_p(doc, "https://ai-career-companion-mg65.onrender.com/docs", bold_prefix="Interactive Swagger API Docs: ")
     add_body_p(doc, "https://github.com/U-ARUN07/ai-career-companion", bold_prefix="GitHub Source Repository: ")
     add_body_p(doc, "arun.student@example.com  |  Password: Student123! (1-Click button available on login page)", bold_prefix="Demo Student Credentials: ")
+
+    # ADD PRODUCTION SCREENSHOTS
+    add_figure(doc, "media_1795545592557_e3d925d0.jpg", "Figure 5: Render Cloud Platform — Production Deployment Succeeded (Live at ai-career-companion-mg65.onrender.com)", width_inches=5.8)
+    add_figure(doc, "media_1795545683656_38eb2119.png", "Figure 6: Live Production JSON API Verification — 8 Operational Modules Active", width_inches=5.8)
+    add_figure(doc, "media_1795544350918_2f5a445b.png", "Figure 7: GitHub Version Control & Open Source Repository (U-ARUN07/ai-career-companion)", width_inches=5.8)
+    add_figure(doc, "media_1795850518357_69d1bef3.png", "Figure 8: Automated Cron-Job.org 24/7 Keep-Alive Monitor Eliminating Cold Starts", width_inches=5.8)
 
     add_heading_styled(doc, "12.3 Final Outcome & Impact", 2)
     add_body_p(doc, "The completed platform successfully solves the core challenges of modern internship recruitment. By combining deterministic vector embeddings, high-speed LLM reasoning via Groq Cloud, and a modern responsive interface, students can evaluate their placement readiness, bridge technical skill gaps, and practice role-specific interviews with confidence. The platform stands fully operational and ready for official academic and corporate evaluation.")
@@ -562,7 +616,7 @@ def build_full_documentation():
 
     slides_data = [
         ("Slide 1: Title & Introduction",
-         "Project Name: AI Career Companion | Subtitle: Unified RAG Career Intelligence Platform\nCandidate: Arun | Mentor: Vijay Parmar | Program: Infosys Springboard VIP 7.0"),
+         "Project Name: AI Career Companion | Subtitle: Unified RAG Career Intelligence Platform\nCandidate: U ARUN | Mentor: Vijay Parmar | Program: Infosys Springboard VIP 7.0"),
         ("Slide 2: Problem Statement",
          "The Broken Internship Pipeline: Fragmented job boards, 75%+ ATS resume rejection rate, zero actionable feedback on missing skills, and generic, unhelpful interview preparation."),
         ("Slide 3: Project Objective & Vision",
@@ -588,7 +642,7 @@ def build_full_documentation():
         add_body_p(doc, s_content, space_after=6)
 
     doc.save("Agile Documentation.docx")
-    print("Agile Documentation.docx successfully generated!")
+    print("Agile Documentation.docx successfully generated with embedded images and candidate name U ARUN!")
 
 if __name__ == "__main__":
     build_full_documentation()
