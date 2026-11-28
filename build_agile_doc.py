@@ -1,6 +1,6 @@
 import os
 import io
-from PIL import Image
+from PIL import Image, ImageOps
 import docx
 from docx.shared import Inches, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -9,6 +9,7 @@ from docx.oxml import OxmlElement, parse_xml
 from docx.oxml.ns import nsdecls, qn
 
 MEDIA_DIR = r"C:\Users\ASUS\.gemini\antigravity\brain\31f3ad5b-9efd-4d5e-bce6-334266677ed6\.user_uploaded"
+MODULE_SHOTS_DIR = "module_screenshots"
 
 def create_element(name):
     return OxmlElement(name)
@@ -70,19 +71,31 @@ def add_body_p(doc, text="", bold_prefix="", space_after=4, bullet=False):
         r.font.color.rgb = RGBColor(51, 65, 85)
     return p
 
-def add_figure(doc, filename, caption_text, width_inches=5.8):
-    img_path = os.path.join(MEDIA_DIR, filename)
-    if not os.path.exists(img_path):
-        print(f"Warning: Image file not found: {img_path}")
+def add_figure(doc, img_rel_path, caption_text, width_inches=5.8):
+    # Check if in MODULE_SHOTS_DIR first, then MEDIA_DIR
+    target_path = os.path.join(MODULE_SHOTS_DIR, img_rel_path)
+    if not os.path.exists(target_path):
+        target_path = os.path.join(MEDIA_DIR, img_rel_path)
+    if not os.path.exists(target_path):
+        target_path = img_rel_path
+    if not os.path.exists(target_path):
+        print(f"Warning: Image file not found: {img_rel_path}")
         return
+
     try:
-        im = Image.open(img_path).convert('RGB')
+        im = Image.open(target_path).convert('RGB')
+        
+        # Add high-contrast, beautiful double-border for clear visibility on white paper
+        # 1px light inner border, 2px solid slate border, 1px light outer padding
+        im_bordered = ImageOps.expand(im, border=2, fill=(71, 85, 105)) # #475569 slate
+        im_bordered = ImageOps.expand(im_bordered, border=1, fill=(203, 213, 225)) # #CBD5E1 subtle edge
+        
         stream = io.BytesIO()
-        im.save(stream, format='PNG')
+        im_bordered.save(stream, format='PNG')
         stream.seek(0)
         
         p = doc.add_paragraph()
-        p.paragraph_format.space_before = Pt(10)
+        p.paragraph_format.space_before = Pt(8)
         p.paragraph_format.space_after = Pt(3)
         p.paragraph_format.keep_with_next = True
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -96,10 +109,10 @@ def add_figure(doc, filename, caption_text, width_inches=5.8):
         r_cap = p_cap.add_run(caption_text)
         r_cap.font.name = "Arial"
         r_cap.font.size = Pt(9)
-        r_cap.font.italic = True
-        r_cap.font.color.rgb = RGBColor(71, 85, 105)
+        r_cap.font.bold = True
+        r_cap.font.color.rgb = RGBColor(30, 41, 59)
     except Exception as e:
-        print(f"Error adding image {filename}: {e}")
+        print(f"Error adding image {img_rel_path}: {e}")
 
 def format_table(table, col_widths, headers, data, header_bg="1E3A8A"):
     set_table_borders(table)
@@ -229,15 +242,15 @@ def build_full_documentation():
         ["2", "Project Objective", "4"],
         ["3", "Technology Stack", "5"],
         ["4", "Project Requirements (Functional & Non-Functional)", "6"],
-        ["5", "System Architecture & End-to-End Workflow (With Diagram)", "7"],
-        ["6", "Product Backlog (User Stories & Epics)", "8"],
-        ["7", "Sprint Planning & Timeline Breakdown", "9"],
-        ["8", "Sprint Tasks & Execution Status", "10"],
-        ["9", "Implementation & Detailed Key Modules (With Screenshots)", "11"],
-        ["10", "Testing Strategy & Comprehensive Test Results", "15"],
-        ["11", "Challenges Encountered & Engineering Solutions", "16"],
-        ["12", "Final Project Status, Live Deliverables & Access Credentials", "17"],
-        ["Appendix", "10-Slide Project Presentation Script", "19"]
+        ["5", "System Architecture & End-to-End Workflow (With Architecture Console)", "7"],
+        ["6", "Product Backlog (User Stories & Epics)", "9"],
+        ["7", "Sprint Planning & Timeline Breakdown", "10"],
+        ["8", "Sprint Tasks & Execution Status", "11"],
+        ["9", "Implementation & Detailed Key Modules (All 8 Modules with Bordered Screenshots)", "12"],
+        ["10", "Testing Strategy & Comprehensive Test Results (With Auth Verification)", "18"],
+        ["11", "Challenges Encountered & Engineering Solutions", "19"],
+        ["12", "Final Project Status, Production Deliverables & Live Cloud Screenshots", "20"],
+        ["Appendix", "10-Slide Project Presentation Script", "23"]
     ]
     idx_tbl = doc.add_table(rows=1, cols=3)
     format_table(idx_tbl, [0.8, 4.27, 1.2], index_headers, index_data, header_bg="0F172A")
@@ -356,8 +369,8 @@ def build_full_documentation():
     add_body_p(doc, "Retrieved context chunks are combined with system prompts and candidate talent profile.", bold_prefix="6. Context Injection: ", bullet=True)
     add_body_p(doc, "Groq LLaMA 3.3 synthesizes response with strict factual grounding and structured JSON schemas.", bold_prefix="7. LLM Generation: ", bullet=True)
 
-    # ADD FIGURE 1: Panoramic Console
-    add_figure(doc, "media_1795109911202_c75507e7.png", "Figure 1: AI Career Companion Panoramic System Architecture & Operational Console", width_inches=5.8)
+    # FIGURE 1: Landing & Console Workflow
+    add_figure(doc, "landing_page.png", "Figure 1: AI Career Companion Panoramic System Architecture & User Interface Console", width_inches=5.8)
 
     # --------------------------------------------------------------------------
     # SECTION 6: PRODUCT BACKLOG
@@ -453,66 +466,66 @@ def build_full_documentation():
     doc.add_page_break()
 
     # --------------------------------------------------------------------------
-    # SECTION 9: IMPLEMENTATION & KEY FEATURES (THE 8 MODULES + SCREENSHOTS)
+    # SECTION 9: IMPLEMENTATION & KEY FEATURES (ALL 8 MODULES WITH BORDERED SCREENSHOTS)
     # --------------------------------------------------------------------------
     add_heading_styled(doc, "9. Implementation / Key Features", 1)
-    add_body_p(doc, "The platform is structured into eight production modules, each solving a distinct aspect of the career preparation lifecycle:")
+    add_body_p(doc, "The platform is structured into eight production modules, each accompanied by its live bordered interface screenshot:")
 
     modules_data = [
         ("Module 1: Student Academic & Career Profile (/profile)",
-         "Central repository of the candidate's verified identity, talent DNA, contact details, academic background, GPA, technical skills inventory, and preferred career tracks.",
-         "Implemented using FastAPI `/api/profile` endpoints backed by SQLite ORM. Includes full CRUD operations and safeguards candidate identity during resume uploads.",
+         "Central repository of candidate identity, talent DNA, contact details, academic history, GPA, technical skills inventory, and verified career preferences.",
+         "Implemented using FastAPI `/api/profile` endpoints backed by SQLite ORM. Provides full CRUD operations while safeguarding candidate identity during resume uploads.",
          "Endpoint: GET/PUT `/api/profile/me` | Output: Structured JSON talent profile and interactive UI cards.",
-         None, None),
+         "module_1_profile.png", "Figure 2: Module 1 — Student Academic & Talent DNA Profile Interface"),
 
         ("Module 2: Resume Parsing & ATS Skill Extraction (/resume-parser)",
-         "Automated ingestion of PDF/DOCX resumes, extracting contact information, detected technical and soft skills, work experience, education, and ATS readiness scores.",
+         "Automated ingestion of PDF/DOCX resumes, extracting contact info, detected technical and soft skills, work experience, education, and ATS readiness scores.",
          "Employs `pypdf` and `docx2txt` with regex and pattern matching. Features an ATS scoring rubric evaluating length, action verbs, quantified results, and skill density.",
          "Endpoint: POST `/resumes/upload` | Output: Extracted JSON talent graph, ATS score (0-100%), and 1-click sample demo profile.",
-         "media_1795109899964_b11fc62d.png", "Figure 2: Module 2 — Deep ATS Resume Parser & Candidate Profile Intelligence"),
+         "module_2_resume_parser.png", "Figure 3: Module 2 — Deep ATS Resume Parser & Skill Extraction Interface"),
 
         ("Module 3: Internship Knowledge Base with RAG Retrieval (/knowledge-base)",
          "Curated database of 22 active multi-department internships (AI, Data Science, Full-Stack, Cloud, DevOps) queryable via semantic natural language search.",
          "Indexed in ChromaDB using `all-MiniLM-L6-v2` dense vector embeddings. Natural language user queries perform top-k cosine similarity retrieval with metadata filtering.",
          "Endpoint: GET `/internships` & POST `/internships/search` | Output: Ranked internship cards with stipend, duration, and requirements.",
-         None, None),
+         "module_3_knowledge_base.png", "Figure 4: Module 3 — Internship Knowledge Base with RAG Semantic Search"),
 
         ("Module 4: Job-Resume Compatibility & Match Scoring (/job-matching)",
          "Objective mathematical matching between parsed candidate resume profiles and internship listings.",
          "Combines TF-IDF keyword overlap (40% weight) with dense vector cosine similarity (60% weight). Displays overall match percentage, matched skills, and missing competencies.",
          "Endpoint: POST `/matching/score` | Output: Match score breakdown (e.g., 88% Strong Match) with visual match badges.",
-         "media_1795109889684_072f1503.png", "Figure 3: Modules 3 & 4 — Enterprise Intelligence Matrix & Multi-Module RAG Suite"),
+         "module_4_job_matching.png", "Figure 5: Module 4 — Job-Resume Compatibility & Match Scoring Interface"),
 
         ("Module 5: Skill Gap Analysis & Improvement Recommendations (/skill-gap)",
          "Diagnostic assessment identifying skill deficiencies against target roles and generating step-by-step upskilling roadmaps.",
          "Compares candidate skill vectors with job prerequisites, separating gaps into Critical Gaps, Secondary Deficits, and Recommended Certifications with direct course links.",
          "Endpoint: POST `/matching/skill-gap` | Output: Actionable learning roadmap with estimated time-to-competency.",
-         None, None),
+         "module_5_skill_gap.png", "Figure 6: Module 5 — Skill Gap Analysis & Diagnostic Upskilling Roadmaps"),
 
         ("Module 6: Role-Specific Resume & Cover Letter Customization (/cover-letter)",
          "AI-powered generation of tailored cover letters and customized resume bullet points aligned to specific job descriptions.",
          "Prompts Groq LLaMA 3.3 70B with candidate credentials and job requirements, enforcing formal business letter etiquette and highlighting relevant achievements.",
          "Endpoint: POST `/cv/generate-cover-letter` | Output: Ready-to-send personalized cover letter and tailored resume copy.",
-         None, None),
+         "module_6_cover_letter.png", "Figure 7: Module 6 — Role-Specific Resume & Cover Letter Tailoring Generator"),
 
         ("Module 7: AI Interview Preparation & Voice Simulation (/interview-prep)",
          "Simulates role-specific technical, behavioral, and situational mock interviews with real-time speech-to-text dictation and objective STAR scoring.",
          "Generates targeted interview questions based on role. Captures audio via Web Speech API, analyzes candidate answers, and scores on Technical Depth, Relevance, and Structure.",
          "Endpoint: POST `/interview/generate` & `/interview/evaluate` | Output: Instant interview scorecards and improvement tips.",
-         None, None),
+         "module_7_interview_prep.png", "Figure 8: Module 7 — Voice-Enabled AI Mock Interview Simulator Interface"),
 
         ("Module 8: Conversational Career Assistant (/career-assistant)",
          "24/7 intelligent career co-pilot providing continuous guidance, resume advice, market salary insights, and placement preparation.",
          "FastAPI chat endpoint integrated with Groq LLaMA 3.3 70B with full conversation history and domain-constrained system prompts.",
          "Endpoint: POST `/agent/chat` | Output: Real-time contextual career responses and guided next-action recommendations.",
-         "media_1795113941122_da88cef8.png", "Figure 4: Modules 7 & 8 — Interactive Command Dock & AI Career Assistant Interface")
+         "module_8_career_assistant.png", "Figure 9: Module 8 — 24/7 Conversational Career Assistant Copilot")
     ]
 
     for m_title, desc, impl, out, fig_file, fig_cap in modules_data:
-        add_heading_styled(doc, m_title, 2, space_before=8, space_after=2)
+        add_heading_styled(doc, m_title, 2, space_before=10, space_after=2)
         add_body_p(doc, desc, bold_prefix="Description: ")
         add_body_p(doc, impl, bold_prefix="Implementation: ")
-        add_body_p(doc, out, bold_prefix="Deliverable: ", space_after=6)
+        add_body_p(doc, out, bold_prefix="Deliverable: ", space_after=4)
         if fig_file and fig_cap:
             add_figure(doc, fig_file, fig_cap, width_inches=5.6)
 
@@ -539,6 +552,9 @@ def build_full_documentation():
     ]
     test_tbl = doc.add_table(rows=1, cols=5)
     format_table(test_tbl, [0.6, 2.0, 1.87, 1.3, 0.5], test_headers, test_data, header_bg="1E3A8A")
+
+    # Add Figure 10: Authentication Verification
+    add_figure(doc, "auth_login.png", "Figure 10: Authentication Testing — One-Click Demo Student Verification Layer", width_inches=5.6)
 
     add_heading_styled(doc, "10.1 Testing Types Performed", 2, space_before=10)
     add_body_p(doc, "Verified all 8 module endpoints using FastAPI TestClient and Swagger UI.", bold_prefix="API Integration Testing: ", bullet=True)
@@ -597,11 +613,11 @@ def build_full_documentation():
     add_body_p(doc, "https://github.com/U-ARUN07/ai-career-companion", bold_prefix="GitHub Source Repository: ")
     add_body_p(doc, "arun.student@example.com  |  Password: Student123! (1-Click button available on login page)", bold_prefix="Demo Student Credentials: ")
 
-    # ADD PRODUCTION SCREENSHOTS
-    add_figure(doc, "media_1795545592557_e3d925d0.jpg", "Figure 5: Render Cloud Platform — Production Deployment Succeeded (Live at ai-career-companion-mg65.onrender.com)", width_inches=5.8)
-    add_figure(doc, "media_1795545683656_38eb2119.png", "Figure 6: Live Production JSON API Verification — 8 Operational Modules Active", width_inches=5.8)
-    add_figure(doc, "media_1795544350918_2f5a445b.png", "Figure 7: GitHub Version Control & Open Source Repository (U-ARUN07/ai-career-companion)", width_inches=5.8)
-    add_figure(doc, "media_1795850518357_69d1bef3.png", "Figure 8: Automated Cron-Job.org 24/7 Keep-Alive Monitor Eliminating Cold Starts", width_inches=5.8)
+    # ADD PRODUCTION SCREENSHOTS (Figures 11, 12, 13, 14)
+    add_figure(doc, "media_1795545592557_e3d925d0.jpg", "Figure 11: Render Cloud Platform — Production Deployment Succeeded (Live at ai-career-companion-mg65.onrender.com)", width_inches=5.8)
+    add_figure(doc, "media_1795545683656_38eb2119.png", "Figure 12: Live Production JSON API Verification — 8 Operational Modules Active", width_inches=5.8)
+    add_figure(doc, "media_1795544350918_2f5a445b.png", "Figure 13: GitHub Version Control & Open Source Repository (U-ARUN07/ai-career-companion)", width_inches=5.8)
+    add_figure(doc, "media_1795850518357_69d1bef3.png", "Figure 14: Automated Cron-Job.org 24/7 Keep-Alive Monitor Eliminating Cold Starts", width_inches=5.8)
 
     add_heading_styled(doc, "12.3 Final Outcome & Impact", 2)
     add_body_p(doc, "The completed platform successfully solves the core challenges of modern internship recruitment. By combining deterministic vector embeddings, high-speed LLM reasoning via Groq Cloud, and a modern responsive interface, students can evaluate their placement readiness, bridge technical skill gaps, and practice role-specific interviews with confidence. The platform stands fully operational and ready for official academic and corporate evaluation.")
@@ -642,7 +658,7 @@ def build_full_documentation():
         add_body_p(doc, s_content, space_after=6)
 
     doc.save("Agile Documentation.docx")
-    print("Agile Documentation.docx successfully generated with embedded images and candidate name U ARUN!")
+    print("Agile Documentation.docx successfully generated with all 8 module screenshots, high-contrast borders, and candidate name U ARUN!")
 
 if __name__ == "__main__":
     build_full_documentation()
