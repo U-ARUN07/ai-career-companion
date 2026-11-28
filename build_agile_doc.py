@@ -7,9 +7,15 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
 from docx.oxml import OxmlElement, parse_xml
 from docx.oxml.ns import nsdecls, qn
+from docx.opc.constants import RELATIONSHIP_TYPE
 
 MEDIA_DIR = r"C:\Users\ASUS\.gemini\antigravity\brain\31f3ad5b-9efd-4d5e-bce6-334266677ed6\.user_uploaded"
 MODULE_SHOTS_DIR = "module_screenshots"
+
+LIVE_APP_URL = "https://ai-career-companion-mg65.onrender.com"
+GITHUB_REPO_URL = "https://github.com/U-ARUN07/ai-career-companion"
+SWAGGER_DOCS_URL = "https://ai-career-companion-mg65.onrender.com/docs"
+LOGIN_DEMO_URL = "https://ai-career-companion-mg65.onrender.com/login"
 
 def create_element(name):
     return OxmlElement(name)
@@ -28,6 +34,23 @@ def set_table_borders(table, color="D1D5DB", sz="4", val="single"):
     tblPr = table._tbl.tblPr
     borders = parse_xml(f'<w:tblBorders {nsdecls("w")}><w:top w:val="{val}" w:sz="{sz}" w:space="0" w:color="{color}"/><w:bottom w:val="{val}" w:sz="{sz}" w:space="0" w:color="{color}"/><w:left w:val="none"/><w:right w:val="none"/><w:insideH w:val="{val}" w:sz="{sz}" w:space="0" w:color="{color}"/><w:insideV w:val="none"/></w:tblBorders>')
     tblPr.append(borders)
+
+def add_hyperlink(p, url, text, color="0056B3", underline=True):
+    part = p.part
+    r_id = part.relate_to(url, RELATIONSHIP_TYPE.HYPERLINK, is_external=True)
+    hyperlink = parse_xml(
+        f'<w:hyperlink xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" '
+        f'r:id="{r_id}" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"/>'
+    )
+    u_tag = '<w:u w:val="single"/>' if underline else ''
+    new_run = parse_xml(
+        f'<w:r xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">'
+        f'<w:rPr><w:rFonts w:ascii="Arial" w:hAnsi="Arial"/><w:color w:val="{color}"/>{u_tag}<w:b/></w:rPr>'
+        f'<w:t>{text}</w:t></w:r>'
+    )
+    hyperlink.append(new_run)
+    p._p.append(hyperlink)
+    return hyperlink
 
 def add_heading_styled(doc, text, level, space_before=14, space_after=6):
     p = doc.add_paragraph()
@@ -72,7 +95,6 @@ def add_body_p(doc, text="", bold_prefix="", space_after=4, bullet=False):
     return p
 
 def add_figure(doc, img_rel_path, caption_text, width_inches=5.8):
-    # Check if in MODULE_SHOTS_DIR first, then MEDIA_DIR
     target_path = os.path.join(MODULE_SHOTS_DIR, img_rel_path)
     if not os.path.exists(target_path):
         target_path = os.path.join(MEDIA_DIR, img_rel_path)
@@ -85,10 +107,9 @@ def add_figure(doc, img_rel_path, caption_text, width_inches=5.8):
     try:
         im = Image.open(target_path).convert('RGB')
         
-        # Add high-contrast, beautiful double-border for clear visibility on white paper
-        # 1px light inner border, 2px solid slate border, 1px light outer padding
-        im_bordered = ImageOps.expand(im, border=2, fill=(71, 85, 105)) # #475569 slate
-        im_bordered = ImageOps.expand(im_bordered, border=1, fill=(203, 213, 225)) # #CBD5E1 subtle edge
+        # High-contrast double-border framing for visibility
+        im_bordered = ImageOps.expand(im, border=3, fill=(51, 65, 85)) # #334155 dark slate
+        im_bordered = ImageOps.expand(im_bordered, border=2, fill=(203, 213, 225)) # #CBD5E1 subtle edge
         
         stream = io.BytesIO()
         im_bordered.save(stream, format='PNG')
@@ -194,38 +215,52 @@ def build_full_documentation():
     r_title.font.color.rgb = RGBColor(15, 30, 80)
 
     p_sub = doc.add_paragraph()
-    p_sub.paragraph_format.space_after = Pt(26)
+    p_sub.paragraph_format.space_after = Pt(24)
     r_sub = p_sub.add_run("Unified RAG Career Intelligence & Internship Matching Platform\nAgile Project Documentation & Comprehensive Technical Report")
     r_sub.font.name = "Arial"
     r_sub.font.size = Pt(13)
     r_sub.font.color.rgb = RGBColor(71, 85, 105)
 
-    # Decorative Box / Metadata Table on Cover
-    cov_table = doc.add_table(rows=5, cols=2)
+    # Cover Metadata Table
+    cov_table = doc.add_table(rows=7, cols=2)
     cov_table.alignment = WD_TABLE_ALIGNMENT.CENTER
     cov_data = [
-        ("Project Title:", "AI Career Companion (Unified RAG Career Intelligence Platform)"),
-        ("Prepared By:", "U ARUN (Candidate / Intern)"),
-        ("Project Duration:", "October 2026 – November 2026"),
-        ("Program Track:", "Artificial Intelligence & RAG Career Intelligence"),
-        ("Project Mentor:", "Vijay Parmar")
+        ("Project Title:", "AI Career Companion (Unified RAG Career Intelligence Platform)", None),
+        ("Prepared By:", "U ARUN (Candidate / Intern)", None),
+        ("Project Duration:", "October 2026 – November 2026", None),
+        ("Program Track:", "Artificial Intelligence & RAG Career Intelligence", None),
+        ("Project Mentor:", "Vijay Parmar", None),
+        ("Live Deployment URL:", "https://ai-career-companion-mg65.onrender.com", LIVE_APP_URL),
+        ("GitHub Repository:", "https://github.com/U-ARUN07/ai-career-companion", GITHUB_REPO_URL)
     ]
     set_table_borders(cov_table, color="CBD5E1", sz="4")
-    for idx, (label, val) in enumerate(cov_data):
+    for idx, (label, val, link_url) in enumerate(cov_data):
         row = cov_table.rows[idx]
         row.cells[0].text = label
-        row.cells[1].text = val
         set_cell_background(row.cells[0], "F1F5F9")
         set_cell_background(row.cells[1], "FFFFFF")
-        set_cell_margins(row.cells[0], top=120, bottom=120, left=160, right=160)
-        set_cell_margins(row.cells[1], top=120, bottom=120, left=160, right=160)
-        row.cells[0].paragraphs[0].runs[0].font.name = "Arial"
-        row.cells[0].paragraphs[0].runs[0].font.size = Pt(10)
-        row.cells[0].paragraphs[0].runs[0].bold = True
-        row.cells[0].paragraphs[0].runs[0].font.color.rgb = RGBColor(30, 41, 59)
-        row.cells[1].paragraphs[0].runs[0].font.name = "Arial"
-        row.cells[1].paragraphs[0].runs[0].font.size = Pt(10)
-        row.cells[1].paragraphs[0].runs[0].font.color.rgb = RGBColor(15, 23, 42)
+        set_cell_margins(row.cells[0], top=110, bottom=110, left=150, right=150)
+        set_cell_margins(row.cells[1], top=110, bottom=110, left=150, right=150)
+        
+        # Label cell
+        p0 = row.cells[0].paragraphs[0]
+        r0 = p0.runs[0] if p0.runs else p0.add_run(label)
+        r0.font.name = "Arial"
+        r0.font.size = Pt(9.5)
+        r0.bold = True
+        r0.font.color.rgb = RGBColor(30, 41, 59)
+        
+        # Value cell
+        p1 = row.cells[1].paragraphs[0]
+        if link_url:
+            add_hyperlink(p1, link_url, val)
+        else:
+            p1.text = val
+            r1 = p1.runs[0]
+            r1.font.name = "Arial"
+            r1.font.size = Pt(9.5)
+            r1.font.color.rgb = RGBColor(15, 23, 42)
+            
         row.cells[0].width = Inches(2.2)
         row.cells[1].width = Inches(4.07)
 
@@ -238,7 +273,7 @@ def build_full_documentation():
     
     index_headers = ["No.", "Section Name", "Page Reference"]
     index_data = [
-        ["1", "Project Overview", "3"],
+        ["1", "Project Overview & Quick Access Live Links", "3"],
         ["2", "Project Objective", "4"],
         ["3", "Technology Stack", "5"],
         ["4", "Project Requirements (Functional & Non-Functional)", "6"],
@@ -262,6 +297,36 @@ def build_full_documentation():
     # --------------------------------------------------------------------------
     add_heading_styled(doc, "1. Project Overview", 1)
     
+    # CALLOUT BOX: Quick-Access Live Links for Evaluator
+    quick_box = doc.add_table(rows=4, cols=2)
+    quick_box.alignment = WD_TABLE_ALIGNMENT.CENTER
+    set_table_borders(quick_box, color="3B82F6", sz="6")
+    q_data = [
+        ("🌐 Live Hosted Application:", "https://ai-career-companion-mg65.onrender.com", LIVE_APP_URL),
+        ("💻 GitHub Source Repository:", "https://github.com/U-ARUN07/ai-career-companion", GITHUB_REPO_URL),
+        ("📖 Swagger API Documentation:", "https://ai-career-companion-mg65.onrender.com/docs", SWAGGER_DOCS_URL),
+        ("🔑 1-Click Demo Login URL:", "https://ai-career-companion-mg65.onrender.com/login", LOGIN_DEMO_URL)
+    ]
+    for q_idx, (q_label, q_txt, q_url) in enumerate(q_data):
+        row = quick_box.rows[q_idx]
+        set_cell_background(row.cells[0], "EFF6FF")
+        set_cell_background(row.cells[1], "FFFFFF")
+        set_cell_margins(row.cells[0], top=100, bottom=100, left=140, right=140)
+        set_cell_margins(row.cells[1], top=100, bottom=100, left=140, right=140)
+        p0 = row.cells[0].paragraphs[0]
+        r0 = p0.add_run(q_label)
+        r0.font.name = "Arial"
+        r0.font.size = Pt(9.5)
+        r0.bold = True
+        r0.font.color.rgb = RGBColor(30, 58, 138)
+        p1 = row.cells[1].paragraphs[0]
+        add_hyperlink(p1, q_url, q_txt, color="0056B3")
+        row.cells[0].width = Inches(2.3)
+        row.cells[1].width = Inches(3.97)
+
+    p_spacer = doc.add_paragraph()
+    p_spacer.paragraph_format.space_before = Pt(6)
+
     add_heading_styled(doc, "1.1 Project Name", 2)
     add_body_p(doc, "AI Career Companion — Unified RAG Career Intelligence Platform", bold_prefix="Official Title: ")
     
@@ -469,7 +534,7 @@ def build_full_documentation():
     # SECTION 9: IMPLEMENTATION & KEY FEATURES (ALL 8 MODULES WITH BORDERED SCREENSHOTS)
     # --------------------------------------------------------------------------
     add_heading_styled(doc, "9. Implementation / Key Features", 1)
-    add_body_p(doc, "The platform is structured into eight production modules, each accompanied by its live bordered interface screenshot:")
+    add_body_p(doc, "The platform is structured into eight production modules, each accompanied by its live authenticated interface screenshot with high-contrast framing borders:")
 
     modules_data = [
         ("Module 1: Student Academic & Career Profile (/profile)",
@@ -502,11 +567,11 @@ def build_full_documentation():
          "Endpoint: POST `/matching/skill-gap` | Output: Actionable learning roadmap with estimated time-to-competency.",
          "module_5_skill_gap.png", "Figure 6: Module 5 — Skill Gap Analysis & Diagnostic Upskilling Roadmaps"),
 
-        ("Module 6: Role-Specific Resume & Cover Letter Customization (/cover-letter)",
+        ("Module 6: Role-Specific Resume & Cover Letter Customization (/customizer)",
          "AI-powered generation of tailored cover letters and customized resume bullet points aligned to specific job descriptions.",
          "Prompts Groq LLaMA 3.3 70B with candidate credentials and job requirements, enforcing formal business letter etiquette and highlighting relevant achievements.",
          "Endpoint: POST `/cv/generate-cover-letter` | Output: Ready-to-send personalized cover letter and tailored resume copy.",
-         "module_6_cover_letter.png", "Figure 7: Module 6 — Role-Specific Resume & Cover Letter Tailoring Generator"),
+         "module_6_cover_letter.png", "Figure 7: Module 6 — Role-Specific Resume & Cover Letter Customizer Workspace (/customizer)"),
 
         ("Module 7: AI Interview Preparation & Voice Simulation (/interview-prep)",
          "Simulates role-specific technical, behavioral, and situational mock interviews with real-time speech-to-text dictation and objective STAR scoring.",
@@ -608,10 +673,45 @@ def build_full_documentation():
     add_body_p(doc, "Module 8: 24/7 Conversational Career Assistant Copilot", bold_prefix="[100% Complete] ", bullet=True)
 
     add_heading_styled(doc, "12.2 Production Links & Access Deliverables", 2)
-    add_body_p(doc, "https://ai-career-companion-mg65.onrender.com", bold_prefix="Live Web Application: ")
-    add_body_p(doc, "https://ai-career-companion-mg65.onrender.com/docs", bold_prefix="Interactive Swagger API Docs: ")
-    add_body_p(doc, "https://github.com/U-ARUN07/ai-career-companion", bold_prefix="GitHub Source Repository: ")
-    add_body_p(doc, "arun.student@example.com  |  Password: Student123! (1-Click button available on login page)", bold_prefix="Demo Student Credentials: ")
+    
+    # Clickable Link Paragraphs
+    p_link1 = doc.add_paragraph()
+    p_link1.paragraph_format.space_after = Pt(3)
+    r_l1 = p_link1.add_run("Live Web Application: ")
+    r_l1.font.name = "Arial"
+    r_l1.bold = True
+    r_l1.font.size = Pt(10)
+    add_hyperlink(p_link1, LIVE_APP_URL, LIVE_APP_URL)
+
+    p_link2 = doc.add_paragraph()
+    p_link2.paragraph_format.space_after = Pt(3)
+    r_l2 = p_link2.add_run("Interactive Swagger API Docs: ")
+    r_l2.font.name = "Arial"
+    r_l2.bold = True
+    r_l2.font.size = Pt(10)
+    add_hyperlink(p_link2, SWAGGER_DOCS_URL, SWAGGER_DOCS_URL)
+
+    p_link3 = doc.add_paragraph()
+    p_link3.paragraph_format.space_after = Pt(3)
+    r_l3 = p_link3.add_run("GitHub Source Repository: ")
+    r_l3.font.name = "Arial"
+    r_l3.bold = True
+    r_l3.font.size = Pt(10)
+    add_hyperlink(p_link3, GITHUB_REPO_URL, GITHUB_REPO_URL)
+
+    p_link4 = doc.add_paragraph()
+    p_link4.paragraph_format.space_after = Pt(6)
+    r_l4 = p_link4.add_run("Demo Student Credentials: ")
+    r_l4.font.name = "Arial"
+    r_l4.bold = True
+    r_l4.font.size = Pt(10)
+    r_l4_val = p_link4.add_run("arun.student@example.com  |  Password: Student123! (1-Click button available on ")
+    r_l4_val.font.name = "Arial"
+    r_l4_val.font.size = Pt(10)
+    add_hyperlink(p_link4, LOGIN_DEMO_URL, "Login Page")
+    r_l4_end = p_link4.add_run(")")
+    r_l4_end.font.name = "Arial"
+    r_l4_end.font.size = Pt(10)
 
     # ADD PRODUCTION SCREENSHOTS (Figures 11, 12, 13, 14)
     add_figure(doc, "media_1795545592557_e3d925d0.jpg", "Figure 11: Render Cloud Platform — Production Deployment Succeeded (Live at ai-career-companion-mg65.onrender.com)", width_inches=5.8)
@@ -632,7 +732,7 @@ def build_full_documentation():
 
     slides_data = [
         ("Slide 1: Title & Introduction",
-         "Project Name: AI Career Companion | Subtitle: Unified RAG Career Intelligence Platform\nCandidate: U ARUN | Mentor: Vijay Parmar | Program: Infosys Springboard VIP 7.0"),
+         f"Project Name: AI Career Companion | Subtitle: Unified RAG Career Intelligence Platform\nCandidate: U ARUN | Mentor: Vijay Parmar | Program: Infosys Springboard VIP 7.0\nLive Application: {LIVE_APP_URL}\nGitHub Repository: {GITHUB_REPO_URL}"),
         ("Slide 2: Problem Statement",
          "The Broken Internship Pipeline: Fragmented job boards, 75%+ ATS resume rejection rate, zero actionable feedback on missing skills, and generic, unhelpful interview preparation."),
         ("Slide 3: Project Objective & Vision",
@@ -650,15 +750,20 @@ def build_full_documentation():
         ("Slide 9: Testing, Verification & Results",
          "10 Comprehensive Test Cases: 100% Pass Rate across Auth, Parser, Matching, Interview Voice Dictation, and Keep-Alive Monitoring. Live cloud uptime verified 24/7 on Render."),
         ("Slide 10: Conclusion & Future Scope",
-         "Conclusion: Successfully delivered production platform fulfilling all VIP 7.0 requirements.\nFuture Scope: Integration with LinkedIn API, automated multi-agent coding challenge evaluator, and campus placement portal integration.")
+         f"Conclusion: Successfully delivered production platform fulfilling all VIP 7.0 requirements.\nLive URL: {LIVE_APP_URL} | Repo: {GITHUB_REPO_URL}\nFuture Scope: Integration with LinkedIn API, automated multi-agent coding challenge evaluator, and campus placement portal integration.")
     ]
 
     for s_title, s_content in slides_data:
         add_heading_styled(doc, s_title, 2, space_before=8, space_after=2)
         add_body_p(doc, s_content, space_after=6)
 
-    doc.save("Agile Documentation.docx")
-    print("Agile Documentation.docx successfully generated with all 8 module screenshots, high-contrast borders, and candidate name U ARUN!")
+    try:
+        doc.save("Agile Documentation.docx")
+        print("Agile Documentation.docx successfully generated with verified clickable hyperlinks!")
+    except PermissionError:
+        doc.save("Agile Documentation_Clickable.docx")
+        print("Note: 'Agile Documentation.docx' is currently open in Word on your machine.")
+        print("Saved to 'Agile Documentation_Clickable.docx' with all clickable links!")
 
 if __name__ == "__main__":
     build_full_documentation()
