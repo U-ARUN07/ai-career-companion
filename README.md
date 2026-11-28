@@ -5,6 +5,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-brightgreen?style=for-the-badge&logo=render&logoColor=white)](https://ai-career-companion-mg65.onrender.com)
 [![Swagger API Docs](https://img.shields.io/badge/Swagger-API%20Docs-blue?style=for-the-badge&logo=fastapi&logoColor=white)](https://ai-career-companion-mg65.onrender.com/docs)
+[![Agile Documentation](https://img.shields.io/badge/Agile%20Doc-Infosys%20VIP%207.0-blueviolet?style=for-the-badge&logo=microsoftword&logoColor=white)](Agile%20Documentation.docx)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/U-ARUN07/ai-career-companion)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 
@@ -31,6 +32,7 @@
 | :--- | :--- | :--- |
 | 🚀 **Live Web Application** | **[https://ai-career-companion-mg65.onrender.com](https://ai-career-companion-mg65.onrender.com)** | Complete responsive Single Page Application (SPA) |
 | 📖 **Interactive Swagger Docs** | **[https://ai-career-companion-mg65.onrender.com/docs](https://ai-career-companion-mg65.onrender.com/docs)** | Interactive OpenAPI test console for all endpoints |
+| 📑 **Agile Project Documentation** | **[Agile Documentation.docx](Agile%20Documentation.docx)** | Full 12-section Agile report, 14 bordered module screenshots & 10-slide presentation script |
 | 💻 **GitHub Repository** | **[https://github.com/U-ARUN07/ai-career-companion](https://github.com/U-ARUN07/ai-career-companion)** | Verified source code & architecture |
 
 > 🔑 **Demo Student Login Credentials:**  
@@ -226,6 +228,7 @@ ai-career-companion/
 │   ├── vercel.json           # SPA rewrite configuration
 │   └── vite.config.js        # Vite dev server & backend reverse-proxy
 │
+├── 📄 Agile Documentation.docx # Official 12-section Infosys Agile project documentation & presentation script
 ├── 📄 main.py                # Root server entry point for Render production deployment
 ├── 📄 render.yaml            # Render infrastructure-as-code blueprint
 ├── 📄 run.bat                # 1-Click launcher for Windows
